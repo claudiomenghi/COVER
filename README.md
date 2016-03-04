@@ -27,20 +27,20 @@ To LTL property is added after the : symbol inside the goal of the goal model
 
 ## Workflow
 COVER works through the following steps
-1. parses the .goal file created by the Gr-tool and extracts the LTL formulae associated with these goals.
-2. loads the  (I)BA containing the (incomplete)  model of the system which is provided through an appropriate XML file.
-3. verifies the LTL formulae over the IBA. 
-4. uses verification results as initial values for the label propagation algorithm.
-5. propagates the results
-6. writes the obtained results back into the .goal file.
-7. the results can be analyzed by the requirement engineer using the Gr-tool.
+* parses the .goal file created by the Gr-tool and extracts the LTL formulae associated with these goals.
+* loads the  (I)BA containing the (incomplete)  model of the system which is provided through an appropriate XML file.
+* verifies the LTL formulae over the IBA. 
+* uses verification results as initial values for the label propagation algorithm.
+* propagates the results
+* writes the obtained results back into the .goal file.
+* the results can be analyzed by the requirement engineer using the Gr-tool.
 
 ##Installation
 To install COVER
-1. download the Gr-Tool from <http://troposproject.org/tools/grtool/>
-2. download the COVER framework from <https://github.com/claudiomenghi/COVER/releases>
-3. download the ltl2ba C library from <https://github.com/claudiomenghi/COVER/releases>
-4. compile ltl2ba. Rename the compiled file and make it available to COVER by placing it in the parent folder in which COVER is placed
+* download the Gr-Tool from <http://troposproject.org/tools/grtool/>
+* download the COVER framework from <https://github.com/claudiomenghi/COVER/releases>
+* download the ltl2ba C library from <https://github.com/claudiomenghi/COVER/releases>
+* compile ltl2ba. Rename the compiled file and make it available to COVER by placing it in the parent folder in which COVER is placed
 
 ##Use
 1. open the Gr-Tool 
