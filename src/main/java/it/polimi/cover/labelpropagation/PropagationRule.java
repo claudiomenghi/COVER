@@ -1,4 +1,4 @@
-package it.polimi.chiare.labelpropagation;
+package it.polimi.cover.labelpropagation;
 
 import it.polimi.checker.SatisfactionValue;
 

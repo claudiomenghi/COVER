@@ -1,11 +1,11 @@
-package it.polimi.chiare.labelpropagation;
+package it.polimi.cover.labelpropagation;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import it.polimi.checker.SatisfactionValue;
-import it.polimi.chiare.models.goal.GOALMODEL;
-import it.polimi.chiare.utils.SatisfactionValueAdapter;
+import it.polimi.cover.models.goal.GOALMODEL;
+import it.polimi.cover.utils.SatisfactionValueAdapter;
 
 public class LabelPropagator {
 

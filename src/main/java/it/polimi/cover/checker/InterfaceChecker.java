@@ -1,4 +1,4 @@
-package it.polimi.chiare.checker;
+package it.polimi.cover.checker;
 
 
 import it.polimi.action.CHIAAction;
@@ -12,8 +12,8 @@ import it.polimi.checker.emptiness.EmptinessChecker;
 import it.polimi.checker.ibablackboxstateremove.IBABlackBoxRemover;
 import it.polimi.checker.intersection.IntersectionBuilder;
 import it.polimi.checker.intersection.acceptingpolicies.AcceptingPolicy;
-import it.polimi.chiare.checker.intersection.InterfaceIntersectionBuilder;
-import it.polimi.chiare.models.automata.InterfaceIBA;
+import it.polimi.cover.checker.intersection.InterfaceIntersectionBuilder;
+import it.polimi.cover.models.automata.InterfaceIBA;
 
 import java.util.AbstractMap;
 import java.util.ArrayList;

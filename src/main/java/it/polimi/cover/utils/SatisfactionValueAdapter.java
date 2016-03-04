@@ -1,4 +1,4 @@
-package it.polimi.chiare.utils;
+package it.polimi.cover.utils;
 
 import it.polimi.checker.SatisfactionValue;
 

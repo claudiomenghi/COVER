@@ -1,4 +1,4 @@
-package it.polimi.chiare.models.automata;
+package it.polimi.cover.models.automata;
 
 import java.util.HashMap;
 import java.util.Map;

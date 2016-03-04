@@ -6,7 +6,7 @@
 //
 
 
-package it.polimi.chiare.models.automata.parser;
+package it.polimi.cover.models.automata.parser;
 
 import java.math.BigInteger;
 import java.util.ArrayList;

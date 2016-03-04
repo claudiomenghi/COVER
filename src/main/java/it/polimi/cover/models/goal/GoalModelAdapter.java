@@ -1,4 +1,4 @@
-package it.polimi.chiare.models.goal;
+package it.polimi.cover.models.goal;
 
 import java.io.File;
 

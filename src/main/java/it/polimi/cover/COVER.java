@@ -1,7 +1,12 @@
-package it.polimi.chiare;
+package it.polimi.cover;
 
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.LinkOption;
+import java.nio.file.Paths;
 import java.util.List;
+
+import javax.xml.bind.JAXBException;
 
 import com.google.common.base.Preconditions;
 
@@ -9,14 +14,14 @@ import it.polimi.automata.BA;
 import it.polimi.checker.SatisfactionValue;
 import it.polimi.checker.intersection.acceptingpolicies.AcceptingPolicy.AcceptingType;
 import it.polimi.checker.intersection.acceptingpolicies.BAAcceptingPolicy;
-import it.polimi.chiare.checker.InterfaceChecker;
-import it.polimi.chiare.labelpropagation.LabelPropagator;
-import it.polimi.chiare.models.automata.InterfaceIBA;
-import it.polimi.chiare.models.automata.parser.BAIntAdapter;
-import it.polimi.chiare.models.goal.GOALMODEL;
-import it.polimi.chiare.models.goal.GOALMODEL.SCENARIO.GOAL;
-import it.polimi.chiare.models.goal.GoalModelAdapter;
-import it.polimi.chiare.utils.SatisfactionValueAdapter;
+import it.polimi.cover.checker.InterfaceChecker;
+import it.polimi.cover.labelpropagation.LabelPropagator;
+import it.polimi.cover.models.automata.InterfaceIBA;
+import it.polimi.cover.models.automata.parser.BAIntAdapter;
+import it.polimi.cover.models.goal.GOALMODEL;
+import it.polimi.cover.models.goal.GOALMODEL.SCENARIO.GOAL;
+import it.polimi.cover.models.goal.GoalModelAdapter;
+import it.polimi.cover.utils.SatisfactionValueAdapter;
 import it.polimi.model.ltltoba.LTLtoBATransformer;
 
 /**
@@ -36,7 +41,7 @@ public class COVER {
 	 * The IBA to be analyzed
 	 */
 	private final InterfaceIBA iba;
-	
+
 	private File outputFile;
 
 	/**
@@ -54,7 +59,7 @@ public class COVER {
 		Preconditions.checkNotNull(iba, "The IBA to be considered cannot be null");
 		this.goalModel = goalModel;
 		this.iba = iba;
-		this.outputFile=outputFile;
+		this.outputFile = outputFile;
 	}
 
 	private void check() throws Exception {
@@ -65,11 +70,10 @@ public class COVER {
 		newScenario.setNAME("Scenario: " + (goalModel.getSCENARIO().size() + 1));
 		for (GOAL goal : goals) {
 			GOAL newGoal = this.cloneGoal(goal);
-			
-			if(goal.getCAPTION().contains(":")){
-				String ltlFormulaString = goal.getCAPTION().substring(goal.getCAPTION().indexOf(":")+2);
 
-				System.out.println(ltlFormulaString);
+			if (goal.getCAPTION().contains(":")) {
+				String ltlFormulaString = goal.getCAPTION().substring(goal.getCAPTION().indexOf(":") + 2);
+
 				LTLtoBATransformer action = new LTLtoBATransformer("!(" + ltlFormulaString + ")");
 				BA claimBA = action.perform();
 
@@ -78,23 +82,22 @@ public class COVER {
 						BAAcceptingPolicy.getAcceptingPolicy(AcceptingType.BA, this.iba, claimBA));
 
 				SatisfactionValue satisfaction = checker.perform();
-				
-				System.out.println("!(" + ltlFormulaString + ")"+"\t"+satisfaction);
+
 				newGoal.setSAT(new SatisfactionValueAdapter().convertSatisfactionValue(satisfaction));
 			}
 			newScenario.getGOAL().add(newGoal);
 		}
-		newScenario=new LabelPropagator(goalModel, newScenario).perform();
+		newScenario = new LabelPropagator(goalModel, newScenario).perform();
 		goalModel.getSCENARIO().add(newScenario);
 
-
-		new GoalModelAdapter().writeGoalModel(this.outputFile, goalModel);
-	
 	}
-	
 
-	private GOAL cloneGoal(GOAL goal){
-		GOAL retGoal=new GOAL();
+	private void writeResults() throws JAXBException {
+		new GoalModelAdapter().writeGoalModel(this.outputFile, goalModel);
+	}
+
+	private GOAL cloneGoal(GOAL goal) {
+		GOAL retGoal = new GOAL();
 		retGoal.setCAPTION(goal.getCAPTION());
 		retGoal.setDEN(goal.getDEN());
 		retGoal.setID(goal.getID());
@@ -107,7 +110,7 @@ public class COVER {
 		retGoal.setSAT(goal.getSAT());
 		retGoal.setTOP(goal.getTOP());
 		retGoal.setTYPE(goal.getTYPE());
-		
+
 		return retGoal;
 	}
 
@@ -125,10 +128,25 @@ public class COVER {
 	 */
 	public static void main(String[] args) throws Exception {
 
-		System.out.println(new BAIntAdapter().parseModel(new File(args[1])));
-		COVER chiaRE = new COVER(new GoalModelAdapter().parseModel(new File(args[0])),
-				new BAIntAdapter().parseModel(new File(args[1])), new File(args[2]));
-		chiaRE.check();
+		Preconditions.checkArgument(args.length == 3,
+				"Illegal arguments. To run cover type: \n java -jar COVER.jar model.goal design.xml newmodel.goal");
+		Preconditions.checkNotNull("You must specity the original goal model", args[0]);
+		Preconditions.checkNotNull("You must specity the xml containing the model to be considered", args[1]);
+		Preconditions.checkNotNull("You must specity the file which must contain the destination goal model", args[2]);
+		Preconditions.checkArgument(Files.exists(Paths.get(args[0]), LinkOption.NOFOLLOW_LINKS),
+				"The original goal model must exist");
+		Preconditions.checkArgument(Files.exists(Paths.get(args[1]), LinkOption.NOFOLLOW_LINKS),
+				"The xml file containing the design must exist");
+
+		System.out.println("Loading the goal model");
+		GOALMODEL goalModel = new GoalModelAdapter().parseModel(new File(args[0]));
+		System.out.println("Loading the desing");
+		InterfaceIBA iba = new BAIntAdapter().parseModel(new File(args[1]));
+		COVER cover = new COVER(goalModel, iba, new File(args[2]));
+		System.out.println("Checking");
+		cover.check();
+		System.out.println("Writing the results");
+		cover.writeResults();
 	}
 
 }

@@ -6,7 +6,7 @@
 //
 
 
-package it.polimi.chiare.models.goal;
+package it.polimi.cover.models.goal;
 
 import java.util.ArrayList;
 import java.util.List;

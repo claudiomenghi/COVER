@@ -1,4 +1,4 @@
-package it.polimi.chiare.models.automata.parser;
+package it.polimi.cover.models.automata.parser;
 
 import java.io.File;
 import java.util.HashMap;
@@ -15,7 +15,7 @@ import it.polimi.automata.state.State;
 import it.polimi.automata.state.StateFactory;
 import it.polimi.automata.transition.ClaimTransitionFactory;
 import it.polimi.automata.transition.TransitionFactory;
-import it.polimi.chiare.models.automata.InterfaceIBA;
+import it.polimi.cover.models.automata.InterfaceIBA;
 
 
 public class BAIntAdapter {

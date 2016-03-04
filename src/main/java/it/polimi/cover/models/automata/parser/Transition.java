@@ -2,11 +2,11 @@
 // Questo file è stato generato dall'architettura JavaTM per XML Binding (JAXB) Reference Implementation, v2.2.8-b130911.1802 
 // Vedere <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Qualsiasi modifica a questo file andrà persa durante la ricompilazione dello schema di origine. 
-// Generato il: 2016.02.25 alle 02:09:36 PM CET 
+// Generato il: 2016.02.25 alle 09:34:39 AM CET 
 //
 
 
-package it.polimi.chiare.models.goal;
+package it.polimi.cover.models.automata.parser;
 
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;

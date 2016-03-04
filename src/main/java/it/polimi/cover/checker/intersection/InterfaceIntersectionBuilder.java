@@ -1,4 +1,4 @@
-package it.polimi.chiare.checker.intersection;
+package it.polimi.cover.checker.intersection;
 
 
 import it.polimi.action.CHIAAction;
@@ -11,7 +11,7 @@ import it.polimi.automata.transition.ClaimTransitionFactory;
 import it.polimi.automata.transition.Transition;
 import it.polimi.checker.intersection.acceptingpolicies.AcceptingPolicy;
 import it.polimi.checker.intersection.acceptingpolicies.KripkeAcceptingPolicy;
-import it.polimi.chiare.models.automata.InterfaceIBA;
+import it.polimi.cover.models.automata.InterfaceIBA;
 import rwth.i2.ltl2ba4j.model.IGraphProposition;
 
 import java.util.Collections;

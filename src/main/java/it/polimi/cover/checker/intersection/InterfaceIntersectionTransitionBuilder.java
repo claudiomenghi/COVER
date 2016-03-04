@@ -1,4 +1,4 @@
-package it.polimi.chiare.checker.intersection;
+package it.polimi.cover.checker.intersection;
 
 
 import it.polimi.automata.transition.ClaimTransitionFactory;
