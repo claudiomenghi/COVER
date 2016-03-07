@@ -8,6 +8,7 @@ import java.util.List;
 
 import javax.xml.bind.JAXBException;
 
+
 import com.google.common.base.Preconditions;
 
 import it.polimi.automata.BA;
@@ -128,16 +129,31 @@ public class COVER {
 	 */
 	public static void main(String[] args) throws Exception {
 
-		Preconditions.checkArgument(args.length == 3,
-				"Illegal arguments. To run cover type: \n java -jar COVER.jar model.goal design.xml newmodel.goal");
-		Preconditions.checkNotNull("You must specity the original goal model", args[0]);
-		Preconditions.checkNotNull("You must specity the xml containing the model to be considered", args[1]);
-		Preconditions.checkNotNull("You must specity the file which must contain the destination goal model", args[2]);
-		Preconditions.checkArgument(Files.exists(Paths.get(args[0]), LinkOption.NOFOLLOW_LINKS),
-				"The original goal model must exist");
-		Preconditions.checkArgument(Files.exists(Paths.get(args[1]), LinkOption.NOFOLLOW_LINKS),
-				"The xml file containing the design must exist");
-
+		
+		if(args.length != 3){
+			System.out.println(	"Illegal arguments. To run cover type: \n java -jar COVER.jar model.goal design.xml newmodel.goal");
+			System.exit(0);
+		}
+		if(args[0]==null){
+			System.out.println("You must specity the original goal model");
+			System.exit(0);
+		}
+		if(args[1]==null){
+			System.out.println("You must specity the xml containing the model to be considered");
+			System.exit(0);
+		}
+		if(args[2]==null){
+			System.out.println("You must specity the file which must contain the destination goal model");
+			System.exit(0);
+		}
+		if(!Files.exists(Paths.get(args[0]), LinkOption.NOFOLLOW_LINKS)){
+			System.out.println("The original goal model must exist");
+			System.exit(0);
+		}
+		if(!Files.exists(Paths.get(args[1]), LinkOption.NOFOLLOW_LINKS)){
+			System.out.println("The xml file containing the design must exist");
+			System.exit(0);
+		}
 		System.out.println("Loading the goal model");
 		GOALMODEL goalModel = new GoalModelAdapter().parseModel(new File(args[0]));
 		System.out.println("Loading the desing");
