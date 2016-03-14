@@ -224,12 +224,12 @@
 						<exclude>**/it/*IT.java</exclude>
 					</excludes>
 					<!-- new configuration needed for coverage per test -->
-					<properties>
+					<!-- <properties>
 						<property>
 							<name>listener</name>
 							<value>org.sonar.java.jacoco.JUnitListener</value>
 						</property>
-					</properties>
+					</properties> -->
 				</configuration>
 			</plugin>
 			<plugin>

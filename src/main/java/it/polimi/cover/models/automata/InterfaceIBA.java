@@ -7,6 +7,8 @@ import java.util.Set;
 
 import org.checkerframework.checker.nullness.qual.NonNull;
 
+import com.google.common.base.Preconditions;
+
 import it.polimi.automata.IBA;
 import it.polimi.automata.state.State;
 import it.polimi.automata.transition.Transition;
@@ -27,6 +29,10 @@ public class InterfaceIBA extends IBA {
 	}
 
 	public void addPropositonToInterface(State state, Set<IGraphProposition> propositions) {
+		Preconditions.checkArgument(this.getPropositions().containsAll(propositions),
+				"There is one proposition in the interface " + propositions
+						+ " which is not contained in the alphabet of the automaton");
+		
 		if (this.stateInterfaces.containsKey(state)) {
 			this.stateInterfaces.get(state).addAll(propositions);
 		} else {

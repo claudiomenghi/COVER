@@ -1,7 +1,5 @@
 package it.polimi.cover.labelpropagation;
 
-import com.google.common.base.Preconditions;
-
 import it.polimi.checker.SatisfactionValue;
 
 /**
@@ -20,13 +18,14 @@ public class PropagationRule {
 	 * @param satGoal2
 	 *            the satisfaction value associated with the goal2
 	 * @return the minimum between the satGoal1 and satGoal2
-	 * @throws NullPointerException
-	 *             if one of the two values is null
 	 */
 	public SatisfactionValue getAnd(SatisfactionValue satGoal1, SatisfactionValue satGoal2) {
-		Preconditions.checkNotNull(satGoal1, "The satisfaction value associated with the goal1 cannot be null");
-		Preconditions.checkNotNull(satGoal2, "The satisfaction value associated with the goal2 cannot be null");
-
+		if(satGoal1==null){
+			return satGoal2;
+		}
+		if(satGoal2==null){
+			return satGoal1;
+		}
 		return this.min(satGoal1, satGoal2);
 	}
 
@@ -40,13 +39,16 @@ public class PropagationRule {
 	 *            the satisfaction value associated with the goal2
 	 * @return the maximum between the values associated with the goal1 and the
 	 *         goal2
-	 * @throws NullPointerException
-	 *             if one of the two values is null
 	 */
 	public SatisfactionValue getOr(SatisfactionValue satGoal1, SatisfactionValue satGoal2) {
 
-		Preconditions.checkNotNull(satGoal1, "The satisfaction value associated with the goal1 cannot be null");
-		Preconditions.checkNotNull(satGoal2, "The satisfaction value associated with the goal2 cannot be null");
+		if(satGoal1==null){
+			return satGoal2;
+		}
+		if(satGoal2==null){
+			return satGoal1;
+		}
+		
 		return this.max(satGoal1, satGoal2);
 	}
 
@@ -65,8 +67,12 @@ public class PropagationRule {
 	 */
 	public SatisfactionValue getPlusPlus(SatisfactionValue satGoal1, SatisfactionValue satGoal2) {
 
-		Preconditions.checkNotNull(satGoal1, "The satisfaction value associated with the goal1 cannot be null");
-		Preconditions.checkNotNull(satGoal2, "The satisfaction value associated with the goal2 cannot be null");
+		if(satGoal1==null){
+			return satGoal2;
+		}
+		if(satGoal2==null){
+			return satGoal1;
+		}
 		return satGoal2;
 	}
 
@@ -85,8 +91,12 @@ public class PropagationRule {
 	 */
 	public SatisfactionValue getMinusMinus(SatisfactionValue satGoal1, SatisfactionValue satGoal2) {
 
-		Preconditions.checkNotNull(satGoal1, "The satisfaction value associated with the goal1 cannot be null");
-		Preconditions.checkNotNull(satGoal2, "The satisfaction value associated with the goal2 cannot be null");
+		if(satGoal1==null){
+			return satGoal2;
+		}
+		if(satGoal2==null){
+			return satGoal1;
+		}
 		return SatisfactionValue.NOTSATISFIED;
 	}
 
@@ -104,9 +114,13 @@ public class PropagationRule {
 	 *             if one of the parameters is null
 	 */
 	public SatisfactionValue min(SatisfactionValue goal1, SatisfactionValue goal2) {
-		Preconditions.checkNotNull(goal1, "The satisfaction value associated with the goal1 cannot be null");
-		Preconditions.checkNotNull(goal2, "The satisfaction value associated with the goal2 cannot be null");
-
+		if(goal1==null){
+			return goal2;
+		}
+		if(goal2==null){
+			return goal1;
+		}
+		
 		if (goal1 == SatisfactionValue.NOTSATISFIED || goal2 == SatisfactionValue.NOTSATISFIED) {
 			return SatisfactionValue.NOTSATISFIED;
 		}
@@ -130,10 +144,13 @@ public class PropagationRule {
 	 *             if one of the parameters is null
 	 */
 	public SatisfactionValue max(SatisfactionValue goal1, SatisfactionValue goal2) {
-
-		Preconditions.checkNotNull(goal1, "The satisfaction value associated with the goal1 cannot be null");
-		Preconditions.checkNotNull(goal2, "The satisfaction value associated with the goal2 cannot be null");
-
+		if(goal1==null){
+			return goal2;
+		}
+		if(goal2==null){
+			return goal1;
+		}
+		
 		if (goal1 == SatisfactionValue.SATISFIED || goal2 == SatisfactionValue.SATISFIED) {
 			return SatisfactionValue.SATISFIED;
 		}

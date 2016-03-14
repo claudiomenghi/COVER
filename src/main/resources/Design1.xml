@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<baInt>
+	<propositions>
+		<proposition name="bna" />
+		<proposition name="ba" />
+		<proposition name="sdtc" />
+		<proposition name="sbac" />
+		<proposition name="bo" />
+		<proposition name="ccc" />
+		<proposition name="getba" />
+		<proposition name="retba" />
+		<proposition name="cbd" />
+		<proposition name="cudc" />
+		<proposition name="br" />
+		<proposition name="wb" />
+		<proposition name="end" />
+		<proposition name="ul" />
+		<proposition name="oc" />
+		<proposition name="spr" />
+		<proposition name="crq" />
+		<proposition name="sprs" />
+		<proposition name="sgcc" />
+		<proposition name="gcc" />
+		<proposition name="spq" />
+		<proposition name="supp" />
+		<proposition name="supo" />
+		<proposition name="sbb" />
+		<proposition name="cim" />
+		<proposition name="sba" />
+		<proposition name="csm" />
+		<proposition name="srm" />
+		<proposition name="sgcn" />
+		<proposition name="sdr" />
+		<proposition name="srm" />
+		<proposition name="sser" />
+		<proposition name="cpo" />
+		<proposition name="csr" />
+	</propositions>
+	<states>
+		<state id="1" name="QM" initial="true" blackbox="true">
+			<interface>
+				<proposition name="crq" />
+				<proposition name="spq" />
+			</interface>
+		</state>
+		<state id="2" name="AM" blackbox="true">
+			<interface>
+				<proposition name="supp" />
+				<proposition name="supo" />
+				<proposition name="sbb" />
+				<proposition name="bo" />
+				<proposition name="sba" />
+			</interface>
+		</state>
+		<state id="3" name="PM" blackbox="true">
+			<interface>
+				<proposition name="cim" />
+				<proposition name="csm" />
+				<proposition name="srm" />
+				<proposition name="sgcn" />
+				<proposition name="ccc" />
+				<proposition name="sgcc" />
+				<proposition name="spr" />
+				<proposition name="csr" />
+				<proposition name="sdr" />
+				<proposition name="sser" />
+			</interface>
+		</state>
+		<state id="4" name="DM" blackbox="true">
+			<interface>
+				<proposition name="sprs" />
+				<proposition name="sdtc" />
+			</interface>
+		</state>
+		<state id="5" name="OC" accepting="true" />
+		<state id="6" name="END" accepting="true" />
+	</states>
+	<transitions>
+		<transition id="1" source="1" destination="2" propositions="getba" />
+		<transition id="2" source="2" destination="1" propositions="retba" />
+		<transition id="3" source="1" destination="6" propositions="ul" />
+		<transition id="4" source="1" destination="3" propositions="cpo" />
+		<transition id="5" source="3" destination="6" propositions="ul" />
+		<transition id="6" source="6" destination="6" propositions="end" />
+		<transition id="7" source="3" destination="4" propositions="cbd^bo" />
+		<transition id="8" source="4" destination="5" propositions="cudc" />
+		<transition id="9" source="4" destination="2" propositions="wb^bna" />
+		<transition id="10" source="2" destination="4"
+			propositions="br^ba" />
+		<transition id="11" source="5" destination="5"
+			propositions="oc" />
+	</transitions>
+</baInt>

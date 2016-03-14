@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<baInt>
+	<propositions>
+		<proposition name="getba" />
+		<proposition name="retba" />
+		<proposition name="ul" />
+		<proposition name="cpo" />
+		<proposition name="end" />
+		<proposition name="cbd" />
+		<proposition name="bo" />
+		<proposition name="cudc" />
+		<proposition name="wb" />
+		<proposition name="bna" />
+		<proposition name="br" />
+		<proposition name="ba" />
+		<proposition name="oc" />
+		<proposition name="ckba" />
+		<proposition name="scs" />
+		<proposition name="supp" />
+		<proposition name="retba" />
+		<proposition name="susb" />
+		<proposition name="sba" />
+		<proposition name="crq" />
+		<proposition name="spq" />
+		<proposition name="cim" />
+		<proposition name="csm" />
+		<proposition name="srm" />
+		<proposition name="sgcn" />
+		<proposition name="ccc" />
+		<proposition name="sgcc" />
+		<proposition name="spr" />
+		<proposition name="csr" />
+		<proposition name="sdr" />
+		<proposition name="sser" />
+		<proposition name="sprs" />
+		<proposition name="sdtc" />
+		<proposition name="supo" />
+	</propositions>
+	<states>
+		<state id="1" name="QM" initial="true" blackbox="true">
+			<interface>
+				<proposition name="crq" />
+				<proposition name="spq" />
+			</interface>
+		</state>
+		<state id="3" name="PM" blackbox="true">
+			<interface>
+				<proposition name="cim" />
+				<proposition name="csm" />
+				<proposition name="srm" />
+				<proposition name="sgcn" />
+				<proposition name="ccc" />
+				<proposition name="sgcc" />
+				<proposition name="spr" />
+				<proposition name="csr" />
+				<proposition name="sdr" />
+				<proposition name="sser" />
+			</interface>
+		</state>
+		<state id="4" name="BDM" blackbox="true">
+			<interface>
+				<proposition name="sprs" />
+				<proposition name="sdtc" />
+			</interface>
+		</state>
+		<state id="5" name="OC" accepting="true" />
+		<state id="6" name="END" accepting="true" />
+		<state id="7" name="q1" />
+		<state id="8" name="q2" />
+		<state id="9" name="q3" />
+		<state id="10" name="q4" />
+		<state id="11" name="q5" />
+		<state id="12" name="q6" />
+		<state id="13" name="q7" />
+		<state id="14" name="q8" />
+	</states>
+	<transitions>
+		<transition id="1" source="1" destination="7" propositions="getba" />
+		<transition id="2" source="8" destination="1" propositions="retba" />
+		<transition id="3" source="1" destination="6" propositions="ul" />
+		<transition id="4" source="1" destination="3" propositions="cpo" />
+		<transition id="5" source="3" destination="6" propositions="ul" />
+		<transition id="6" source="6" destination="6" propositions="end" />
+		<transition id="7" source="3" destination="4" propositions="cbd^bo" />
+		<transition id="8" source="4" destination="5" propositions="cudc" />
+		<transition id="9" source="4" destination="11"
+			propositions="wb^bna" />
+		<transition id="10" source="14" destination="4"
+			propositions="br^ba" />
+		<transition id="11" source="5" destination="5"
+			propositions="oc" />
+		<transition id="12" source="7" destination="8"
+			propositions="ckba" />
+		<transition id="13" source="8" destination="9"
+			propositions="scs" />
+		<transition id="14" source="9" destination="10"
+			propositions="supp" />
+		<transition id="15" source="10" destination="1"
+			propositions="retba" />
+		<transition id="16" source="11" destination="12"
+			propositions="supo" />
+		<transition id="17" source="12" destination="13"
+			propositions="susb" />
+		<transition id="18" source="13" destination="14"
+			propositions="sba" />
+	</transitions>
+</baInt>

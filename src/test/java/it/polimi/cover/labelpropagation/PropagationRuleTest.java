@@ -18,18 +18,19 @@ public class PropagationRuleTest {
 	/**
 	 * Test method for {@link it.polimi.cover.labelpropagation.PropagationRule#getAnd(it.polimi.checker.SatisfactionValue, it.polimi.checker.SatisfactionValue)}.
 	 */
-	@Test(expected=NullPointerException.class)
+	@Test
 	public void getAndShouldThrowAnExceptionIfTheFirstValueIsNull() {
-		new PropagationRule().getAnd(null, SatisfactionValue.SATISFIED);
+		
+		assertEquals(SatisfactionValue.SATISFIED,new PropagationRule().getAnd(null, SatisfactionValue.SATISFIED));
 		
 	}
 	
 	/**
 	 * Test method for {@link it.polimi.cover.labelpropagation.PropagationRule#getAnd(it.polimi.checker.SatisfactionValue, it.polimi.checker.SatisfactionValue)}.
 	 */
-	@Test(expected=NullPointerException.class)
+	@Test
 	public void getAndShouldThrowAnExceptionIfTheSecondValueIsNull() {
-		new PropagationRule().getAnd(SatisfactionValue.SATISFIED, null);
+		assertEquals(SatisfactionValue.SATISFIED,new PropagationRule().getAnd(SatisfactionValue.SATISFIED, null));
 		
 	}
 	/**
@@ -45,18 +46,18 @@ public class PropagationRuleTest {
 	/**
 	 * Test method for {@link it.polimi.cover.labelpropagation.PropagationRule#getOr(it.polimi.checker.SatisfactionValue, it.polimi.checker.SatisfactionValue)}.
 	 */
-	@Test(expected=NullPointerException.class)
+	@Test
 	public void getOrShouldThrowAnExceptionIfTheFirstValueIsNull() {
-		new PropagationRule().getOr(null, SatisfactionValue.SATISFIED);
+		assertEquals(SatisfactionValue.SATISFIED, new PropagationRule().getOr(null, SatisfactionValue.SATISFIED));
 		
 	}
 	
 	/**
 	 * Test method for {@link it.polimi.cover.labelpropagation.PropagationRule#getOr(it.polimi.checker.SatisfactionValue, it.polimi.checker.SatisfactionValue)}.
 	 */
-	@Test(expected=NullPointerException.class)
+	@Test
 	public void getOrShouldThrowAnExceptionIfTheSecondValueIsNull() {
-		new PropagationRule().getOr(SatisfactionValue.SATISFIED, null);
+		assertEquals(SatisfactionValue.SATISFIED, new PropagationRule().getOr(SatisfactionValue.SATISFIED, null));
 		
 	}
 	/**
@@ -73,18 +74,18 @@ public class PropagationRuleTest {
 	/**
 	 * Test method for {@link it.polimi.cover.labelpropagation.PropagationRule#getPlusPlus(it.polimi.checker.SatisfactionValue, it.polimi.checker.SatisfactionValue)}.
 	 */
-	@Test(expected=NullPointerException.class)
+	@Test
 	public void getPlusPlusShouldThrowAnExceptionIfTheFirstValueIsNull() {
-		new PropagationRule().getPlusPlus(null, SatisfactionValue.SATISFIED);
+		assertEquals(SatisfactionValue.SATISFIED,new PropagationRule().getPlusPlus(null, SatisfactionValue.SATISFIED));
 		
 	}
 	
 	/**
 	 * Test method for {@link it.polimi.cover.labelpropagation.PropagationRule#getPlusPlus(it.polimi.checker.SatisfactionValue, it.polimi.checker.SatisfactionValue)}.
 	 */
-	@Test(expected=NullPointerException.class)
+	@Test
 	public void getPlusPlusShouldThrowAnExceptionIfTheSecondValueIsNull() {
-		new PropagationRule().getPlusPlus(SatisfactionValue.SATISFIED, null);
+		assertEquals(SatisfactionValue.SATISFIED,new PropagationRule().getPlusPlus(SatisfactionValue.SATISFIED, null));
 		
 	}
 	
@@ -102,18 +103,18 @@ public class PropagationRuleTest {
 	/**
 	 * Test method for {@link it.polimi.cover.labelpropagation.PropagationRule#getMinusMinus(it.polimi.checker.SatisfactionValue, it.polimi.checker.SatisfactionValue)}.
 	 */
-	@Test(expected=NullPointerException.class)
+	@Test
 	public void getMinusMinusShouldThrowAnExceptionIfTheFirstValueIsNull() {
-		new PropagationRule().getMinusMinus(null, SatisfactionValue.SATISFIED);
+		assertEquals(SatisfactionValue.SATISFIED,new PropagationRule().getMinusMinus(null, SatisfactionValue.SATISFIED));
 		
 	}
 	
 	/**
 	 * Test method for {@link it.polimi.cover.labelpropagation.PropagationRule#getMinusMinus(it.polimi.checker.SatisfactionValue, it.polimi.checker.SatisfactionValue)}.
 	 */
-	@Test(expected=NullPointerException.class)
+	@Test
 	public void getMinusMinusShouldThrowAnExceptionIfTheSecondValueIsNull() {
-		new PropagationRule().getMinusMinus(SatisfactionValue.SATISFIED, null);
+		assertEquals(SatisfactionValue.SATISFIED,new PropagationRule().getMinusMinus(SatisfactionValue.SATISFIED, null));
 		
 	}
 
@@ -131,18 +132,18 @@ public class PropagationRuleTest {
 	/**
 	 * Test method for {@link it.polimi.cover.labelpropagation.PropagationRule#min(it.polimi.checker.SatisfactionValue, it.polimi.checker.SatisfactionValue)}.
 	 */
-	@Test(expected=NullPointerException.class)
+	@Test
 	public void getMinShouldThrowAnExceptionIfTheFirstValueIsNull() {
-		new PropagationRule().min(null, SatisfactionValue.SATISFIED);
+		assertEquals(SatisfactionValue.SATISFIED,new PropagationRule().min(null, SatisfactionValue.SATISFIED));
 		
 	}
 	
 	/**
 	 * Test method for {@link it.polimi.cover.labelpropagation.PropagationRule#min(it.polimi.checker.SatisfactionValue, it.polimi.checker.SatisfactionValue)}.
 	 */
-	@Test(expected=NullPointerException.class)
+	@Test
 	public void getMinShouldThrowAnExceptionIfTheSecondValueIsNull() {
-		new PropagationRule().min(SatisfactionValue.SATISFIED, null);
+		assertEquals(SatisfactionValue.SATISFIED,new PropagationRule().min(SatisfactionValue.SATISFIED, null));
 		
 	}
 	/**
@@ -158,18 +159,18 @@ public class PropagationRuleTest {
 	/**
 	 * Test method for {@link it.polimi.cover.labelpropagation.PropagationRule#max(it.polimi.checker.SatisfactionValue, it.polimi.checker.SatisfactionValue)}.
 	 */
-	@Test(expected=NullPointerException.class)
+	@Test
 	public void getMaxShouldThrowAnExceptionIfTheFirstValueIsNull() {
-		new PropagationRule().max(null, SatisfactionValue.SATISFIED);
+		assertEquals(SatisfactionValue.SATISFIED,new PropagationRule().max(null, SatisfactionValue.SATISFIED));
 		
 	}
 	
 	/**
 	 * Test method for {@link it.polimi.cover.labelpropagation.PropagationRule#max(it.polimi.checker.SatisfactionValue, it.polimi.checker.SatisfactionValue)}.
 	 */
-	@Test(expected=NullPointerException.class)
+	@Test
 	public void getMaxShouldThrowAnExceptionIfTheSecondValueIsNull() {
-		new PropagationRule().max(SatisfactionValue.SATISFIED, null);
+		assertEquals(SatisfactionValue.SATISFIED,new PropagationRule().max(SatisfactionValue.SATISFIED, null));
 		
 	}
 	/**
