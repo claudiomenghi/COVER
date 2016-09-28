@@ -62,8 +62,9 @@ Note that the identifier of the assertion must mach the identifier used for the 
 The Book Seller example is contained in the folder Examples/BookSeller.
 
 The results are obtained by performing the commands 
-1. java -jar COVER.jar GoalModel.goal Design.lts D1_PROC resultsD1.goal
-2. java -jar COVER.jar GoalModel.goal Design.lts D2_PROC resultsD2.goal
-3. java -jar COVER.jar GoalModel.goal Design.lts D3_PROC resultsD3.goal
+
+* java -jar COVER.jar GoalModel.goal Design.lts D1_PROC resultsD1.goal
+* java -jar COVER.jar GoalModel.goal Design.lts D2_PROC resultsD2.goal
+* java -jar COVER.jar GoalModel.goal Design.lts D3_PROC resultsD3.goal
 
 
