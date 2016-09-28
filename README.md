@@ -57,3 +57,13 @@ Note that the identifier of the assertion must mach the identifier used for the 
     3. <code>PROCESS</code> contains the identifier of the process to be considered in the file design.lts
     3. <code>finalGoalModel.goal</code> contains the goal model updated with the values obtained by COVER
 7. open the generated file (i.e., <code>finalGoalModel.goal</code>) with the Gr-Tool
+
+##Examples
+The Book Seller example is contained in the folder Examples/BookSeller.
+
+The results are obtained by performing the commands 
+1. java -jar COVER.jar GoalModel.goal Design.lts D1_PROC resultsD1.goal
+2. java -jar COVER.jar GoalModel.goal Design.lts D2_PROC resultsD2.goal
+3. java -jar COVER.jar GoalModel.goal Design.lts D3_PROC resultsD3.goal
+
+
