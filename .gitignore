@@ -3,5 +3,6 @@
 .classpath
 .settings/*
 /bin/
+cover/target/
 /bin/
 *.class
