@@ -1,0 +1,1256 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>173/4/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Sep 28 15:44:18 CEST 2016</td>
+</tr>
+<tr><td>Total time:</td><td>6 seconds (6551 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='MTSATests.controller.ControlledDeterminisationTests.testServicesExampleForLegalControllers()'><b>testServicesExampleForLegalControllers</b><br>Test class: MTSATests.controller.ControlledDeterminisationTests</td>
+<td><div><pre>java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/ltsa/dist/examples/2013-services-legal.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at ltsa.ui.FileInput.&lt;init&gt;(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.ControlledDeterminisationTests.testServicesExampleForLegalControllers(ControlledDeterminisationTests.java:31)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1940055334", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1940055334'><pre>java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/ltsa/dist/examples/2013-services-legal.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at ltsa.ui.FileInput.&lt;init&gt;(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.ControlledDeterminisationTests.testServicesExampleForLegalControllers(ControlledDeterminisationTests.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:81)
+	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:69)
+	at org.testng.TestRunner$1.run(TestRunner.java:697)
+	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:1004)
+	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:728)
+	at org.testng.TestRunner.run(TestRunner.java:629)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:211)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:107)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:112)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+</pre></div></td>
+<td>0</td>
+<td>testServicesExampleForLegalControllers(MTSATests.controller.ControlledDeterminisationTests)</td></tr>
+<tr>
+<td title='MTSATests.controller.ControlledDeterminisationTests.testSimpleControlledDet()'><b>testSimpleControlledDet</b><br>Test class: MTSATests.controller.ControlledDeterminisationTests</td>
+<td><div><pre>java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/ltsa/dist/examples/controlled-det-1.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at ltsa.ui.FileInput.&lt;init&gt;(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.ControlledDeterminisationTests.testSimpleControlledDet(ControlledDeterminisationTests.java:21)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2103763750", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2103763750'><pre>java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/ltsa/dist/examples/controlled-det-1.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at ltsa.ui.FileInput.&lt;init&gt;(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.ControlledDeterminisationTests.testSimpleControlledDet(ControlledDeterminisationTests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:81)
+	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:69)
+	at org.testng.TestRunner$1.run(TestRunner.java:697)
+	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:1004)
+	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:728)
+	at org.testng.TestRunner.run(TestRunner.java:629)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:211)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:107)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:112)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+</pre></div></td>
+<td>0</td>
+<td>testSimpleControlledDet(MTSATests.controller.ControlledDeterminisationTests)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.lsc.ChartTest.testTwoLinearisationsWithInteractionsAndConditionsA()'><b>testTwoLinearisationsWithInteractionsAndConditionsA</b><br>Test class: MTSSynthesis.ar.dc.uba.lsc.ChartTest</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;[[User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[User, ATM], Phi_4[Bank], ATM -&gt; wait -&gt; User, Bank -&gt; doCheck -&gt; Bank, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User], [User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[User, ATM], Phi_4[Bank], Bank -&gt; doCheck -&gt; Bank, ATM -&gt; wait -&gt; User, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User]]&gt; but was:&lt;[[User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_2[ATM], Phi_3[User, ATM], Phi_1[Bank], Phi_4[Bank], Bank -&gt; doCheck -&gt; Bank, ATM -&gt; wait -&gt; User, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User], [User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_2[ATM], Phi_3[User, ATM], Phi_1[Bank], Phi_4[Bank], ATM -&gt; wait -&gt; User, Bank -&gt; doCheck -&gt; Bank, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User]]&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at MTSSynthesis.ar.dc.uba.lsc.ChartTest.testTwoLinearisationsWithInteractionsAndConditionsA(ChartTest.java:430)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2087228281", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2087228281'><pre>java.lang.AssertionError: expected:&lt;[[User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[User, ATM], Phi_4[Bank], ATM -&gt; wait -&gt; User, Bank -&gt; doCheck -&gt; Bank, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User], [User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[User, ATM], Phi_4[Bank], Bank -&gt; doCheck -&gt; Bank, ATM -&gt; wait -&gt; User, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User]]&gt; but was:&lt;[[User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_2[ATM], Phi_3[User, ATM], Phi_1[Bank], Phi_4[Bank], Bank -&gt; doCheck -&gt; Bank, ATM -&gt; wait -&gt; User, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User], [User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_2[ATM], Phi_3[User, ATM], Phi_1[Bank], Phi_4[Bank], ATM -&gt; wait -&gt; User, Bank -&gt; doCheck -&gt; Bank, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User]]&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at MTSSynthesis.ar.dc.uba.lsc.ChartTest.testTwoLinearisationsWithInteractionsAndConditionsA(ChartTest.java:430)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:81)
+	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:69)
+	at org.testng.TestRunner$1.run(TestRunner.java:697)
+	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:1004)
+	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:728)
+	at org.testng.TestRunner.run(TestRunner.java:629)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:211)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:107)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:112)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+</pre></div></td>
+<td>0</td>
+<td>testTwoLinearisationsWithInteractionsAndConditionsA(MTSSynthesis.ar.dc.uba.lsc.ChartTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.lsc.ChartTest.testTwoLinearisationsWithInteractionsAndConditionsB()'><b>testTwoLinearisationsWithInteractionsAndConditionsB</b><br>Test class: MTSSynthesis.ar.dc.uba.lsc.ChartTest</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;[[User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[Bank, ATM], Bank -&gt; doCheck -&gt; Bank, ATM -&gt; wait -&gt; User, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User], [User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[Bank, ATM], ATM -&gt; wait -&gt; User, Bank -&gt; doCheck -&gt; Bank, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User]]&gt; but was:&lt;[[User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_2[ATM], Phi_1[Bank], Phi_3[Bank, ATM], ATM -&gt; wait -&gt; User, Bank -&gt; doCheck -&gt; Bank, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User], [User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_2[ATM], Phi_1[Bank], Phi_3[Bank, ATM], Bank -&gt; doCheck -&gt; Bank, ATM -&gt; wait -&gt; User, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User]]&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at MTSSynthesis.ar.dc.uba.lsc.ChartTest.testTwoLinearisationsWithInteractionsAndConditionsB(ChartTest.java:466)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace150619719", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace150619719'><pre>java.lang.AssertionError: expected:&lt;[[User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[Bank, ATM], Bank -&gt; doCheck -&gt; Bank, ATM -&gt; wait -&gt; User, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User], [User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[Bank, ATM], ATM -&gt; wait -&gt; User, Bank -&gt; doCheck -&gt; Bank, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User]]&gt; but was:&lt;[[User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_2[ATM], Phi_1[Bank], Phi_3[Bank, ATM], ATM -&gt; wait -&gt; User, Bank -&gt; doCheck -&gt; Bank, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User], [User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_2[ATM], Phi_1[Bank], Phi_3[Bank, ATM], Bank -&gt; doCheck -&gt; Bank, ATM -&gt; wait -&gt; User, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User]]&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at MTSSynthesis.ar.dc.uba.lsc.ChartTest.testTwoLinearisationsWithInteractionsAndConditionsB(ChartTest.java:466)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:81)
+	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:69)
+	at org.testng.TestRunner$1.run(TestRunner.java:697)
+	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:1004)
+	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:728)
+	at org.testng.TestRunner.run(TestRunner.java:629)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:211)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:107)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:112)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+</pre></div></td>
+<td>0</td>
+<td>testTwoLinearisationsWithInteractionsAndConditionsB(MTSSynthesis.ar.dc.uba.lsc.ChartTest)</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='MTSSynthesis.controller.game.bgr.BGRGameSolverTest.bgrEmptyBuchiExample()'><b>bgrEmptyBuchiExample</b><br>Test class: MTSSynthesis.controller.game.bgr.BGRGameSolverTest</td>
+<td></td>
+<td>0</td>
+<td>bgrEmptyBuchiExample(MTSSynthesis.controller.game.bgr.BGRGameSolverTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.controller.game.bgr.BGRGameSolverTest.bgrEmptyGRExample()'><b>bgrEmptyGRExample</b><br>Test class: MTSSynthesis.controller.game.bgr.BGRGameSolverTest</td>
+<td></td>
+<td>0</td>
+<td>bgrEmptyGRExample(MTSSynthesis.controller.game.bgr.BGRGameSolverTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.controller.game.bgr.BGRGameSolverTest.bgrNegativeExample()'><b>bgrNegativeExample</b><br>Test class: MTSSynthesis.controller.game.bgr.BGRGameSolverTest</td>
+<td></td>
+<td>0</td>
+<td>bgrNegativeExample(MTSSynthesis.controller.game.bgr.BGRGameSolverTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.controller.game.bgr.BGRGameSolverTest.bgrNoGuaranteeExample()'><b>bgrNoGuaranteeExample</b><br>Test class: MTSSynthesis.controller.game.bgr.BGRGameSolverTest</td>
+<td></td>
+<td>0</td>
+<td>bgrNoGuaranteeExample(MTSSynthesis.controller.game.bgr.BGRGameSolverTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.controller.game.bgr.BGRGameSolverTest.bgrPositiveExample()'><b>bgrPositiveExample</b><br>Test class: MTSSynthesis.controller.game.bgr.BGRGameSolverTest</td>
+<td></td>
+<td>0</td>
+<td>bgrPositiveExample(MTSSynthesis.controller.game.bgr.BGRGameSolverTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest.test1()'><b>test1</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest</td>
+<td></td>
+<td>0</td>
+<td>test1(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)</td></tr>
+<tr>
+<td title='MTSATests.controller.NonDetControllerSynthesisTests.test1()'><b>test1</b><br>Test class: MTSATests.controller.NonDetControllerSynthesisTests</td>
+<td></td>
+<td>0</td>
+<td>test1(MTSATests.controller.NonDetControllerSynthesisTests)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest.test2()'><b>test2</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest</td>
+<td></td>
+<td>0</td>
+<td>test2(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)</td></tr>
+<tr>
+<td title='MTSATests.controller.NonDetControllerSynthesisTests.test2()'><b>test2</b><br>Test class: MTSATests.controller.NonDetControllerSynthesisTests</td>
+<td></td>
+<td>0</td>
+<td>test2(MTSATests.controller.NonDetControllerSynthesisTests)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.ClosureTraceInclusionTest.test2StatesBisimulationWouldntMinimize()'><b>test2StatesBisimulationWouldntMinimize</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.ClosureTraceInclusionTest</td>
+<td></td>
+<td>0</td>
+<td>test2StatesBisimulationWouldntMinimize(FSP2MTS.ac.ic.doc.mtstools.model.impl.ClosureTraceInclusionTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSDeterminiserTest.test2StepsToErrorState()'><b>test2StepsToErrorState</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSDeterminiserTest</td>
+<td></td>
+<td>0</td>
+<td>test2StepsToErrorState(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSDeterminiserTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest.test3()'><b>test3</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest</td>
+<td></td>
+<td>0</td>
+<td>test3(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)</td></tr>
+<tr>
+<td title='MTSATests.controller.NonDetControllerSynthesisTests.test3()'><b>test3</b><br>Test class: MTSATests.controller.NonDetControllerSynthesisTests</td>
+<td></td>
+<td>0</td>
+<td>test3(MTSATests.controller.NonDetControllerSynthesisTests)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSDeterminiserTest.test3States()'><b>test3States</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSDeterminiserTest</td>
+<td></td>
+<td>0</td>
+<td>test3States(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSDeterminiserTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest.test4()'><b>test4</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest</td>
+<td></td>
+<td>0</td>
+<td>test4(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)</td></tr>
+<tr>
+<td title='MTSATests.controller.NonDetControllerSynthesisTests.test4()'><b>test4</b><br>Test class: MTSATests.controller.NonDetControllerSynthesisTests</td>
+<td></td>
+<td>0</td>
+<td>test4(MTSATests.controller.NonDetControllerSynthesisTests)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest.test5()'><b>test5</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest</td>
+<td></td>
+<td>0</td>
+<td>test5(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)</td></tr>
+<tr>
+<td title='MTSATests.controller.NonDetControllerSynthesisTests.test5()'><b>test5</b><br>Test class: MTSATests.controller.NonDetControllerSynthesisTests</td>
+<td></td>
+<td>0</td>
+<td>test5(MTSATests.controller.NonDetControllerSynthesisTests)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest.test6()'><b>test6</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest</td>
+<td></td>
+<td>0</td>
+<td>test6(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)</td></tr>
+<tr>
+<td title='MTSATests.controller.NonDetControllerSynthesisTests.test6()'><b>test6</b><br>Test class: MTSATests.controller.NonDetControllerSynthesisTests</td>
+<td></td>
+<td>0</td>
+<td>test6(MTSATests.controller.NonDetControllerSynthesisTests)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest.test7()'><b>test7</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest</td>
+<td></td>
+<td>0</td>
+<td>test7(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest.test8()'><b>test8</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest</td>
+<td></td>
+<td>0</td>
+<td>test8(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest.test9()'><b>test9</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest</td>
+<td></td>
+<td>0</td>
+<td>test9(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)</td></tr>
+<tr>
+<td title='MTSATests.controller.MTSControllerSynthesisTests.testAll()'><b>testAll</b><br>Test class: MTSATests.controller.MTSControllerSynthesisTests</td>
+<td></td>
+<td>0</td>
+<td>testAll(MTSATests.controller.MTSControllerSynthesisTests)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilder2Test.testAll()'><b>testAll</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilder2Test</td>
+<td></td>
+<td>0</td>
+<td>testAll(FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilder2Test)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.ClousurePathBuilderTest.testAll()'><b>testAll</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.ClousurePathBuilderTest</td>
+<td></td>
+<td>0</td>
+<td>testAll(FSP2MTS.ac.ic.doc.mtstools.model.impl.ClousurePathBuilderTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilderTest.testAll()'><b>testAll</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilderTest</td>
+<td></td>
+<td>0</td>
+<td>testAll(FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilderTest)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.distribution.DistributionTest.testAlphabetModelEqualsAlphabetDistribution()'><b>testAlphabetModelEqualsAlphabetDistribution</b><br>Test class: MTSATests.ac.ic.doc.distribution.DistributionTest</td>
+<td></td>
+<td>0</td>
+<td>testAlphabetModelEqualsAlphabetDistribution(MTSATests.ac.ic.doc.distribution.DistributionTest)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest.testAnyAlphabetNotEmpty()'><b>testAnyAlphabetNotEmpty</b><br>Test class: MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest</td>
+<td></td>
+<td>0</td>
+<td>testAnyAlphabetNotEmpty(MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.RefinementBetweenStatesTest.testBasic2StatesRefinement()'><b>testBasic2StatesRefinement</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.RefinementBetweenStatesTest</td>
+<td></td>
+<td>0</td>
+<td>testBasic2StatesRefinement(FSP2MTS.ac.ic.doc.mtstools.model.impl.RefinementBetweenStatesTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest.testBuildAlphabetWithMaybeAndNotMaybe()'><b>testBuildAlphabetWithMaybeAndNotMaybe</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest</td>
+<td></td>
+<td>0</td>
+<td>testBuildAlphabetWithMaybeAndNotMaybe(FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest.testBuildAlphabetWithoutMaybeAndNotMaybe()'><b>testBuildAlphabetWithoutMaybeAndNotMaybe</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest</td>
+<td></td>
+<td>0</td>
+<td>testBuildAlphabetWithoutMaybeAndNotMaybe(FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest)</td></tr>
+<tr>
+<td title='MTSTools.ac.ic.doc.mtstools.model.operations.impl.MTSPropertyToBuchiConverterTest.testBuildProperty()'><b>testBuildProperty</b><br>Test class: MTSTools.ac.ic.doc.mtstools.model.operations.impl.MTSPropertyToBuchiConverterTest</td>
+<td></td>
+<td>0</td>
+<td>testBuildProperty(MTSTools.ac.ic.doc.mtstools.model.operations.impl.MTSPropertyToBuchiConverterTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.PlusCROperatorTest.testCR()'><b>testCR</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.PlusCROperatorTest</td>
+<td></td>
+<td>0</td>
+<td>testCR(FSP2MTS.ac.ic.doc.mtstools.model.impl.PlusCROperatorTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.model.language.CanonicalSymbolTest.testCanonicalSymbolEquals()'><b>testCanonicalSymbolEquals</b><br>Test class: MTSSynthesis.ar.dc.uba.model.language.CanonicalSymbolTest</td>
+<td></td>
+<td>0</td>
+<td>testCanonicalSymbolEquals(MTSSynthesis.ar.dc.uba.model.language.CanonicalSymbolTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.model.language.CanonicalSymbolTest.testCanonicalSymbolNotEquals()'><b>testCanonicalSymbolNotEquals</b><br>Test class: MTSSynthesis.ar.dc.uba.model.language.CanonicalSymbolTest</td>
+<td></td>
+<td>0</td>
+<td>testCanonicalSymbolNotEquals(MTSSynthesis.ar.dc.uba.model.language.CanonicalSymbolTest)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest.testComplexModelDifferentModalities()'><b>testComplexModelDifferentModalities</b><br>Test class: MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest</td>
+<td></td>
+<td>0</td>
+<td>testComplexModelDifferentModalities(MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest.testComplicatedDeadLockPath()'><b>testComplicatedDeadLockPath</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest</td>
+<td></td>
+<td>0</td>
+<td>testComplicatedDeadLockPath(FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest)</td></tr>
+<tr>
+<td title='MTSATests.mts.TopStatesTests.testComponeBien()'><b>testComponeBien</b><br>Test class: MTSATests.mts.TopStatesTests</td>
+<td></td>
+<td>0</td>
+<td>testComponeBien(MTSATests.mts.TopStatesTests)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.PlusCAAndCROperationTest.testComponeConError()'><b>testComponeConError</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.PlusCAAndCROperationTest</td>
+<td></td>
+<td>0</td>
+<td>testComponeConError(FSP2MTS.ac.ic.doc.mtstools.model.impl.PlusCAAndCROperationTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMultipleComposertMemoryAndTimeTest.testComponeMTSA()'><b>testComponeMTSA</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMultipleComposertMemoryAndTimeTest</td>
+<td></td>
+<td>1</td>
+<td>testComponeMTSA(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMultipleComposertMemoryAndTimeTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSComposerTest.testCompositionFrom2MTS()'><b>testCompositionFrom2MTS</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSComposerTest</td>
+<td></td>
+<td>0</td>
+<td>testCompositionFrom2MTS(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSComposerTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.util.LanguageUtilsTest.testConcatenateLanguages()'><b>testConcatenateLanguages</b><br>Test class: MTSSynthesis.ar.dc.uba.util.LanguageUtilsTest</td>
+<td></td>
+<td>0</td>
+<td>testConcatenateLanguages(MTSSynthesis.ar.dc.uba.util.LanguageUtilsTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests.testConsistentes()'><b>testConsistentes</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests</td>
+<td></td>
+<td>0</td>
+<td>testConsistentes(FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests.testConsistentesAlfabetosDistintos()'><b>testConsistentesAlfabetosDistintos</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests</td>
+<td></td>
+<td>0</td>
+<td>testConsistentesAlfabetosDistintos(FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests.testConsistentesEjemploSebas()'><b>testConsistentesEjemploSebas</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests</td>
+<td></td>
+<td>0</td>
+<td>testConsistentesEjemploSebas(FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests)</td></tr>
+<tr>
+<td title='MTSTools.ac.ic.doc.commons.collections.PowerSetTest.testContainsObject()'><b>testContainsObject</b><br>Test class: MTSTools.ac.ic.doc.commons.collections.PowerSetTest</td>
+<td></td>
+<td>0</td>
+<td>testContainsObject(MTSTools.ac.ic.doc.commons.collections.PowerSetTest)</td></tr>
+<tr>
+<td title='MTSTools.ac.ic.doc.commons.relations.UniversalNAryRelationTest.testContainsObject()'><b>testContainsObject</b><br>Test class: MTSTools.ac.ic.doc.commons.relations.UniversalNAryRelationTest</td>
+<td></td>
+<td>0</td>
+<td>testContainsObject(MTSTools.ac.ic.doc.commons.relations.UniversalNAryRelationTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.model.condition.ZetaFunctionTest.testCopy()'><b>testCopy</b><br>Test class: MTSSynthesis.ar.dc.uba.model.condition.ZetaFunctionTest</td>
+<td></td>
+<td>0</td>
+<td>testCopy(MTSSynthesis.ar.dc.uba.model.condition.ZetaFunctionTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests.testCounterExampleWeakAlphabetCompleteness()'><b>testCounterExampleWeakAlphabetCompleteness</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests</td>
+<td></td>
+<td>0</td>
+<td>testCounterExampleWeakAlphabetCompleteness(FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests.testCounterExampleWeakAlphabetConsistency()'><b>testCounterExampleWeakAlphabetConsistency</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests</td>
+<td></td>
+<td>0</td>
+<td>testCounterExampleWeakAlphabetConsistency(FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest.testDeadLockPathForDeadlockState()'><b>testDeadLockPathForDeadlockState</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest</td>
+<td></td>
+<td>0</td>
+<td>testDeadLockPathForDeadlockState(FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest.testDeadLockPathForOnlyMaybeOutgoing()'><b>testDeadLockPathForOnlyMaybeOutgoing</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest</td>
+<td></td>
+<td>0</td>
+<td>testDeadLockPathForOnlyMaybeOutgoing(FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest.testDeadlockEmptyMTS()'><b>testDeadlockEmptyMTS</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest</td>
+<td></td>
+<td>0</td>
+<td>testDeadlockEmptyMTS(FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest.testDeadlockMaybeMTS()'><b>testDeadlockMaybeMTS</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest</td>
+<td></td>
+<td>0</td>
+<td>testDeadlockMaybeMTS(FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest.testDeadlockSimpleMTS()'><b>testDeadlockSimpleMTS</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest</td>
+<td></td>
+<td>0</td>
+<td>testDeadlockSimpleMTS(FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest.testDistributionFeedbackOnFullAlphabetNotPresent()'><b>testDistributionFeedbackOnFullAlphabetNotPresent</b><br>Test class: MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest</td>
+<td></td>
+<td>0</td>
+<td>testDistributionFeedbackOnFullAlphabetNotPresent(MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest.testDistributionFeedbackOnFullAlphabetPresent()'><b>testDistributionFeedbackOnFullAlphabetPresent</b><br>Test class: MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest</td>
+<td></td>
+<td>0</td>
+<td>testDistributionFeedbackOnFullAlphabetPresent(MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest.testDoMaybe()'><b>testDoMaybe</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest</td>
+<td></td>
+<td>0</td>
+<td>testDoMaybe(FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.model.language.WordTest.testEmptyWord()'><b>testEmptyWord</b><br>Test class: MTSSynthesis.ar.dc.uba.model.language.WordTest</td>
+<td></td>
+<td>0</td>
+<td>testEmptyWord(MTSSynthesis.ar.dc.uba.model.language.WordTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.model.structure.SynthesisedStateEqualsTest.testEmptyWordNoObligations()'><b>testEmptyWordNoObligations</b><br>Test class: MTSSynthesis.ar.dc.uba.model.structure.SynthesisedStateEqualsTest</td>
+<td></td>
+<td>0</td>
+<td>testEmptyWordNoObligations(MTSSynthesis.ar.dc.uba.model.structure.SynthesisedStateEqualsTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.CompositionStateTests.testEquals()'><b>testEquals</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.CompositionStateTests</td>
+<td></td>
+<td>0</td>
+<td>testEquals(FSP2MTS.ac.ic.doc.mtstools.model.impl.CompositionStateTests)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.model.condition.ZetaFunctionTest.testEquals()'><b>testEquals</b><br>Test class: MTSSynthesis.ar.dc.uba.model.condition.ZetaFunctionTest</td>
+<td></td>
+<td>0</td>
+<td>testEquals(MTSSynthesis.ar.dc.uba.model.condition.ZetaFunctionTest)</td></tr>
+<tr>
+<td title='MTSAEnactment.robot.NXTRobotTest.testExecuteCommand()'><b>testExecuteCommand</b><br>Test class: MTSAEnactment.robot.NXTRobotTest</td>
+<td></td>
+<td>0</td>
+<td>testExecuteCommand(MTSAEnactment.robot.NXTRobotTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.model.language.WordTest.testFirst()'><b>testFirst</b><br>Test class: MTSSynthesis.ar.dc.uba.model.language.WordTest</td>
+<td></td>
+<td>0</td>
+<td>testFirst(MTSSynthesis.ar.dc.uba.model.language.WordTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.util.WordUtilsTest.testFirsts()'><b>testFirsts</b><br>Test class: MTSSynthesis.ar.dc.uba.util.WordUtilsTest</td>
+<td></td>
+<td>0</td>
+<td>testFirsts(MTSSynthesis.ar.dc.uba.util.WordUtilsTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.model.condition.ZetaFunctionTest.testFluentsEquals()'><b>testFluentsEquals</b><br>Test class: MTSSynthesis.ar.dc.uba.model.condition.ZetaFunctionTest</td>
+<td></td>
+<td>0</td>
+<td>testFluentsEquals(MTSSynthesis.ar.dc.uba.model.condition.ZetaFunctionTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.util.WordUtilsTest.testFollows()'><b>testFollows</b><br>Test class: MTSSynthesis.ar.dc.uba.util.WordUtilsTest</td>
+<td></td>
+<td>0</td>
+<td>testFollows(MTSSynthesis.ar.dc.uba.util.WordUtilsTest)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest.testGetATraceToAParticularState()'><b>testGetATraceToAParticularState</b><br>Test class: MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest</td>
+<td></td>
+<td>0</td>
+<td>testGetATraceToAParticularState(MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest)</td></tr>
+<tr>
+<td title='MTSAEnactment.robot.CommandAcceptedMessageTest.testGetAcceptedMid()'><b>testGetAcceptedMid</b><br>Test class: MTSAEnactment.robot.CommandAcceptedMessageTest</td>
+<td></td>
+<td>0</td>
+<td>testGetAcceptedMid(MTSAEnactment.robot.CommandAcceptedMessageTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.model.language.LanguageTest.testGetAlphabet()'><b>testGetAlphabet</b><br>Test class: MTSSynthesis.ar.dc.uba.model.language.LanguageTest</td>
+<td></td>
+<td>0</td>
+<td>testGetAlphabet(MTSSynthesis.ar.dc.uba.model.language.LanguageTest)</td></tr>
+<tr>
+<td title='MTSAEnactment.robot.CommandAcceptedMessageTest.testGetMessageLength()'><b>testGetMessageLength</b><br>Test class: MTSAEnactment.robot.CommandAcceptedMessageTest</td>
+<td></td>
+<td>0</td>
+<td>testGetMessageLength(MTSAEnactment.robot.CommandAcceptedMessageTest)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest.testHasNonDetTransitionsFromState()'><b>testHasNonDetTransitionsFromState</b><br>Test class: MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest</td>
+<td></td>
+<td>0</td>
+<td>testHasNonDetTransitionsFromState(MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest)</td></tr>
+<tr>
+<td title='MTSATests.controller.StrategyStateTests.testIntegerStrategyState()'><b>testIntegerStrategyState</b><br>Test class: MTSATests.controller.StrategyStateTests</td>
+<td></td>
+<td>0</td>
+<td>testIntegerStrategyState(MTSATests.controller.StrategyStateTests)</td></tr>
+<tr>
+<td title='MTSATests.controller.StrategyStateTests.testIntegerStrategyStateHashSet()'><b>testIntegerStrategyStateHashSet</b><br>Test class: MTSATests.controller.StrategyStateTests</td>
+<td></td>
+<td>0</td>
+<td>testIntegerStrategyStateHashSet(MTSATests.controller.StrategyStateTests)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.mtstools.model.predicates.IsDeterministicMTSPredicateTest.testIsDeterministic()'><b>testIsDeterministic</b><br>Test class: MTSATests.ac.ic.doc.mtstools.model.predicates.IsDeterministicMTSPredicateTest</td>
+<td></td>
+<td>0</td>
+<td>testIsDeterministic(MTSATests.ac.ic.doc.mtstools.model.predicates.IsDeterministicMTSPredicateTest)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest.testIsEmpty()'><b>testIsEmpty</b><br>Test class: MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest</td>
+<td></td>
+<td>0</td>
+<td>testIsEmpty(MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest.testIsMTSRepresentation()'><b>testIsMTSRepresentation</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest</td>
+<td></td>
+<td>0</td>
+<td>testIsMTSRepresentation(FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest)</td></tr>
+<tr>
+<td title='MTSTools.ac.ic.doc.commons.collections.PowerSetTest.testIterator()'><b>testIterator</b><br>Test class: MTSTools.ac.ic.doc.commons.collections.PowerSetTest</td>
+<td></td>
+<td>0</td>
+<td>testIterator(MTSTools.ac.ic.doc.commons.collections.PowerSetTest)</td></tr>
+<tr>
+<td title='MTSTools.ac.ic.doc.commons.relations.UniversalNAryRelationTest.testIterator()'><b>testIterator</b><br>Test class: MTSTools.ac.ic.doc.commons.relations.UniversalNAryRelationTest</td>
+<td></td>
+<td>0</td>
+<td>testIterator(MTSTools.ac.ic.doc.commons.relations.UniversalNAryRelationTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.lsc.ChartTest.testLinearisationsOnlyInteractions()'><b>testLinearisationsOnlyInteractions</b><br>Test class: MTSSynthesis.ar.dc.uba.lsc.ChartTest</td>
+<td></td>
+<td>0</td>
+<td>testLinearisationsOnlyInteractions(MTSSynthesis.ar.dc.uba.lsc.ChartTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.lsc.ChartTest.testLinearisationsWithInteractionsAndConditions()'><b>testLinearisationsWithInteractionsAndConditions</b><br>Test class: MTSSynthesis.ar.dc.uba.lsc.ChartTest</td>
+<td></td>
+<td>0</td>
+<td>testLinearisationsWithInteractionsAndConditions(MTSSynthesis.ar.dc.uba.lsc.ChartTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.MTSToAutomataConverterTest.testMTSUnMTSAEstadoPorA()'><b>testMTSUnMTSAEstadoPorA</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.MTSToAutomataConverterTest</td>
+<td></td>
+<td>0</td>
+<td>testMTSUnMTSAEstadoPorA(FSP2MTS.ac.ic.doc.mtstools.MTSToAutomataConverterTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest.testMerge0()'><b>testMerge0</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest</td>
+<td></td>
+<td>0</td>
+<td>testMerge0(FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest.testMerge8()'><b>testMerge8</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest</td>
+<td></td>
+<td>0</td>
+<td>testMerge8(FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest.testMergeC2()'><b>testMergeC2</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest</td>
+<td></td>
+<td>0</td>
+<td>testMergeC2(FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest.testMergeC3()'><b>testMergeC3</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest</td>
+<td></td>
+<td>0</td>
+<td>testMergeC3(FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest.testMergeC4()'><b>testMergeC4</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest</td>
+<td></td>
+<td>0</td>
+<td>testMergeC4(FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest.testMergeC5()'><b>testMergeC5</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest</td>
+<td></td>
+<td>0</td>
+<td>testMergeC5(FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest.testMinimisaEjemploABCConEstadoFinalMaybe()'><b>testMinimisaEjemploABCConEstadoFinalMaybe</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest</td>
+<td></td>
+<td>0</td>
+<td>testMinimisaEjemploABCConEstadoFinalMaybe(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest.testMinimisaEjemploABSimple()'><b>testMinimisaEjemploABSimple</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest</td>
+<td></td>
+<td>0</td>
+<td>testMinimisaEjemploABSimple(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest.testMinimisaEjemploLibroModelChecking()'><b>testMinimisaEjemploLibroModelChecking</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest</td>
+<td></td>
+<td>0</td>
+<td>testMinimisaEjemploLibroModelChecking(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest.testMinimisaEjemploPaper()'><b>testMinimisaEjemploPaper</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest</td>
+<td></td>
+<td>0</td>
+<td>testMinimisaEjemploPaper(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest)</td></tr>
+<tr>
+<td title='MTSATests.mts.TopStatesTests.testNoTopStates()'><b>testNoTopStates</b><br>Test class: MTSATests.mts.TopStatesTests</td>
+<td></td>
+<td>0</td>
+<td>testNoTopStates(MTSATests.mts.TopStatesTests)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest.testNonDeterminismFeedback()'><b>testNonDeterminismFeedback</b><br>Test class: MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest</td>
+<td></td>
+<td>0</td>
+<td>testNonDeterminismFeedback(MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.distribution.ComponentBuilderTest.testNonFullProjection()'><b>testNonFullProjection</b><br>Test class: MTSATests.ac.ic.doc.distribution.ComponentBuilderTest</td>
+<td></td>
+<td>0</td>
+<td>testNonFullProjection(MTSATests.ac.ic.doc.distribution.ComponentBuilderTest)</td></tr>
+<tr>
+<td title='MTSATests.controller.MTSControllerSynthesisTests.testNone()'><b>testNone</b><br>Test class: MTSATests.controller.MTSControllerSynthesisTests</td>
+<td></td>
+<td>0</td>
+<td>testNone(MTSATests.controller.MTSControllerSynthesisTests)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest.testNotEmpty()'><b>testNotEmpty</b><br>Test class: MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest</td>
+<td></td>
+<td>0</td>
+<td>testNotEmpty(MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.model.language.WordTest.testNotEmptyWord()'><b>testNotEmptyWord</b><br>Test class: MTSSynthesis.ar.dc.uba.model.language.WordTest</td>
+<td></td>
+<td>0</td>
+<td>testNotEmptyWord(MTSSynthesis.ar.dc.uba.model.language.WordTest)</td></tr>
+<tr>
+<td title='MTSATests.controller.PermissiveControllerTests.testNotPermissive1()'><b>testNotPermissive1</b><br>Test class: MTSATests.controller.PermissiveControllerTests</td>
+<td></td>
+<td>0</td>
+<td>testNotPermissive1(MTSATests.controller.PermissiveControllerTests)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest.testOnATrace()'><b>testOnATrace</b><br>Test class: MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest</td>
+<td></td>
+<td>0</td>
+<td>testOnATrace(MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest.testOnDeterministicMTSs()'><b>testOnDeterministicMTSs</b><br>Test class: MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest</td>
+<td></td>
+<td>0</td>
+<td>testOnDeterministicMTSs(MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest.testOnNonDeterministicMTSs()'><b>testOnNonDeterministicMTSs</b><br>Test class: MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest</td>
+<td></td>
+<td>0</td>
+<td>testOnNonDeterministicMTSs(MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest.testOneAlphabet()'><b>testOneAlphabet</b><br>Test class: MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest</td>
+<td></td>
+<td>0</td>
+<td>testOneAlphabet(MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.lsc.ChartTest.testOrderNotImportantForConditionInstances()'><b>testOrderNotImportantForConditionInstances</b><br>Test class: MTSSynthesis.ar.dc.uba.lsc.ChartTest</td>
+<td></td>
+<td>0</td>
+<td>testOrderNotImportantForConditionInstances(MTSSynthesis.ar.dc.uba.lsc.ChartTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.lsc.ChartTest.testOrderNotImportantForConditionsInstances()'><b>testOrderNotImportantForConditionsInstances</b><br>Test class: MTSSynthesis.ar.dc.uba.lsc.ChartTest</td>
+<td></td>
+<td>0</td>
+<td>testOrderNotImportantForConditionsInstances(MTSSynthesis.ar.dc.uba.lsc.ChartTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.lsc.ChartTest.testOrderNotImportantForLinearisationInteractionsAndConditions()'><b>testOrderNotImportantForLinearisationInteractionsAndConditions</b><br>Test class: MTSSynthesis.ar.dc.uba.lsc.ChartTest</td>
+<td></td>
+<td>0</td>
+<td>testOrderNotImportantForLinearisationInteractionsAndConditions(MTSSynthesis.ar.dc.uba.lsc.ChartTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.lsc.ChartTest.testOrderNotImportantForLinearisationOnlyInteractions()'><b>testOrderNotImportantForLinearisationOnlyInteractions</b><br>Test class: MTSSynthesis.ar.dc.uba.lsc.ChartTest</td>
+<td></td>
+<td>0</td>
+<td>testOrderNotImportantForLinearisationOnlyInteractions(MTSSynthesis.ar.dc.uba.lsc.ChartTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.parser.AlphabetParserTest.testParseAlphabet()'><b>testParseAlphabet</b><br>Test class: MTSSynthesis.ar.dc.uba.parser.AlphabetParserTest</td>
+<td></td>
+<td>0</td>
+<td>testParseAlphabet(MTSSynthesis.ar.dc.uba.parser.AlphabetParserTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.parser.SetParserTest.testParseEmptySet()'><b>testParseEmptySet</b><br>Test class: MTSSynthesis.ar.dc.uba.parser.SetParserTest</td>
+<td></td>
+<td>0</td>
+<td>testParseEmptySet(MTSSynthesis.ar.dc.uba.parser.SetParserTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.parser.LanguageParserTest.testParseLanguageNonSingletonWord()'><b>testParseLanguageNonSingletonWord</b><br>Test class: MTSSynthesis.ar.dc.uba.parser.LanguageParserTest</td>
+<td></td>
+<td>0</td>
+<td>testParseLanguageNonSingletonWord(MTSSynthesis.ar.dc.uba.parser.LanguageParserTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.parser.LanguageParserTest.testParseLanguageSingletonWord()'><b>testParseLanguageSingletonWord</b><br>Test class: MTSSynthesis.ar.dc.uba.parser.LanguageParserTest</td>
+<td></td>
+<td>0</td>
+<td>testParseLanguageSingletonWord(MTSSynthesis.ar.dc.uba.parser.LanguageParserTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.parser.SetParserTest.testParseMultipleElementsSet()'><b>testParseMultipleElementsSet</b><br>Test class: MTSSynthesis.ar.dc.uba.parser.SetParserTest</td>
+<td></td>
+<td>0</td>
+<td>testParseMultipleElementsSet(MTSSynthesis.ar.dc.uba.parser.SetParserTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.parser.SetParserTest.testParseSet()'><b>testParseSet</b><br>Test class: MTSSynthesis.ar.dc.uba.parser.SetParserTest</td>
+<td></td>
+<td>0</td>
+<td>testParseSet(MTSSynthesis.ar.dc.uba.parser.SetParserTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.parser.AlphabetParserTest.testParseSingletonAlphabet()'><b>testParseSingletonAlphabet</b><br>Test class: MTSSynthesis.ar.dc.uba.parser.AlphabetParserTest</td>
+<td></td>
+<td>0</td>
+<td>testParseSingletonAlphabet(MTSSynthesis.ar.dc.uba.parser.AlphabetParserTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.parser.LanguageParserTest.testParseSingletonLanguageNonSingletonWord()'><b>testParseSingletonLanguageNonSingletonWord</b><br>Test class: MTSSynthesis.ar.dc.uba.parser.LanguageParserTest</td>
+<td></td>
+<td>0</td>
+<td>testParseSingletonLanguageNonSingletonWord(MTSSynthesis.ar.dc.uba.parser.LanguageParserTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.parser.LanguageParserTest.testParseSingletonLanguageSingletonWord()'><b>testParseSingletonLanguageSingletonWord</b><br>Test class: MTSSynthesis.ar.dc.uba.parser.LanguageParserTest</td>
+<td></td>
+<td>0</td>
+<td>testParseSingletonLanguageSingletonWord(MTSSynthesis.ar.dc.uba.parser.LanguageParserTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.parser.SetParserTest.testParseSingletonSet()'><b>testParseSingletonSet</b><br>Test class: MTSSynthesis.ar.dc.uba.parser.SetParserTest</td>
+<td></td>
+<td>0</td>
+<td>testParseSingletonSet(MTSSynthesis.ar.dc.uba.parser.SetParserTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.parser.WordParserTest.testParseSingletonWord()'><b>testParseSingletonWord</b><br>Test class: MTSSynthesis.ar.dc.uba.parser.WordParserTest</td>
+<td></td>
+<td>0</td>
+<td>testParseSingletonWord(MTSSynthesis.ar.dc.uba.parser.WordParserTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.parser.WordParserTest.testParseWord()'><b>testParseWord</b><br>Test class: MTSSynthesis.ar.dc.uba.parser.WordParserTest</td>
+<td></td>
+<td>0</td>
+<td>testParseWord(MTSSynthesis.ar.dc.uba.parser.WordParserTest)</td></tr>
+<tr>
+<td title='MTSATests.controller.PermissiveControllerTests.testPermissive1()'><b>testPermissive1</b><br>Test class: MTSATests.controller.PermissiveControllerTests</td>
+<td></td>
+<td>0</td>
+<td>testPermissive1(MTSATests.controller.PermissiveControllerTests)</td></tr>
+<tr>
+<td title='MTSATests.controller.PermissiveControllerTests.testPermissive2()'><b>testPermissive2</b><br>Test class: MTSATests.controller.PermissiveControllerTests</td>
+<td></td>
+<td>0</td>
+<td>testPermissive2(MTSATests.controller.PermissiveControllerTests)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.util.WordUtilsTest.testPreffixes()'><b>testPreffixes</b><br>Test class: MTSSynthesis.ar.dc.uba.util.WordUtilsTest</td>
+<td></td>
+<td>0</td>
+<td>testPreffixes(MTSSynthesis.ar.dc.uba.util.WordUtilsTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSPropertyTest.testPropertyA()'><b>testPropertyA</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSPropertyTest</td>
+<td></td>
+<td>0</td>
+<td>testPropertyA(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSPropertyTest)</td></tr>
+<tr>
+<td title='MTSATests.parser.testParserLabelTest.testPropertyInComposite()'><b>testPropertyInComposite</b><br>Test class: MTSATests.parser.testParserLabelTest</td>
+<td></td>
+<td>0</td>
+<td>testPropertyInComposite(MTSATests.parser.testParserLabelTest)</td></tr>
+<tr>
+<td title='MTSATests.parser.PropertyTests.testPropertyInComposite()'><b>testPropertyInComposite</b><br>Test class: MTSATests.parser.PropertyTests</td>
+<td></td>
+<td>0</td>
+<td>testPropertyInComposite(MTSATests.parser.PropertyTests)</td></tr>
+<tr>
+<td title='MTSATests.parser.PropertyTests.testPropertyInCompositeWithAlotOfStates()'><b>testPropertyInCompositeWithAlotOfStates</b><br>Test class: MTSATests.parser.PropertyTests</td>
+<td></td>
+<td>0</td>
+<td>testPropertyInCompositeWithAlotOfStates(MTSATests.parser.PropertyTests)</td></tr>
+<tr>
+<td title='MTSATests.parser.PropertyTests.testPropertyInCompositeWithOthersOperations()'><b>testPropertyInCompositeWithOthersOperations</b><br>Test class: MTSATests.parser.PropertyTests</td>
+<td></td>
+<td>0</td>
+<td>testPropertyInCompositeWithOthersOperations(MTSATests.parser.PropertyTests)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.lsc.ChartTest.testQtyInteractions()'><b>testQtyInteractions</b><br>Test class: MTSSynthesis.ar.dc.uba.lsc.ChartTest</td>
+<td></td>
+<td>0</td>
+<td>testQtyInteractions(MTSSynthesis.ar.dc.uba.lsc.ChartTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilder2Test.testReflexiveSilent()'><b>testReflexiveSilent</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilder2Test</td>
+<td></td>
+<td>0</td>
+<td>testReflexiveSilent(FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilder2Test)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilderTest.testReflexiveSilent()'><b>testReflexiveSilent</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilderTest</td>
+<td></td>
+<td>0</td>
+<td>testReflexiveSilent(FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilderTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSRemoveTransitionTests.testRemoveOneTransitionWithOneOrphan()'><b>testRemoveOneTransitionWithOneOrphan</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSRemoveTransitionTests</td>
+<td></td>
+<td>0</td>
+<td>testRemoveOneTransitionWithOneOrphan(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSRemoveTransitionTests)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSRemoveTransitionTests.testRemoveOneTransitionWithTwoOrphans()'><b>testRemoveOneTransitionWithTwoOrphans</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSRemoveTransitionTests</td>
+<td></td>
+<td>0</td>
+<td>testRemoveOneTransitionWithTwoOrphans(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSRemoveTransitionTests)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSRemoveTransitionTests.testRemoveOneTransitionWithoutOrphans()'><b>testRemoveOneTransitionWithoutOrphans</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSRemoveTransitionTests</td>
+<td></td>
+<td>0</td>
+<td>testRemoveOneTransitionWithoutOrphans(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSRemoveTransitionTests)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.RemoveUnreachableStatesTest.testRemoveStates()'><b>testRemoveStates</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.RemoveUnreachableStatesTest</td>
+<td></td>
+<td>0</td>
+<td>testRemoveStates(FSP2MTS.ac.ic.doc.mtstools.model.impl.RemoveUnreachableStatesTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest.testRemoveTransitionsToDeadlock()'><b>testRemoveTransitionsToDeadlock</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest</td>
+<td></td>
+<td>0</td>
+<td>testRemoveTransitionsToDeadlock(FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.model.language.WordTest.testReverseEmptyWord()'><b>testReverseEmptyWord</b><br>Test class: MTSSynthesis.ar.dc.uba.model.language.WordTest</td>
+<td></td>
+<td>0</td>
+<td>testReverseEmptyWord(MTSSynthesis.ar.dc.uba.model.language.WordTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.model.language.WordTest.testReverseNonEmptyWord()'><b>testReverseNonEmptyWord</b><br>Test class: MTSSynthesis.ar.dc.uba.model.language.WordTest</td>
+<td></td>
+<td>0</td>
+<td>testReverseNonEmptyWord(MTSSynthesis.ar.dc.uba.model.language.WordTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest.testSimpleDeadlock()'><b>testSimpleDeadlock</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest</td>
+<td></td>
+<td>0</td>
+<td>testSimpleDeadlock(FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.distribution.ComponentBuilderTest.testSimpleModelFullProjection()'><b>testSimpleModelFullProjection</b><br>Test class: MTSATests.ac.ic.doc.distribution.ComponentBuilderTest</td>
+<td></td>
+<td>0</td>
+<td>testSimpleModelFullProjection(MTSATests.ac.ic.doc.distribution.ComponentBuilderTest)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.distribution.ComponentBuilderTest.testSimpleModelNonDetDifferentModalities()'><b>testSimpleModelNonDetDifferentModalities</b><br>Test class: MTSATests.ac.ic.doc.distribution.ComponentBuilderTest</td>
+<td></td>
+<td>0</td>
+<td>testSimpleModelNonDetDifferentModalities(MTSATests.ac.ic.doc.distribution.ComponentBuilderTest)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest.testSimpleModelNonDetDifferentModalities()'><b>testSimpleModelNonDetDifferentModalities</b><br>Test class: MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest</td>
+<td></td>
+<td>0</td>
+<td>testSimpleModelNonDetDifferentModalities(MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.distribution.ComponentBuilderTest.testSimpleModelNonDetDifferentModalitiesWithLoops()'><b>testSimpleModelNonDetDifferentModalitiesWithLoops</b><br>Test class: MTSATests.ac.ic.doc.distribution.ComponentBuilderTest</td>
+<td></td>
+<td>0</td>
+<td>testSimpleModelNonDetDifferentModalitiesWithLoops(MTSATests.ac.ic.doc.distribution.ComponentBuilderTest)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.distribution.ComponentBuilderTest.testSimpleModelNonDetNonFullProjection()'><b>testSimpleModelNonDetNonFullProjection</b><br>Test class: MTSATests.ac.ic.doc.distribution.ComponentBuilderTest</td>
+<td></td>
+<td>0</td>
+<td>testSimpleModelNonDetNonFullProjection(MTSATests.ac.ic.doc.distribution.ComponentBuilderTest)</td></tr>
+<tr>
+<td title='MTSATests.controller.StarEnvTests.testSimpleStarredModel()'><b>testSimpleStarredModel</b><br>Test class: MTSATests.controller.StarEnvTests</td>
+<td></td>
+<td>0</td>
+<td>testSimpleStarredModel(MTSATests.controller.StarEnvTests)</td></tr>
+<tr>
+<td title='MTSTools.ac.ic.doc.commons.collections.PowerSetTest.testSize()'><b>testSize</b><br>Test class: MTSTools.ac.ic.doc.commons.collections.PowerSetTest</td>
+<td></td>
+<td>0</td>
+<td>testSize(MTSTools.ac.ic.doc.commons.collections.PowerSetTest)</td></tr>
+<tr>
+<td title='MTSTools.ac.ic.doc.commons.relations.UniversalNAryRelationTest.testSize()'><b>testSize</b><br>Test class: MTSTools.ac.ic.doc.commons.relations.UniversalNAryRelationTest</td>
+<td></td>
+<td>0</td>
+<td>testSize(MTSTools.ac.ic.doc.commons.relations.UniversalNAryRelationTest)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest.testSizeForGetAllTracesToStateSatisfyingPredicateNonDeterministicStates()'><b>testSizeForGetAllTracesToStateSatisfyingPredicateNonDeterministicStates</b><br>Test class: MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest</td>
+<td></td>
+<td>0</td>
+<td>testSizeForGetAllTracesToStateSatisfyingPredicateNonDeterministicStates(MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest)</td></tr>
+<tr>
+<td title='MTSATests.controller.MTSControllerSynthesisTests.testSome()'><b>testSome</b><br>Test class: MTSATests.controller.MTSControllerSynthesisTests</td>
+<td></td>
+<td>0</td>
+<td>testSome(MTSATests.controller.MTSControllerSynthesisTests)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests.testSonConsistentes()'><b>testSonConsistentes</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests</td>
+<td></td>
+<td>0</td>
+<td>testSonConsistentes(FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests.testSonWeakConsistentes()'><b>testSonWeakConsistentes</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests</td>
+<td></td>
+<td>0</td>
+<td>testSonWeakConsistentes(FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.model.language.WordTest.testStartsWithEmptyWord()'><b>testStartsWithEmptyWord</b><br>Test class: MTSSynthesis.ar.dc.uba.model.language.WordTest</td>
+<td></td>
+<td>0</td>
+<td>testStartsWithEmptyWord(MTSSynthesis.ar.dc.uba.model.language.WordTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.model.language.WordTest.testStartsWithFalse()'><b>testStartsWithFalse</b><br>Test class: MTSSynthesis.ar.dc.uba.model.language.WordTest</td>
+<td></td>
+<td>0</td>
+<td>testStartsWithFalse(MTSSynthesis.ar.dc.uba.model.language.WordTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.model.language.WordTest.testStartsWithFalseSingletonWord()'><b>testStartsWithFalseSingletonWord</b><br>Test class: MTSSynthesis.ar.dc.uba.model.language.WordTest</td>
+<td></td>
+<td>0</td>
+<td>testStartsWithFalseSingletonWord(MTSSynthesis.ar.dc.uba.model.language.WordTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.model.language.WordTest.testStartsWithTrue()'><b>testStartsWithTrue</b><br>Test class: MTSSynthesis.ar.dc.uba.model.language.WordTest</td>
+<td></td>
+<td>0</td>
+<td>testStartsWithTrue(MTSSynthesis.ar.dc.uba.model.language.WordTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.model.language.WordTest.testStartsWithTrueSigletonWord()'><b>testStartsWithTrueSigletonWord</b><br>Test class: MTSSynthesis.ar.dc.uba.model.language.WordTest</td>
+<td></td>
+<td>0</td>
+<td>testStartsWithTrueSigletonWord(MTSSynthesis.ar.dc.uba.model.language.WordTest)</td></tr>
+<tr>
+<td title='MTSATests.controller.StarEnvTests.testStateWithNoReqs()'><b>testStateWithNoReqs</b><br>Test class: MTSATests.controller.StarEnvTests</td>
+<td></td>
+<td>0</td>
+<td>testStateWithNoReqs(MTSATests.controller.StarEnvTests)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.util.WordUtilsTest.testSuffixes()'><b>testSuffixes</b><br>Test class: MTSSynthesis.ar.dc.uba.util.WordUtilsTest</td>
+<td></td>
+<td>0</td>
+<td>testSuffixes(MTSSynthesis.ar.dc.uba.util.WordUtilsTest)</td></tr>
+<tr>
+<td title='MTSATests.controller.StrategyStateTests.testSymetricIntegerStrategyState()'><b>testSymetricIntegerStrategyState</b><br>Test class: MTSATests.controller.StrategyStateTests</td>
+<td></td>
+<td>0</td>
+<td>testSymetricIntegerStrategyState(MTSATests.controller.StrategyStateTests)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.model.language.WordTest.testTailWord()'><b>testTailWord</b><br>Test class: MTSSynthesis.ar.dc.uba.model.language.WordTest</td>
+<td></td>
+<td>0</td>
+<td>testTailWord(MTSSynthesis.ar.dc.uba.model.language.WordTest)</td></tr>
+<tr>
+<td title='MTSATests.controller.BasicTomAndJerryTest.testTomAndJerry()'><b>testTomAndJerry</b><br>Test class: MTSATests.controller.BasicTomAndJerryTest</td>
+<td></td>
+<td>0</td>
+<td>testTomAndJerry(MTSATests.controller.BasicTomAndJerryTest)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest.testTracesSatisfyPredicateFromGetAllTracesToStateSatisfyingPredicate()'><b>testTracesSatisfyPredicateFromGetAllTracesToStateSatisfyingPredicate</b><br>Test class: MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest</td>
+<td></td>
+<td>0</td>
+<td>testTracesSatisfyPredicateFromGetAllTracesToStateSatisfyingPredicate(MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest.testTwoAlphabet()'><b>testTwoAlphabet</b><br>Test class: MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest</td>
+<td></td>
+<td>0</td>
+<td>testTwoAlphabet(MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest.testTwoAlphabetOneEmpty()'><b>testTwoAlphabetOneEmpty</b><br>Test class: MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest</td>
+<td></td>
+<td>0</td>
+<td>testTwoAlphabetOneEmpty(MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.lsc.ChartTest.testTwoLinearisationsSeveralConditionsBeginingChartWithInteractionsA()'><b>testTwoLinearisationsSeveralConditionsBeginingChartWithInteractionsA</b><br>Test class: MTSSynthesis.ar.dc.uba.lsc.ChartTest</td>
+<td></td>
+<td>0</td>
+<td>testTwoLinearisationsSeveralConditionsBeginingChartWithInteractionsA(MTSSynthesis.ar.dc.uba.lsc.ChartTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.lsc.ChartTest.testTwoLinearisationsSeveralConditionsBeginingChartWithInteractionsB()'><b>testTwoLinearisationsSeveralConditionsBeginingChartWithInteractionsB</b><br>Test class: MTSSynthesis.ar.dc.uba.lsc.ChartTest</td>
+<td></td>
+<td>0</td>
+<td>testTwoLinearisationsSeveralConditionsBeginingChartWithInteractionsB(MTSSynthesis.ar.dc.uba.lsc.ChartTest)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.lsc.ChartTest.testTwoLinearisationsWithInteractionsAndConditions()'><b>testTwoLinearisationsWithInteractionsAndConditions</b><br>Test class: MTSSynthesis.ar.dc.uba.lsc.ChartTest</td>
+<td></td>
+<td>0</td>
+<td>testTwoLinearisationsWithInteractionsAndConditions(MTSSynthesis.ar.dc.uba.lsc.ChartTest)</td></tr>
+<tr>
+<td title='MTSATests.ac.ic.doc.distribution.ComponentBuilderTest.testTwoMistmatches()'><b>testTwoMistmatches</b><br>Test class: MTSATests.ac.ic.doc.distribution.ComponentBuilderTest</td>
+<td></td>
+<td>0</td>
+<td>testTwoMistmatches(MTSATests.ac.ic.doc.distribution.ComponentBuilderTest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSAvsLTSATest.testUnLTSenMTSAyEnLTSA()'><b>testUnLTSenMTSAyEnLTSA</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSAvsLTSATest</td>
+<td></td>
+<td>0</td>
+<td>testUnLTSenMTSAyEnLTSA(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSAvsLTSATest)</td></tr>
+<tr>
+<td title='FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests.testWeakAlphabetConsistencyEmptySilentSet()'><b>testWeakAlphabetConsistencyEmptySilentSet</b><br>Test class: FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests</td>
+<td></td>
+<td>0</td>
+<td>testWeakAlphabetConsistencyEmptySilentSet(FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests)</td></tr>
+<tr>
+<td title='MTSSynthesis.ar.dc.uba.model.language.WordTest.testWordLengthComparator()'><b>testWordLengthComparator</b><br>Test class: MTSSynthesis.ar.dc.uba.model.language.WordTest</td>
+<td></td>
+<td>0</td>
+<td>testWordLengthComparator(MTSSynthesis.ar.dc.uba.model.language.WordTest)</td></tr>
+<tr>
+<td title='MTSAEnactment.robot.CommandAcceptedMessageTest.testWriteData()'><b>testWriteData</b><br>Test class: MTSAEnactment.robot.CommandAcceptedMessageTest</td>
+<td></td>
+<td>0</td>
+<td>testWriteData(MTSAEnactment.robot.CommandAcceptedMessageTest)</td></tr>
+<tr>
+<td title='MTSTools.ac.ic.doc.commons.relations.HashNAryRelationTest.tetAdd()'><b>tetAdd</b><br>Test class: MTSTools.ac.ic.doc.commons.relations.HashNAryRelationTest</td>
+<td></td>
+<td>0</td>
+<td>tetAdd(MTSTools.ac.ic.doc.commons.relations.HashNAryRelationTest)</td></tr>
+</table><p>
+</body>
+</html>

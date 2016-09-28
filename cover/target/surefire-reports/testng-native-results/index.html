@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 39 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Surefire_suite">
+              <span class="suite-name border-failed">Surefire suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Surefire_suite">
+                    <span>[unset file name]</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Surefire_suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Surefire_suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Surefire_suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Surefire_suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Surefire_suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Surefire_suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">39 methods, 39 failed,   </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods failed suite-Surefire_suite"> (hide)</a> <!-- hide-methods failed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods failed suite-Surefire_suite"> (show)</a> <!-- show-methods failed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Surefire_suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.OppositeGR1GameSolverTests" hash-for-method="OppositeGR1GameTest(../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.lts, CASE1, EXP1, C1, G1, ../ltsa/dist/examples/O...)">OppositeGR1GameTest(../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.lts, CASE1, EXP1, C1, G1, ../ltsa/dist/examples/O...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.OppositeGR1GameSolverTests" hash-for-method="OppositeGR1GameTest(../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.lts, CASE0, EXP0, C0, G1, ../ltsa/dist/examples/O...)">OppositeGR1GameTest(../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.lts, CASE0, EXP0, C0, G1, ../ltsa/dist/examples/O...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.OppositeGR1GameSolverTests" hash-for-method="OppositeGR1GameTest(../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.lts, CASE2, EXP2, C2, G1, ../ltsa/dist/examples/O...)">OppositeGR1GameTest(../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.lts, CASE2, EXP2, C2, G1, ../ltsa/dist/examples/O...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.OppositeGR1GameSolverTests" hash-for-method="OppositeGR1GameTest(../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.lts, CASE3, EXP3, C3, G1, ../ltsa/dist/examples/O...)">OppositeGR1GameTest(../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.lts, CASE3, EXP3, C3, G1, ../ltsa/dist/examples/O...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.OppositeSafeGameSolverTests" hash-for-method="OppositeSafeGameTest(section-4.64-bookstore, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.64-bookstore.lts,...)">OppositeSafeGameTest(section-4.64-bookstore, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.64-bookstore.lts,...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.OppositeSafeGameSolverTests" hash-for-method="OppositeSafeGameTest(prod_cell_variant, ../ltsa/dist/examples/SafetyCuts/Tests/prod_cell_variant.lts, Plant, EXP, C, G1, ...)">OppositeSafeGameTest(prod_cell_variant, ../ltsa/dist/examples/SafetyCuts/Tests/prod_cell_variant.lts, Plant, EXP, C, G1, ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.OppositeSafeGameSolverTests" hash-for-method="OppositeSafeGameTest(section-3.84-productioncell-small, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.84-pro...)">OppositeSafeGameTest(section-3.84-productioncell-small, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.84-pro...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.OppositeSafeGameSolverTests" hash-for-method="OppositeSafeGameTest(section-3.83-bookstore, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.83-bookstore.lts,...)">OppositeSafeGameTest(section-3.83-bookstore, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.83-bookstore.lts,...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.OppositeSafeGameSolverTests" hash-for-method="OppositeSafeGameTest(section-3.1-productioncell, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.1-productionc...)">OppositeSafeGameTest(section-3.1-productioncell, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.1-productionc...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.OppositeSafeGameSolverTests" hash-for-method="OppositeSafeGameTest(section-4.2-biscotti, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.2-biscotti.lts, ENV...)">OppositeSafeGameTest(section-4.2-biscotti, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.2-biscotti.lts, ENV...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.OppositeSafeGameSolverTests" hash-for-method="OppositeSafeGameTest(section-4.62-payandship, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.62-payandship.lt...)">OppositeSafeGameTest(section-4.62-payandship, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.62-payandship.lt...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.OppositeSafeGameSolverTests" hash-for-method="OppositeSafeGameTest(section-3.82-purchaseanddelivery, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.82-purc...)">OppositeSafeGameTest(section-3.82-purchaseanddelivery, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.82-purc...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.OppositeSafeGameSolverTests" hash-for-method="OppositeSafeGameTest(tomAndJerryV12, ../ltsa/dist/examples/SafetyCuts/Tests/TomAndJerryV12.lts, Tom_Jerry, EXP, C, G1, .....)">OppositeSafeGameTest(tomAndJerryV12, ../ltsa/dist/examples/SafetyCuts/Tests/TomAndJerryV12.lts, Tom_Jerry, EXP, C, G1, .....)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.OppositeSafeGameSolverTests" hash-for-method="OppositeSafeGameTest(section-3.81-autonomousvehicles, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.81-auton...)">OppositeSafeGameTest(section-3.81-autonomousvehicles, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.81-auton...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.OppositeSafeGameSolverTests" hash-for-method="OppositeSafeGameTest(section-4.61-productioncell, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.61-productio...)">OppositeSafeGameTest(section-4.61-productioncell, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.61-productio...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.OppositeSafeGameSolverTests" hash-for-method="OppositeSafeGameTest(section-4.71-productioncell, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.71-productio...)">OppositeSafeGameTest(section-4.71-productioncell, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.71-productio...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.OppositeSafeGameSolverTests" hash-for-method="OppositeSafeGameTest(section-4.1-travelagency, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.1-travelagency....)">OppositeSafeGameTest(section-4.1-travelagency, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.1-travelagency....)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.OppositeSafeGameSolverTests" hash-for-method="OppositeSafeGameTest(Augmented Biscotti, ../ltsa/dist/examples/SafetyCuts/Tests/Augmented-Biscotti.lts, BISCOTTI, EXP, C,...)">OppositeSafeGameTest(Augmented Biscotti, ../ltsa/dist/examples/SafetyCuts/Tests/Augmented-Biscotti.lts, BISCOTTI, EXP, C,...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.OppositeSafeGameSolverTests" hash-for-method="OppositeSafeGameTest(arbiter, ../ltsa/dist/examples/SafetyCuts/Tests/arbiter.lts, PROCS, EXP, C, PETERSON, ../ltsa/dist/e...)">OppositeSafeGameTest(arbiter, ../ltsa/dist/examples/SafetyCuts/Tests/arbiter.lts, PROCS, EXP, C, PETERSON, ../ltsa/dist/e...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.OppositeSafeGameSolverTests" hash-for-method="OppositeSafeGameTest(section-4.63-autonomousvehicles, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.63-auton...)">OppositeSafeGameTest(section-4.63-autonomousvehicles, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.63-auton...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.SafeGameSolverTests" hash-for-method="SafeGameTest(../ltsa/dist/examples/SafetyCuts/Tests/safe_game_test.lts, MUT, EXP, C, G1, ../ltsa/dist/examples/Sa...)">SafeGameTest(../ltsa/dist/examples/SafetyCuts/Tests/safe_game_test.lts, MUT, EXP, C, G1, ../ltsa/dist/examples/Sa...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.UpdatingControllersTests" hash-for-method="checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Tests/UAV_test)">checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Tests/UAV_test)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.UpdatingControllersTests" hash-for-method="checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/2015-FSE-Workflow)">checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/2015-FSE-Workflow)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.UpdatingControllersTests" hash-for-method="checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Tests/removing_actions_test)">checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Tests/removing_actions_test)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.UpdatingControllersTests" hash-for-method="checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-PowerPlant-Ghezzi2013)">checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-PowerPlant-Ghezzi2013)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.UpdatingControllersTests" hash-for-method="checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-Railcab-Ghezzi2012)">checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-Railcab-Ghezzi2012)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.UpdatingControllersTests" hash-for-method="checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Tests/adding_actions_test)">checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Tests/adding_actions_test)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.UpdatingControllersTests" hash-for-method="checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/2015-Tokyo/colorBallsTransfer)">checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/2015-Tokyo/colorBallsTransfer)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.UpdatingControllersTests" hash-for-method="checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Tests/productionCell_test)">checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Tests/productionCell_test)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.UpdatingControllersTests" hash-for-method="environmentTest(/ltsa/dist/examples/ControllerUpdate/2015-FSE-Wildlife)">environmentTest(/ltsa/dist/examples/ControllerUpdate/2015-FSE-Wildlife)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.UpdatingControllersTests" hash-for-method="environmentTest(/ltsa/dist/examples/ControllerUpdate/2015-FSE-Workflow)">environmentTest(/ltsa/dist/examples/ControllerUpdate/2015-FSE-Workflow)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.UpdatingControllersTests" hash-for-method="environmentTest(/ltsa/dist/examples/ControllerUpdate/2015-FSE-ProductionCell)">environmentTest(/ltsa/dist/examples/ControllerUpdate/2015-FSE-ProductionCell)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.UpdatingControllersTests" hash-for-method="environmentTest(/ltsa/dist/examples/ControllerUpdate/Tests/adding_actions_test)">environmentTest(/ltsa/dist/examples/ControllerUpdate/Tests/adding_actions_test)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.UpdatingControllersTests" hash-for-method="environmentTest(/ltsa/dist/examples/ControllerUpdate/Tests/removing_actions_test)">environmentTest(/ltsa/dist/examples/ControllerUpdate/Tests/removing_actions_test)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.UpdatingControllersTests" hash-for-method="environmentTest(/ltsa/dist/examples/ControllerUpdate/Tests/UAV_test)">environmentTest(/ltsa/dist/examples/ControllerUpdate/Tests/UAV_test)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.UpdatingControllersTests" hash-for-method="environmentTest(/ltsa/dist/examples/ControllerUpdate/Tests/productionCell_test)">environmentTest(/ltsa/dist/examples/ControllerUpdate/Tests/productionCell_test)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.UpdatingControllersTests" hash-for-method="environmentTest(/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-PowerPlant-Ghezzi2013)">environmentTest(/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-PowerPlant-Ghezzi2013)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.UpdatingControllersTests" hash-for-method="environmentTest(/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-Railcab-Ghezzi2012)">environmentTest(/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-Railcab-Ghezzi2012)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="MTSATests.controller.UpdatingControllersTests" hash-for-method="graphGenerator_producesCorrectGraph(/ltsa/dist/examples/ControllerUpdate/2015-Tokyo/colorBallsTransfer)">graphGenerator_producesCorrectGraph(/ltsa/dist/examples/ControllerUpdate/2015-Tokyo/colorBallsTransfer)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Surefire_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
+          <div class="suite-Surefire_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">MTSATests.controller.SafeGameSolverTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="SafeGameTest(../ltsa/dist/examples/SafetyCuts/Tests/safe_game_test.lts, MUT, EXP, C, G1, ../ltsa/dist/examples/Sa...)">
+                  </a> <!-- SafeGameTest(../ltsa/dist/examples/SafetyCuts/Tests/safe_game_test.lts, MUT, EXP, C, G1, ../ltsa/dist/examples/Sa...) -->
+                  <span class="method-name">SafeGameTest</span>
+                  <span class="parameters">(../ltsa/dist/examples/SafetyCuts/Tests/safe_game_test.lts, MUT, EXP, C, G1, ../ltsa/dist/examples/SafetyCuts/Results/safe_game_test.results)</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at MTSSynthesis.controller.game.safe.SafeGame.&lt;init&gt;(SafeGame.java:29)
+	at MTSSynthesis.controller.game.model.SafeGameSolver.&lt;init&gt;(SafeGameSolver.java:24)
+	at MTSATests.controller.SafeGameSolverTests.getLTSSafeGameStrategyFromFile(SafeGameSolverTests.java:29)
+	at MTSATests.controller.SafeGameSolverTests.getMut(SafeGameSolverTests.java:74)
+	at MTSATests.controller.SafeGameSolverTests.SafeGameTest(SafeGameSolverTests.java:61)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
+          <div class="suite-Surefire_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">MTSATests.controller.UpdatingControllersTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Tests/UAV_test)">
+                  </a> <!-- checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Tests/UAV_test) -->
+                  <span class="method-name">checkUpdatingFormula</span>
+                  <span class="parameters">(/ltsa/dist/examples/ControllerUpdate/Tests/UAV_test)</span>
+                  <div class="stack-trace">java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/UAV_test.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at ltsa.ui.FileInput.&lt;init&gt;(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSATests.controller.UpdatingControllersTests.checkUpdatingFormula(UpdatingControllersTests.java:113)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/2015-FSE-Workflow)">
+                  </a> <!-- checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/2015-FSE-Workflow) -->
+                  <span class="method-name">checkUpdatingFormula</span>
+                  <span class="parameters">(/ltsa/dist/examples/ControllerUpdate/2015-FSE-Workflow)</span>
+                  <div class="stack-trace">java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/2015-FSE-Workflow.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at ltsa.ui.FileInput.&lt;init&gt;(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSATests.controller.UpdatingControllersTests.checkUpdatingFormula(UpdatingControllersTests.java:113)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Tests/removing_actions_test)">
+                  </a> <!-- checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Tests/removing_actions_test) -->
+                  <span class="method-name">checkUpdatingFormula</span>
+                  <span class="parameters">(/ltsa/dist/examples/ControllerUpdate/Tests/removing_actions_test)</span>
+                  <div class="stack-trace">java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/removing_actions_test.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at ltsa.ui.FileInput.&lt;init&gt;(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSATests.controller.UpdatingControllersTests.checkUpdatingFormula(UpdatingControllersTests.java:113)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-PowerPlant-Ghezzi2013)">
+                  </a> <!-- checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-PowerPlant-Ghezzi2013) -->
+                  <span class="method-name">checkUpdatingFormula</span>
+                  <span class="parameters">(/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-PowerPlant-Ghezzi2013)</span>
+                  <div class="stack-trace">java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-PowerPlant-Ghezzi2013.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at ltsa.ui.FileInput.&lt;init&gt;(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSATests.controller.UpdatingControllersTests.checkUpdatingFormula(UpdatingControllersTests.java:113)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-Railcab-Ghezzi2012)">
+                  </a> <!-- checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-Railcab-Ghezzi2012) -->
+                  <span class="method-name">checkUpdatingFormula</span>
+                  <span class="parameters">(/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-Railcab-Ghezzi2012)</span>
+                  <div class="stack-trace">java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-Railcab-Ghezzi2012.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at ltsa.ui.FileInput.&lt;init&gt;(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSATests.controller.UpdatingControllersTests.checkUpdatingFormula(UpdatingControllersTests.java:113)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Tests/adding_actions_test)">
+                  </a> <!-- checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Tests/adding_actions_test) -->
+                  <span class="method-name">checkUpdatingFormula</span>
+                  <span class="parameters">(/ltsa/dist/examples/ControllerUpdate/Tests/adding_actions_test)</span>
+                  <div class="stack-trace">java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/adding_actions_test.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at ltsa.ui.FileInput.&lt;init&gt;(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSATests.controller.UpdatingControllersTests.checkUpdatingFormula(UpdatingControllersTests.java:113)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/2015-Tokyo/colorBallsTransfer)">
+                  </a> <!-- checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/2015-Tokyo/colorBallsTransfer) -->
+                  <span class="method-name">checkUpdatingFormula</span>
+                  <span class="parameters">(/ltsa/dist/examples/ControllerUpdate/2015-Tokyo/colorBallsTransfer)</span>
+                  <div class="stack-trace">java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/2015-Tokyo/colorBallsTransfer.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at ltsa.ui.FileInput.&lt;init&gt;(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSATests.controller.UpdatingControllersTests.checkUpdatingFormula(UpdatingControllersTests.java:113)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Tests/productionCell_test)">
+                  </a> <!-- checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Tests/productionCell_test) -->
+                  <span class="method-name">checkUpdatingFormula</span>
+                  <span class="parameters">(/ltsa/dist/examples/ControllerUpdate/Tests/productionCell_test)</span>
+                  <div class="stack-trace">java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/productionCell_test.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at ltsa.ui.FileInput.&lt;init&gt;(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSATests.controller.UpdatingControllersTests.checkUpdatingFormula(UpdatingControllersTests.java:113)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="environmentTest(/ltsa/dist/examples/ControllerUpdate/2015-FSE-Wildlife)">
+                  </a> <!-- environmentTest(/ltsa/dist/examples/ControllerUpdate/2015-FSE-Wildlife) -->
+                  <span class="method-name">environmentTest</span>
+                  <span class="parameters">(/ltsa/dist/examples/ControllerUpdate/2015-FSE-Wildlife)</span>
+                  <div class="stack-trace">java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/2015-FSE-Wildlife_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at ltsa.ui.FileInput.&lt;init&gt;(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="environmentTest(/ltsa/dist/examples/ControllerUpdate/2015-FSE-Workflow)">
+                  </a> <!-- environmentTest(/ltsa/dist/examples/ControllerUpdate/2015-FSE-Workflow) -->
+                  <span class="method-name">environmentTest</span>
+                  <span class="parameters">(/ltsa/dist/examples/ControllerUpdate/2015-FSE-Workflow)</span>
+                  <div class="stack-trace">java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/2015-FSE-Workflow_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at ltsa.ui.FileInput.&lt;init&gt;(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="environmentTest(/ltsa/dist/examples/ControllerUpdate/2015-FSE-ProductionCell)">
+                  </a> <!-- environmentTest(/ltsa/dist/examples/ControllerUpdate/2015-FSE-ProductionCell) -->
+                  <span class="method-name">environmentTest</span>
+                  <span class="parameters">(/ltsa/dist/examples/ControllerUpdate/2015-FSE-ProductionCell)</span>
+                  <div class="stack-trace">java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/2015-FSE-ProductionCell_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at ltsa.ui.FileInput.&lt;init&gt;(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="environmentTest(/ltsa/dist/examples/ControllerUpdate/Tests/adding_actions_test)">
+                  </a> <!-- environmentTest(/ltsa/dist/examples/ControllerUpdate/Tests/adding_actions_test) -->
+                  <span class="method-name">environmentTest</span>
+                  <span class="parameters">(/ltsa/dist/examples/ControllerUpdate/Tests/adding_actions_test)</span>
+                  <div class="stack-trace">java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/adding_actions_test_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at ltsa.ui.FileInput.&lt;init&gt;(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="environmentTest(/ltsa/dist/examples/ControllerUpdate/Tests/removing_actions_test)">
+                  </a> <!-- environmentTest(/ltsa/dist/examples/ControllerUpdate/Tests/removing_actions_test) -->
+                  <span class="method-name">environmentTest</span>
+                  <span class="parameters">(/ltsa/dist/examples/ControllerUpdate/Tests/removing_actions_test)</span>
+                  <div class="stack-trace">java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/removing_actions_test_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at ltsa.ui.FileInput.&lt;init&gt;(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="environmentTest(/ltsa/dist/examples/ControllerUpdate/Tests/UAV_test)">
+                  </a> <!-- environmentTest(/ltsa/dist/examples/ControllerUpdate/Tests/UAV_test) -->
+                  <span class="method-name">environmentTest</span>
+                  <span class="parameters">(/ltsa/dist/examples/ControllerUpdate/Tests/UAV_test)</span>
+                  <div class="stack-trace">java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/UAV_test_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at ltsa.ui.FileInput.&lt;init&gt;(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="environmentTest(/ltsa/dist/examples/ControllerUpdate/Tests/productionCell_test)">
+                  </a> <!-- environmentTest(/ltsa/dist/examples/ControllerUpdate/Tests/productionCell_test) -->
+                  <span class="method-name">environmentTest</span>
+                  <span class="parameters">(/ltsa/dist/examples/ControllerUpdate/Tests/productionCell_test)</span>
+                  <div class="stack-trace">java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/productionCell_test_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at ltsa.ui.FileInput.&lt;init&gt;(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="environmentTest(/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-PowerPlant-Ghezzi2013)">
+                  </a> <!-- environmentTest(/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-PowerPlant-Ghezzi2013) -->
+                  <span class="method-name">environmentTest</span>
+                  <span class="parameters">(/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-PowerPlant-Ghezzi2013)</span>
+                  <div class="stack-trace">java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-PowerPlant-Ghezzi2013_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at ltsa.ui.FileInput.&lt;init&gt;(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="environmentTest(/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-Railcab-Ghezzi2012)">
+                  </a> <!-- environmentTest(/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-Railcab-Ghezzi2012) -->
+                  <span class="method-name">environmentTest</span>
+                  <span class="parameters">(/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-Railcab-Ghezzi2012)</span>
+                  <div class="stack-trace">java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-Railcab-Ghezzi2012_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at ltsa.ui.FileInput.&lt;init&gt;(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="graphGenerator_producesCorrectGraph(/ltsa/dist/examples/ControllerUpdate/2015-Tokyo/colorBallsTransfer)">
+                  </a> <!-- graphGenerator_producesCorrectGraph(/ltsa/dist/examples/ControllerUpdate/2015-Tokyo/colorBallsTransfer) -->
+                  <span class="method-name">graphGenerator_producesCorrectGraph</span>
+                  <span class="parameters">(/ltsa/dist/examples/ControllerUpdate/2015-Tokyo/colorBallsTransfer)</span>
+                  <div class="stack-trace">java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/2015-Tokyo/colorBallsTransfer.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at ltsa.ui.FileInput.&lt;init&gt;(FileInput.java:19)
+	at MTSATests.controller.UpdatingControllersTests.graphGenerator_producesCorrectGraph(UpdatingControllersTests.java:135)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
+          <div class="suite-Surefire_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">MTSATests.controller.OppositeSafeGameSolverTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="OppositeSafeGameTest(section-4.64-bookstore, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.64-bookstore.lts,...)">
+                  </a> <!-- OppositeSafeGameTest(section-4.64-bookstore, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.64-bookstore.lts,...) -->
+                  <span class="method-name">OppositeSafeGameTest</span>
+                  <span class="parameters">(section-4.64-bookstore, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.64-bookstore.lts, ENV, EXP, C, G1, ../ltsa/dist/examples/SafetyCuts/Results/dIppolito/section-4.64-bookstore.result)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="OppositeSafeGameTest(prod_cell_variant, ../ltsa/dist/examples/SafetyCuts/Tests/prod_cell_variant.lts, Plant, EXP, C, G1, ...)">
+                  </a> <!-- OppositeSafeGameTest(prod_cell_variant, ../ltsa/dist/examples/SafetyCuts/Tests/prod_cell_variant.lts, Plant, EXP, C, G1, ...) -->
+                  <span class="method-name">OppositeSafeGameTest</span>
+                  <span class="parameters">(prod_cell_variant, ../ltsa/dist/examples/SafetyCuts/Tests/prod_cell_variant.lts, Plant, EXP, C, G1, ../ltsa/dist/examples/SafetyCuts/Results/prod_cell_variant.result)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="OppositeSafeGameTest(section-3.84-productioncell-small, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.84-pro...)">
+                  </a> <!-- OppositeSafeGameTest(section-3.84-productioncell-small, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.84-pro...) -->
+                  <span class="method-name">OppositeSafeGameTest</span>
+                  <span class="parameters">(section-3.84-productioncell-small, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.84-productioncell-small.lts, ENV, EXP, C, Objective, ../ltsa/dist/examples/SafetyCuts/Results/dIppolito/section-3.84-productioncell-small.result)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="OppositeSafeGameTest(section-3.83-bookstore, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.83-bookstore.lts,...)">
+                  </a> <!-- OppositeSafeGameTest(section-3.83-bookstore, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.83-bookstore.lts,...) -->
+                  <span class="method-name">OppositeSafeGameTest</span>
+                  <span class="parameters">(section-3.83-bookstore, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.83-bookstore.lts, ENV, EXP, C, G1, ../ltsa/dist/examples/SafetyCuts/Results/dIppolito/section-3.83-bookstore.result)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="OppositeSafeGameTest(section-3.1-productioncell, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.1-productionc...)">
+                  </a> <!-- OppositeSafeGameTest(section-3.1-productioncell, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.1-productionc...) -->
+                  <span class="method-name">OppositeSafeGameTest</span>
+                  <span class="parameters">(section-3.1-productioncell, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.1-productioncell.lts, ENV, EXP, C, Objective, ../ltsa/dist/examples/SafetyCuts/Results/dIppolito/section-3.1-productioncell.result)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="OppositeSafeGameTest(section-4.2-biscotti, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.2-biscotti.lts, ENV...)">
+                  </a> <!-- OppositeSafeGameTest(section-4.2-biscotti, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.2-biscotti.lts, ENV...) -->
+                  <span class="method-name">OppositeSafeGameTest</span>
+                  <span class="parameters">(section-4.2-biscotti, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.2-biscotti.lts, ENV, EXP, C, G1, ../ltsa/dist/examples/SafetyCuts/Results/dIppolito/section-4.2-biscotti.result)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="OppositeSafeGameTest(section-4.62-payandship, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.62-payandship.lt...)">
+                  </a> <!-- OppositeSafeGameTest(section-4.62-payandship, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.62-payandship.lt...) -->
+                  <span class="method-name">OppositeSafeGameTest</span>
+                  <span class="parameters">(section-4.62-payandship, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.62-payandship.lts, ENV, EXP, C, G1, ../ltsa/dist/examples/SafetyCuts/Results/dIppolito/section-4.62-payandship.result)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="OppositeSafeGameTest(section-3.82-purchaseanddelivery, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.82-purc...)">
+                  </a> <!-- OppositeSafeGameTest(section-3.82-purchaseanddelivery, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.82-purc...) -->
+                  <span class="method-name">OppositeSafeGameTest</span>
+                  <span class="parameters">(section-3.82-purchaseanddelivery, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.82-purchaseanddelivery.lts, ENV, EXP, C, G1, ../ltsa/dist/examples/SafetyCuts/Results/dIppolito/section-3.82-purchaseanddelivery.result)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="OppositeSafeGameTest(tomAndJerryV12, ../ltsa/dist/examples/SafetyCuts/Tests/TomAndJerryV12.lts, Tom_Jerry, EXP, C, G1, .....)">
+                  </a> <!-- OppositeSafeGameTest(tomAndJerryV12, ../ltsa/dist/examples/SafetyCuts/Tests/TomAndJerryV12.lts, Tom_Jerry, EXP, C, G1, .....) -->
+                  <span class="method-name">OppositeSafeGameTest</span>
+                  <span class="parameters">(tomAndJerryV12, ../ltsa/dist/examples/SafetyCuts/Tests/TomAndJerryV12.lts, Tom_Jerry, EXP, C, G1, ../ltsa/dist/examples/SafetyCuts/Results/TomAndJerryV12.result)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="OppositeSafeGameTest(section-3.81-autonomousvehicles, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.81-auton...)">
+                  </a> <!-- OppositeSafeGameTest(section-3.81-autonomousvehicles, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.81-auton...) -->
+                  <span class="method-name">OppositeSafeGameTest</span>
+                  <span class="parameters">(section-3.81-autonomousvehicles, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.81-autonomousvehicles.lts, ENV, EXP, C, G1, ../ltsa/dist/examples/SafetyCuts/Results/dIppolito/section-3.81-autonomousvehicles.result)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="OppositeSafeGameTest(section-4.61-productioncell, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.61-productio...)">
+                  </a> <!-- OppositeSafeGameTest(section-4.61-productioncell, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.61-productio...) -->
+                  <span class="method-name">OppositeSafeGameTest</span>
+                  <span class="parameters">(section-4.61-productioncell, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.61-productioncell.lts, Plant, EXP, C, G1, ../ltsa/dist/examples/SafetyCuts/Results/dIppolito/section-4.61-productioncell.result)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="OppositeSafeGameTest(section-4.71-productioncell, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.71-productio...)">
+                  </a> <!-- OppositeSafeGameTest(section-4.71-productioncell, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.71-productio...) -->
+                  <span class="method-name">OppositeSafeGameTest</span>
+                  <span class="parameters">(section-4.71-productioncell, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.71-productioncell.lts, ENV, EXP, C, G1, ../ltsa/dist/examples/SafetyCuts/Results/dIppolito/section-4.71-productioncell.result)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="OppositeSafeGameTest(section-4.1-travelagency, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.1-travelagency....)">
+                  </a> <!-- OppositeSafeGameTest(section-4.1-travelagency, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.1-travelagency....) -->
+                  <span class="method-name">OppositeSafeGameTest</span>
+                  <span class="parameters">(section-4.1-travelagency, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.1-travelagency.lts, ENV, EXP, C, G1, ../ltsa/dist/examples/SafetyCuts/Results/dIppolito/section-4.1-travelagency.result)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="OppositeSafeGameTest(Augmented Biscotti, ../ltsa/dist/examples/SafetyCuts/Tests/Augmented-Biscotti.lts, BISCOTTI, EXP, C,...)">
+                  </a> <!-- OppositeSafeGameTest(Augmented Biscotti, ../ltsa/dist/examples/SafetyCuts/Tests/Augmented-Biscotti.lts, BISCOTTI, EXP, C,...) -->
+                  <span class="method-name">OppositeSafeGameTest</span>
+                  <span class="parameters">(Augmented Biscotti, ../ltsa/dist/examples/SafetyCuts/Tests/Augmented-Biscotti.lts, BISCOTTI, EXP, C, G1, ../ltsa/dist/examples/SafetyCuts/Results/Augmented-Biscotti.result)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="OppositeSafeGameTest(arbiter, ../ltsa/dist/examples/SafetyCuts/Tests/arbiter.lts, PROCS, EXP, C, PETERSON, ../ltsa/dist/e...)">
+                  </a> <!-- OppositeSafeGameTest(arbiter, ../ltsa/dist/examples/SafetyCuts/Tests/arbiter.lts, PROCS, EXP, C, PETERSON, ../ltsa/dist/e...) -->
+                  <span class="method-name">OppositeSafeGameTest</span>
+                  <span class="parameters">(arbiter, ../ltsa/dist/examples/SafetyCuts/Tests/arbiter.lts, PROCS, EXP, C, PETERSON, ../ltsa/dist/examples/SafetyCuts/Results/arbiter.result)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="OppositeSafeGameTest(section-4.63-autonomousvehicles, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.63-auton...)">
+                  </a> <!-- OppositeSafeGameTest(section-4.63-autonomousvehicles, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.63-auton...) -->
+                  <span class="method-name">OppositeSafeGameTest</span>
+                  <span class="parameters">(section-4.63-autonomousvehicles, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.63-autonomousvehicles.lts, PLANT, EXP, C, G1, ../ltsa/dist/examples/SafetyCuts/Results/dIppolito/section-4.63-autonomousvehicles.result)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
+          <div class="suite-Surefire_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">MTSATests.controller.OppositeGR1GameSolverTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="OppositeGR1GameTest(../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.lts, CASE1, EXP1, C1, G1, ../ltsa/dist/examples/O...)">
+                  </a> <!-- OppositeGR1GameTest(../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.lts, CASE1, EXP1, C1, G1, ../ltsa/dist/examples/O...) -->
+                  <span class="method-name">OppositeGR1GameTest</span>
+                  <span class="parameters">(../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.lts, CASE1, EXP1, C1, G1, ../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.CASE1.result)</span>
+                  <div class="stack-trace">java.lang.AssertionError: mut was null expected [true] but found [false]
+	at MTSATests.controller.OppositeGR1GameSolverTests.OppositeGR1GameTest(OppositeGR1GameSolverTests.java:77)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="OppositeGR1GameTest(../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.lts, CASE0, EXP0, C0, G1, ../ltsa/dist/examples/O...)">
+                  </a> <!-- OppositeGR1GameTest(../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.lts, CASE0, EXP0, C0, G1, ../ltsa/dist/examples/O...) -->
+                  <span class="method-name">OppositeGR1GameTest</span>
+                  <span class="parameters">(../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.lts, CASE0, EXP0, C0, G1, ../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.CASE0.result)</span>
+                  <div class="stack-trace">java.lang.AssertionError: mut was null expected [true] but found [false]
+	at MTSATests.controller.OppositeGR1GameSolverTests.OppositeGR1GameTest(OppositeGR1GameSolverTests.java:77)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="OppositeGR1GameTest(../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.lts, CASE2, EXP2, C2, G1, ../ltsa/dist/examples/O...)">
+                  </a> <!-- OppositeGR1GameTest(../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.lts, CASE2, EXP2, C2, G1, ../ltsa/dist/examples/O...) -->
+                  <span class="method-name">OppositeGR1GameTest</span>
+                  <span class="parameters">(../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.lts, CASE2, EXP2, C2, G1, ../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.CASE2.result)</span>
+                  <div class="stack-trace">java.lang.AssertionError: mut was null expected [true] but found [false]
+	at MTSATests.controller.OppositeGR1GameSolverTests.OppositeGR1GameTest(OppositeGR1GameSolverTests.java:77)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="OppositeGR1GameTest(../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.lts, CASE3, EXP3, C3, G1, ../ltsa/dist/examples/O...)">
+                  </a> <!-- OppositeGR1GameTest(../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.lts, CASE3, EXP3, C3, G1, ../ltsa/dist/examples/O...) -->
+                  <span class="method-name">OppositeGR1GameTest</span>
+                  <span class="parameters">(../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.lts, CASE3, EXP3, C3, G1, ../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.CASE3.result)</span>
+                  <div class="stack-trace">java.lang.AssertionError: mut was null expected [true] but found [false]
+	at MTSATests.controller.OppositeGR1GameSolverTests.OppositeGR1GameTest(OppositeGR1GameSolverTests.java:77)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
+        </div> <!-- panel Surefire_suite -->
+        <div panel-name="test-xml-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;1&quot; verbose=&quot;0&quot; name=&quot;Surefire suite&quot;&gt;
+  &lt;test name=&quot;Surefire test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;FSP2MTS.ac.ic.doc.mtstools.facade.MTSAFacadeTest&quot;/&gt;
+      &lt;class name=&quot;MTSATests.controller.UpdatingControllersTests&quot;/&gt;
+      &lt;class name=&quot;MTSSynthesis.controller.game.game.gr.GameSolverSimplePositiveTests&quot;/&gt;
+      &lt;class name=&quot;RobotProtocolClient.ar.uba.dc.lafhis.enactment.RandomSchedulerTest&quot;/&gt;
+      &lt;class name=&quot;MTSSynthesis.controller.game.game.gr.GameSolverSimpleNegativeTests&quot;/&gt;
+      &lt;class name=&quot;MTSATests.controller.SafeGameSolverTests&quot;/&gt;
+      &lt;class name=&quot;MTSATests.controller.OppositeGR1GameSolverTests&quot;/&gt;
+      &lt;class name=&quot;MTSAEnactment.robot.NXTRobotCommTest&quot;/&gt;
+      &lt;class name=&quot;MTSATests.controller.OppositeSafeGameSolverTests&quot;/&gt;
+      &lt;class name=&quot;MTSATests.controller.LTSLTLPropertyTest&quot;/&gt;
+      &lt;class name=&quot;MTSAEnactment.robot.RobotProtocolSessionTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Surefire test --&gt;
+&lt;/suite&gt; &lt;!-- Surefire suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Surefire test (11 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Surefire_suite');
+function tableData_Surefire_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(39);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'OppositeSafeGameTest')
+data.setCell(0, 2, 'MTSATests.controller.OppositeSafeGameSolverTests')
+data.setCell(0, 3, 18);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'OppositeGR1GameTest')
+data.setCell(1, 2, 'MTSATests.controller.OppositeGR1GameSolverTests')
+data.setCell(1, 3, 9);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'OppositeGR1GameTest')
+data.setCell(2, 2, 'MTSATests.controller.OppositeGR1GameSolverTests')
+data.setCell(2, 3, 5);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'SafeGameTest')
+data.setCell(3, 2, 'MTSATests.controller.SafeGameSolverTests')
+data.setCell(3, 3, 2);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'OppositeSafeGameTest')
+data.setCell(4, 2, 'MTSATests.controller.OppositeSafeGameSolverTests')
+data.setCell(4, 3, 2);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'checkUpdatingFormula')
+data.setCell(5, 2, 'MTSATests.controller.UpdatingControllersTests')
+data.setCell(5, 3, 2);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'OppositeSafeGameTest')
+data.setCell(6, 2, 'MTSATests.controller.OppositeSafeGameSolverTests')
+data.setCell(6, 3, 1);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'checkUpdatingFormula')
+data.setCell(7, 2, 'MTSATests.controller.UpdatingControllersTests')
+data.setCell(7, 3, 1);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'environmentTest')
+data.setCell(8, 2, 'MTSATests.controller.UpdatingControllersTests')
+data.setCell(8, 3, 1);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'OppositeSafeGameTest')
+data.setCell(9, 2, 'MTSATests.controller.OppositeSafeGameSolverTests')
+data.setCell(9, 3, 1);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'environmentTest')
+data.setCell(10, 2, 'MTSATests.controller.UpdatingControllersTests')
+data.setCell(10, 3, 1);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'checkUpdatingFormula')
+data.setCell(11, 2, 'MTSATests.controller.UpdatingControllersTests')
+data.setCell(11, 3, 1);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'checkUpdatingFormula')
+data.setCell(12, 2, 'MTSATests.controller.UpdatingControllersTests')
+data.setCell(12, 3, 1);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'OppositeSafeGameTest')
+data.setCell(13, 2, 'MTSATests.controller.OppositeSafeGameSolverTests')
+data.setCell(13, 3, 1);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'OppositeSafeGameTest')
+data.setCell(14, 2, 'MTSATests.controller.OppositeSafeGameSolverTests')
+data.setCell(14, 3, 1);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'OppositeSafeGameTest')
+data.setCell(15, 2, 'MTSATests.controller.OppositeSafeGameSolverTests')
+data.setCell(15, 3, 1);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'OppositeSafeGameTest')
+data.setCell(16, 2, 'MTSATests.controller.OppositeSafeGameSolverTests')
+data.setCell(16, 3, 1);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'environmentTest')
+data.setCell(17, 2, 'MTSATests.controller.UpdatingControllersTests')
+data.setCell(17, 3, 1);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'OppositeSafeGameTest')
+data.setCell(18, 2, 'MTSATests.controller.OppositeSafeGameSolverTests')
+data.setCell(18, 3, 1);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'OppositeSafeGameTest')
+data.setCell(19, 2, 'MTSATests.controller.OppositeSafeGameSolverTests')
+data.setCell(19, 3, 1);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'graphGenerator_producesCorrectGraph')
+data.setCell(20, 2, 'MTSATests.controller.UpdatingControllersTests')
+data.setCell(20, 3, 1);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'OppositeGR1GameTest')
+data.setCell(21, 2, 'MTSATests.controller.OppositeGR1GameSolverTests')
+data.setCell(21, 3, 1);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'OppositeSafeGameTest')
+data.setCell(22, 2, 'MTSATests.controller.OppositeSafeGameSolverTests')
+data.setCell(22, 3, 0);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'environmentTest')
+data.setCell(23, 2, 'MTSATests.controller.UpdatingControllersTests')
+data.setCell(23, 3, 0);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'OppositeSafeGameTest')
+data.setCell(24, 2, 'MTSATests.controller.OppositeSafeGameSolverTests')
+data.setCell(24, 3, 0);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'checkUpdatingFormula')
+data.setCell(25, 2, 'MTSATests.controller.UpdatingControllersTests')
+data.setCell(25, 3, 0);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'checkUpdatingFormula')
+data.setCell(26, 2, 'MTSATests.controller.UpdatingControllersTests')
+data.setCell(26, 3, 0);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'environmentTest')
+data.setCell(27, 2, 'MTSATests.controller.UpdatingControllersTests')
+data.setCell(27, 3, 0);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'OppositeSafeGameTest')
+data.setCell(28, 2, 'MTSATests.controller.OppositeSafeGameSolverTests')
+data.setCell(28, 3, 0);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'environmentTest')
+data.setCell(29, 2, 'MTSATests.controller.UpdatingControllersTests')
+data.setCell(29, 3, 0);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'OppositeSafeGameTest')
+data.setCell(30, 2, 'MTSATests.controller.OppositeSafeGameSolverTests')
+data.setCell(30, 3, 0);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'checkUpdatingFormula')
+data.setCell(31, 2, 'MTSATests.controller.UpdatingControllersTests')
+data.setCell(31, 3, 0);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'environmentTest')
+data.setCell(32, 2, 'MTSATests.controller.UpdatingControllersTests')
+data.setCell(32, 3, 0);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'environmentTest')
+data.setCell(33, 2, 'MTSATests.controller.UpdatingControllersTests')
+data.setCell(33, 3, 0);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'OppositeGR1GameTest')
+data.setCell(34, 2, 'MTSATests.controller.OppositeGR1GameSolverTests')
+data.setCell(34, 3, 0);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'OppositeSafeGameTest')
+data.setCell(35, 2, 'MTSATests.controller.OppositeSafeGameSolverTests')
+data.setCell(35, 3, 0);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'checkUpdatingFormula')
+data.setCell(36, 2, 'MTSATests.controller.UpdatingControllersTests')
+data.setCell(36, 3, 0);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'environmentTest')
+data.setCell(37, 2, 'MTSATests.controller.UpdatingControllersTests')
+data.setCell(37, 3, 0);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'OppositeSafeGameTest')
+data.setCell(38, 2, 'MTSATests.controller.OppositeSafeGameSolverTests')
+data.setCell(38, 3, 0);
+window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 54 ms</span>
+              <div id="times-div-Surefire_suite">
+              </div> <!-- times-div-Surefire_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">MTSATests.controller.OppositeSafeGameSolverTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">OppositeSafeGameTest(Augmented Biscotti, ../ltsa/dist/examples/SafetyCuts/Tests/Augmented-Biscotti.lts, BISCOTTI, EXP, C,...)</span>
+                <span class="method-start">19 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">OppositeSafeGameTest(section-4.2-biscotti, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.2-biscotti.lts, ENV...)</span>
+                <span class="method-start">44 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">OppositeSafeGameTest(section-4.64-bookstore, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.64-bookstore.lts,...)</span>
+                <span class="method-start">45 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">OppositeSafeGameTest(section-4.63-autonomousvehicles, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.63-auton...)</span>
+                <span class="method-start">47 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">OppositeSafeGameTest(section-4.62-payandship, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.62-payandship.lt...)</span>
+                <span class="method-start">48 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">OppositeSafeGameTest(section-4.1-travelagency, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.1-travelagency....)</span>
+                <span class="method-start">49 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">OppositeSafeGameTest(section-3.83-bookstore, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.83-bookstore.lts,...)</span>
+                <span class="method-start">50 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">OppositeSafeGameTest(section-3.82-purchaseanddelivery, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.82-purc...)</span>
+                <span class="method-start">51 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">OppositeSafeGameTest(section-3.84-productioncell-small, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.84-pro...)</span>
+                <span class="method-start">52 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">OppositeSafeGameTest(section-3.81-autonomousvehicles, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.81-auton...)</span>
+                <span class="method-start">53 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">OppositeSafeGameTest(arbiter, ../ltsa/dist/examples/SafetyCuts/Tests/arbiter.lts, PROCS, EXP, C, PETERSON, ../ltsa/dist/e...)</span>
+                <span class="method-start">55 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">OppositeSafeGameTest(prod_cell_variant, ../ltsa/dist/examples/SafetyCuts/Tests/prod_cell_variant.lts, Plant, EXP, C, G1, ...)</span>
+                <span class="method-start">57 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">OppositeSafeGameTest(tomAndJerryV12, ../ltsa/dist/examples/SafetyCuts/Tests/TomAndJerryV12.lts, Tom_Jerry, EXP, C, G1, .....)</span>
+                <span class="method-start">58 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">OppositeSafeGameTest(section-4.71-productioncell, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.71-productio...)</span>
+                <span class="method-start">60 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">OppositeSafeGameTest(section-4.61-productioncell, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-4.61-productio...)</span>
+                <span class="method-start">61 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">OppositeSafeGameTest(section-3.1-productioncell, ../ltsa/dist/examples/SafetyCuts/Tests/dIppolito/section-3.1-productionc...)</span>
+                <span class="method-start">63 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">65 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">MTSATests.controller.SafeGameSolverTests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">SafeGameTest(../ltsa/dist/examples/SafetyCuts/Tests/safe_game_test.lts, MUT, EXP, C, G1, ../ltsa/dist/examples/Sa...)</span>
+                <span class="method-start">75 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">MTSATests.controller.UpdatingControllersTests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Tests/adding_actions_test)</span>
+                <span class="method-start">80 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Tests/removing_actions_test)</span>
+                <span class="method-start">83 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Tests/UAV_test)</span>
+                <span class="method-start">83 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Tests/productionCell_test)</span>
+                <span class="method-start">84 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-PowerPlant-Ghezzi2013)</span>
+                <span class="method-start">84 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-Railcab-Ghezzi2012)</span>
+                <span class="method-start">85 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/2015-FSE-Workflow)</span>
+                <span class="method-start">86 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">checkUpdatingFormula(/ltsa/dist/examples/ControllerUpdate/2015-Tokyo/colorBallsTransfer)</span>
+                <span class="method-start">89 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">environmentTest(/ltsa/dist/examples/ControllerUpdate/Tests/adding_actions_test)</span>
+                <span class="method-start">91 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">environmentTest(/ltsa/dist/examples/ControllerUpdate/Tests/removing_actions_test)</span>
+                <span class="method-start">92 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">environmentTest(/ltsa/dist/examples/ControllerUpdate/Tests/UAV_test)</span>
+                <span class="method-start">93 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">environmentTest(/ltsa/dist/examples/ControllerUpdate/Tests/productionCell_test)</span>
+                <span class="method-start">94 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">environmentTest(/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-PowerPlant-Ghezzi2013)</span>
+                <span class="method-start">95 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">environmentTest(/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-Railcab-Ghezzi2012)</span>
+                <span class="method-start">96 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">environmentTest(/ltsa/dist/examples/ControllerUpdate/2015-FSE-ProductionCell)</span>
+                <span class="method-start">98 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">environmentTest(/ltsa/dist/examples/ControllerUpdate/2015-FSE-Wildlife)</span>
+                <span class="method-start">98 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">environmentTest(/ltsa/dist/examples/ControllerUpdate/2015-FSE-Workflow)</span>
+                <span class="method-start">100 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">graphGenerator_producesCorrectGraph(/ltsa/dist/examples/ControllerUpdate/2015-Tokyo/colorBallsTransfer)</span>
+                <span class="method-start">102 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">MTSATests.controller.OppositeGR1GameSolverTests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">OppositeGR1GameTest(../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.lts, CASE0, EXP0, C0, G1, ../ltsa/dist/examples/O...)</span>
+                <span class="method-start">110 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">OppositeGR1GameTest(../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.lts, CASE1, EXP1, C1, G1, ../ltsa/dist/examples/O...)</span>
+                <span class="method-start">112 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">OppositeGR1GameTest(../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.lts, CASE2, EXP2, C2, G1, ../ltsa/dist/examples/O...)</span>
+                <span class="method-start">122 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">OppositeGR1GameTest(../ltsa/dist/examples/OppositeGR1/Tests/Base_cases.lts, CASE3, EXP3, C3, G1, ../ltsa/dist/examples/O...)</span>
+                <span class="method-start">124 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

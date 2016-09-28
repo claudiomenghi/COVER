@@ -1,0 +1,1059 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="4" total="177" passed="173">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="6551" started-at="2016-09-28T13:44:18Z" finished-at="2016-09-28T13:44:24Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="6551" started-at="2016-09-28T13:44:18Z" finished-at="2016-09-28T13:44:24Z">
+      <class name="MTSATests.controller.StarEnvTests">
+        <test-method status="PASS" signature="testSimpleStarredModel()[pri:0, instance:testSimpleStarredModel(MTSATests.controller.StarEnvTests)]" name="testSimpleStarredModel" duration-ms="26" started-at="2016-09-28T15:44:18Z" finished-at="2016-09-28T15:44:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSimpleStarredModel -->
+        <test-method status="PASS" signature="testStateWithNoReqs()[pri:0, instance:testStateWithNoReqs(MTSATests.controller.StarEnvTests)]" name="testStateWithNoReqs" duration-ms="54" started-at="2016-09-28T15:44:18Z" finished-at="2016-09-28T15:44:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStateWithNoReqs -->
+      </class> <!-- MTSATests.controller.StarEnvTests -->
+      <class name="MTSSynthesis.ar.dc.uba.util.LanguageUtilsTest">
+        <test-method status="PASS" signature="testConcatenateLanguages()[pri:0, instance:testConcatenateLanguages(MTSSynthesis.ar.dc.uba.util.LanguageUtilsTest)]" name="testConcatenateLanguages" duration-ms="2" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testConcatenateLanguages -->
+      </class> <!-- MTSSynthesis.ar.dc.uba.util.LanguageUtilsTest -->
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSComposerTest">
+        <test-method status="PASS" signature="testCompositionFrom2MTS()[pri:0, instance:testCompositionFrom2MTS(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSComposerTest)]" name="testCompositionFrom2MTS" duration-ms="4" started-at="2016-09-28T15:44:22Z" finished-at="2016-09-28T15:44:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCompositionFrom2MTS -->
+      </class> <!-- FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSComposerTest -->
+      <class name="MTSSynthesis.ar.dc.uba.util.WordUtilsTest">
+        <test-method status="PASS" signature="testSuffixes()[pri:0, instance:testSuffixes(MTSSynthesis.ar.dc.uba.util.WordUtilsTest)]" name="testSuffixes" duration-ms="0" started-at="2016-09-28T15:44:24Z" finished-at="2016-09-28T15:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSuffixes -->
+        <test-method status="PASS" signature="testFirsts()[pri:0, instance:testFirsts(MTSSynthesis.ar.dc.uba.util.WordUtilsTest)]" name="testFirsts" duration-ms="1" started-at="2016-09-28T15:44:24Z" finished-at="2016-09-28T15:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFirsts -->
+        <test-method status="PASS" signature="testPreffixes()[pri:0, instance:testPreffixes(MTSSynthesis.ar.dc.uba.util.WordUtilsTest)]" name="testPreffixes" duration-ms="0" started-at="2016-09-28T15:44:24Z" finished-at="2016-09-28T15:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPreffixes -->
+        <test-method status="PASS" signature="testFollows()[pri:0, instance:testFollows(MTSSynthesis.ar.dc.uba.util.WordUtilsTest)]" name="testFollows" duration-ms="0" started-at="2016-09-28T15:44:24Z" finished-at="2016-09-28T15:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFollows -->
+      </class> <!-- MTSSynthesis.ar.dc.uba.util.WordUtilsTest -->
+      <class name="MTSATests.controller.StrategyStateTests">
+        <test-method status="PASS" signature="testIntegerStrategyState()[pri:0, instance:testIntegerStrategyState(MTSATests.controller.StrategyStateTests)]" name="testIntegerStrategyState" duration-ms="5" started-at="2016-09-28T15:44:22Z" finished-at="2016-09-28T15:44:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIntegerStrategyState -->
+        <test-method status="PASS" signature="testIntegerStrategyStateHashSet()[pri:0, instance:testIntegerStrategyStateHashSet(MTSATests.controller.StrategyStateTests)]" name="testIntegerStrategyStateHashSet" duration-ms="3" started-at="2016-09-28T15:44:22Z" finished-at="2016-09-28T15:44:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIntegerStrategyStateHashSet -->
+        <test-method status="PASS" signature="testSymetricIntegerStrategyState()[pri:0, instance:testSymetricIntegerStrategyState(MTSATests.controller.StrategyStateTests)]" name="testSymetricIntegerStrategyState" duration-ms="1" started-at="2016-09-28T15:44:22Z" finished-at="2016-09-28T15:44:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSymetricIntegerStrategyState -->
+      </class> <!-- MTSATests.controller.StrategyStateTests -->
+      <class name="MTSAEnactment.robot.CommandAcceptedMessageTest">
+        <test-method status="PASS" signature="testGetAcceptedMid()[pri:0, instance:testGetAcceptedMid(MTSAEnactment.robot.CommandAcceptedMessageTest)]" name="testGetAcceptedMid" duration-ms="1" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAcceptedMid -->
+        <test-method status="PASS" signature="testWriteData()[pri:0, instance:testWriteData(MTSAEnactment.robot.CommandAcceptedMessageTest)]" name="testWriteData" duration-ms="1" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWriteData -->
+        <test-method status="PASS" signature="testGetMessageLength()[pri:0, instance:testGetMessageLength(MTSAEnactment.robot.CommandAcceptedMessageTest)]" name="testGetMessageLength" duration-ms="0" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetMessageLength -->
+      </class> <!-- MTSAEnactment.robot.CommandAcceptedMessageTest -->
+      <class name="MTSATests.ac.ic.doc.mtstools.model.predicates.IsDeterministicMTSPredicateTest">
+        <test-method status="PASS" signature="testIsDeterministic()[pri:0, instance:testIsDeterministic(MTSATests.ac.ic.doc.mtstools.model.predicates.IsDeterministicMTSPredicateTest)]" name="testIsDeterministic" duration-ms="1" started-at="2016-09-28T15:44:21Z" finished-at="2016-09-28T15:44:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsDeterministic -->
+      </class> <!-- MTSATests.ac.ic.doc.mtstools.model.predicates.IsDeterministicMTSPredicateTest -->
+      <class name="MTSATests.mts.TopStatesTests">
+        <test-method status="PASS" signature="testComponeBien()[pri:0, instance:testComponeBien(MTSATests.mts.TopStatesTests)]" name="testComponeBien" duration-ms="429" started-at="2016-09-28T15:44:18Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testComponeBien -->
+        <test-method status="PASS" signature="testNoTopStates()[pri:0, instance:testNoTopStates(MTSATests.mts.TopStatesTests)]" name="testNoTopStates" duration-ms="68" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNoTopStates -->
+      </class> <!-- MTSATests.mts.TopStatesTests -->
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSPropertyTest">
+        <test-method status="PASS" signature="testPropertyA()[pri:0, instance:testPropertyA(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSPropertyTest)]" name="testPropertyA" duration-ms="63" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPropertyA -->
+      </class> <!-- FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSPropertyTest -->
+      <class name="MTSTools.ac.ic.doc.mtstools.model.operations.impl.MTSPropertyToBuchiConverterTest">
+        <test-method status="PASS" signature="testBuildProperty()[pri:0, instance:testBuildProperty(MTSTools.ac.ic.doc.mtstools.model.operations.impl.MTSPropertyToBuchiConverterTest)]" name="testBuildProperty" duration-ms="3" started-at="2016-09-28T15:44:24Z" finished-at="2016-09-28T15:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBuildProperty -->
+      </class> <!-- MTSTools.ac.ic.doc.mtstools.model.operations.impl.MTSPropertyToBuchiConverterTest -->
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.PlusCROperatorTest">
+        <test-method status="PASS" signature="testCR()[pri:0, instance:testCR(FSP2MTS.ac.ic.doc.mtstools.model.impl.PlusCROperatorTest)]" name="testCR" duration-ms="11" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCR -->
+      </class> <!-- FSP2MTS.ac.ic.doc.mtstools.model.impl.PlusCROperatorTest -->
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.RefinementBetweenStatesTest">
+        <test-method status="PASS" signature="testBasic2StatesRefinement()[pri:0, instance:testBasic2StatesRefinement(FSP2MTS.ac.ic.doc.mtstools.model.impl.RefinementBetweenStatesTest)]" name="testBasic2StatesRefinement" duration-ms="1" started-at="2016-09-28T15:44:22Z" finished-at="2016-09-28T15:44:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBasic2StatesRefinement -->
+      </class> <!-- FSP2MTS.ac.ic.doc.mtstools.model.impl.RefinementBetweenStatesTest -->
+      <class name="MTSSynthesis.ar.dc.uba.model.language.WordTest">
+        <test-method status="PASS" signature="testStartsWithTrue()[pri:0, instance:testStartsWithTrue(MTSSynthesis.ar.dc.uba.model.language.WordTest)]" name="testStartsWithTrue" duration-ms="0" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStartsWithTrue -->
+        <test-method status="PASS" signature="testStartsWithTrueSigletonWord()[pri:0, instance:testStartsWithTrueSigletonWord(MTSSynthesis.ar.dc.uba.model.language.WordTest)]" name="testStartsWithTrueSigletonWord" duration-ms="1" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStartsWithTrueSigletonWord -->
+        <test-method status="PASS" signature="testReverseEmptyWord()[pri:0, instance:testReverseEmptyWord(MTSSynthesis.ar.dc.uba.model.language.WordTest)]" name="testReverseEmptyWord" duration-ms="0" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReverseEmptyWord -->
+        <test-method status="PASS" signature="testFirst()[pri:0, instance:testFirst(MTSSynthesis.ar.dc.uba.model.language.WordTest)]" name="testFirst" duration-ms="0" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFirst -->
+        <test-method status="PASS" signature="testTailWord()[pri:0, instance:testTailWord(MTSSynthesis.ar.dc.uba.model.language.WordTest)]" name="testTailWord" duration-ms="1" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTailWord -->
+        <test-method status="PASS" signature="testEmptyWord()[pri:0, instance:testEmptyWord(MTSSynthesis.ar.dc.uba.model.language.WordTest)]" name="testEmptyWord" duration-ms="0" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEmptyWord -->
+        <test-method status="PASS" signature="testNotEmptyWord()[pri:0, instance:testNotEmptyWord(MTSSynthesis.ar.dc.uba.model.language.WordTest)]" name="testNotEmptyWord" duration-ms="0" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNotEmptyWord -->
+        <test-method status="PASS" signature="testWordLengthComparator()[pri:0, instance:testWordLengthComparator(MTSSynthesis.ar.dc.uba.model.language.WordTest)]" name="testWordLengthComparator" duration-ms="0" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWordLengthComparator -->
+        <test-method status="PASS" signature="testStartsWithEmptyWord()[pri:0, instance:testStartsWithEmptyWord(MTSSynthesis.ar.dc.uba.model.language.WordTest)]" name="testStartsWithEmptyWord" duration-ms="0" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStartsWithEmptyWord -->
+        <test-method status="PASS" signature="testStartsWithFalseSingletonWord()[pri:0, instance:testStartsWithFalseSingletonWord(MTSSynthesis.ar.dc.uba.model.language.WordTest)]" name="testStartsWithFalseSingletonWord" duration-ms="0" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStartsWithFalseSingletonWord -->
+        <test-method status="PASS" signature="testStartsWithFalse()[pri:0, instance:testStartsWithFalse(MTSSynthesis.ar.dc.uba.model.language.WordTest)]" name="testStartsWithFalse" duration-ms="0" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStartsWithFalse -->
+        <test-method status="PASS" signature="testReverseNonEmptyWord()[pri:0, instance:testReverseNonEmptyWord(MTSSynthesis.ar.dc.uba.model.language.WordTest)]" name="testReverseNonEmptyWord" duration-ms="0" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReverseNonEmptyWord -->
+      </class> <!-- MTSSynthesis.ar.dc.uba.model.language.WordTest -->
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.PlusCAAndCROperationTest">
+        <test-method status="PASS" signature="testComponeConError()[pri:0, instance:testComponeConError(FSP2MTS.ac.ic.doc.mtstools.model.impl.PlusCAAndCROperationTest)]" name="testComponeConError" duration-ms="21" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testComponeConError -->
+      </class> <!-- FSP2MTS.ac.ic.doc.mtstools.model.impl.PlusCAAndCROperationTest -->
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.RemoveUnreachableStatesTest">
+        <test-method status="PASS" signature="testRemoveStates()[pri:0, instance:testRemoveStates(FSP2MTS.ac.ic.doc.mtstools.model.impl.RemoveUnreachableStatesTest)]" name="testRemoveStates" duration-ms="53" started-at="2016-09-28T15:44:21Z" finished-at="2016-09-28T15:44:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRemoveStates -->
+      </class> <!-- FSP2MTS.ac.ic.doc.mtstools.model.impl.RemoveUnreachableStatesTest -->
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSDeterminiserTest">
+        <test-method status="PASS" signature="test3States()[pri:0, instance:test3States(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSDeterminiserTest)]" name="test3States" duration-ms="10" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test3States -->
+        <test-method status="PASS" signature="test2StepsToErrorState()[pri:0, instance:test2StepsToErrorState(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSDeterminiserTest)]" name="test2StepsToErrorState" duration-ms="19" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2StepsToErrorState -->
+      </class> <!-- FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSDeterminiserTest -->
+      <class name="MTSATests.parser.testParserLabelTest">
+        <test-method status="PASS" signature="testPropertyInComposite()[pri:0, instance:testPropertyInComposite(MTSATests.parser.testParserLabelTest)]" name="testPropertyInComposite" duration-ms="41" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPropertyInComposite -->
+      </class> <!-- MTSATests.parser.testParserLabelTest -->
+      <class name="MTSATests.controller.ControlledDeterminisationTests">
+        <test-method status="FAIL" signature="testServicesExampleForLegalControllers()[pri:0, instance:testServicesExampleForLegalControllers(MTSATests.controller.ControlledDeterminisationTests)]" name="testServicesExampleForLegalControllers" duration-ms="3" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <exception class="java.io.FileNotFoundException">
+            <message>
+              <![CDATA[/Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/ltsa/dist/examples/2013-services-legal.lts (No such file or directory)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/ltsa/dist/examples/2013-services-legal.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.ControlledDeterminisationTests.testServicesExampleForLegalControllers(ControlledDeterminisationTests.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:81)
+	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:69)
+	at org.testng.TestRunner$1.run(TestRunner.java:697)
+	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:1004)
+	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:728)
+	at org.testng.TestRunner.run(TestRunner.java:629)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:211)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:107)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:112)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.io.FileNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testServicesExampleForLegalControllers -->
+        <test-method status="FAIL" signature="testSimpleControlledDet()[pri:0, instance:testSimpleControlledDet(MTSATests.controller.ControlledDeterminisationTests)]" name="testSimpleControlledDet" duration-ms="0" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <exception class="java.io.FileNotFoundException">
+            <message>
+              <![CDATA[/Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/ltsa/dist/examples/controlled-det-1.lts (No such file or directory)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/ltsa/dist/examples/controlled-det-1.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.ControlledDeterminisationTests.testSimpleControlledDet(ControlledDeterminisationTests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:81)
+	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:69)
+	at org.testng.TestRunner$1.run(TestRunner.java:697)
+	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:1004)
+	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:728)
+	at org.testng.TestRunner.run(TestRunner.java:629)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:211)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:107)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:112)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.io.FileNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSimpleControlledDet -->
+      </class> <!-- MTSATests.controller.ControlledDeterminisationTests -->
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.ClosureTraceInclusionTest">
+        <test-method status="PASS" signature="test2StatesBisimulationWouldntMinimize()[pri:0, instance:test2StatesBisimulationWouldntMinimize(FSP2MTS.ac.ic.doc.mtstools.model.impl.ClosureTraceInclusionTest)]" name="test2StatesBisimulationWouldntMinimize" duration-ms="101" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2StatesBisimulationWouldntMinimize -->
+      </class> <!-- FSP2MTS.ac.ic.doc.mtstools.model.impl.ClosureTraceInclusionTest -->
+      <class name="MTSATests.controller.MTSControllerSynthesisTests">
+        <test-method status="PASS" signature="testAll()[pri:0, instance:testAll(MTSATests.controller.MTSControllerSynthesisTests)]" name="testAll" duration-ms="110" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAll -->
+        <test-method status="PASS" signature="testNone()[pri:0, instance:testNone(MTSATests.controller.MTSControllerSynthesisTests)]" name="testNone" duration-ms="38" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNone -->
+        <test-method status="PASS" signature="testSome()[pri:0, instance:testSome(MTSATests.controller.MTSControllerSynthesisTests)]" name="testSome" duration-ms="30" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSome -->
+      </class> <!-- MTSATests.controller.MTSControllerSynthesisTests -->
+      <class name="MTSATests.controller.BasicTomAndJerryTest">
+        <test-method status="PASS" signature="testTomAndJerry()[pri:0, instance:testTomAndJerry(MTSATests.controller.BasicTomAndJerryTest)]" name="testTomAndJerry" duration-ms="242" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTomAndJerry -->
+      </class> <!-- MTSATests.controller.BasicTomAndJerryTest -->
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSRemoveTransitionTests">
+        <test-method status="PASS" signature="testRemoveOneTransitionWithoutOrphans()[pri:0, instance:testRemoveOneTransitionWithoutOrphans(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSRemoveTransitionTests)]" name="testRemoveOneTransitionWithoutOrphans" duration-ms="1" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRemoveOneTransitionWithoutOrphans -->
+        <test-method status="PASS" signature="testRemoveOneTransitionWithOneOrphan()[pri:0, instance:testRemoveOneTransitionWithOneOrphan(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSRemoveTransitionTests)]" name="testRemoveOneTransitionWithOneOrphan" duration-ms="0" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRemoveOneTransitionWithOneOrphan -->
+        <test-method status="PASS" signature="testRemoveOneTransitionWithTwoOrphans()[pri:0, instance:testRemoveOneTransitionWithTwoOrphans(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSRemoveTransitionTests)]" name="testRemoveOneTransitionWithTwoOrphans" duration-ms="0" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRemoveOneTransitionWithTwoOrphans -->
+      </class> <!-- FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSRemoveTransitionTests -->
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMultipleComposertMemoryAndTimeTest">
+        <test-method status="PASS" signature="testComponeMTSA()[pri:0, instance:testComponeMTSA(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMultipleComposertMemoryAndTimeTest)]" name="testComponeMTSA" duration-ms="1159" started-at="2016-09-28T15:44:22Z" finished-at="2016-09-28T15:44:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testComponeMTSA -->
+      </class> <!-- FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMultipleComposertMemoryAndTimeTest -->
+      <class name="MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest">
+        <test-method status="PASS" signature="testOnNonDeterministicMTSs()[pri:0, instance:testOnNonDeterministicMTSs(MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest)]" name="testOnNonDeterministicMTSs" duration-ms="0" started-at="2016-09-28T15:44:21Z" finished-at="2016-09-28T15:44:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOnNonDeterministicMTSs -->
+        <test-method status="PASS" signature="testOnDeterministicMTSs()[pri:0, instance:testOnDeterministicMTSs(MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest)]" name="testOnDeterministicMTSs" duration-ms="0" started-at="2016-09-28T15:44:21Z" finished-at="2016-09-28T15:44:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOnDeterministicMTSs -->
+        <test-method status="PASS" signature="testOnATrace()[pri:0, instance:testOnATrace(MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest)]" name="testOnATrace" duration-ms="0" started-at="2016-09-28T15:44:21Z" finished-at="2016-09-28T15:44:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOnATrace -->
+        <test-method status="PASS" signature="testHasNonDetTransitionsFromState()[pri:0, instance:testHasNonDetTransitionsFromState(MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest)]" name="testHasNonDetTransitionsFromState" duration-ms="0" started-at="2016-09-28T15:44:21Z" finished-at="2016-09-28T15:44:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHasNonDetTransitionsFromState -->
+      </class> <!-- MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest -->
+      <class name="MTSTools.ac.ic.doc.commons.relations.HashNAryRelationTest">
+        <test-method status="PASS" signature="tetAdd()[pri:0, instance:tetAdd(MTSTools.ac.ic.doc.commons.relations.HashNAryRelationTest)]" name="tetAdd" duration-ms="2" started-at="2016-09-28T15:44:21Z" finished-at="2016-09-28T15:44:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tetAdd -->
+      </class> <!-- MTSTools.ac.ic.doc.commons.relations.HashNAryRelationTest -->
+      <class name="MTSSynthesis.ar.dc.uba.lsc.ChartTest">
+        <test-method status="PASS" signature="testLinearisationsOnlyInteractions()[pri:0, instance:testLinearisationsOnlyInteractions(MTSSynthesis.ar.dc.uba.lsc.ChartTest)]" name="testLinearisationsOnlyInteractions" duration-ms="14" started-at="2016-09-28T15:44:24Z" finished-at="2016-09-28T15:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLinearisationsOnlyInteractions -->
+        <test-method status="PASS" signature="testOrderNotImportantForConditionInstances()[pri:0, instance:testOrderNotImportantForConditionInstances(MTSSynthesis.ar.dc.uba.lsc.ChartTest)]" name="testOrderNotImportantForConditionInstances" duration-ms="3" started-at="2016-09-28T15:44:24Z" finished-at="2016-09-28T15:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOrderNotImportantForConditionInstances -->
+        <test-method status="PASS" signature="testLinearisationsWithInteractionsAndConditions()[pri:0, instance:testLinearisationsWithInteractionsAndConditions(MTSSynthesis.ar.dc.uba.lsc.ChartTest)]" name="testLinearisationsWithInteractionsAndConditions" duration-ms="1" started-at="2016-09-28T15:44:24Z" finished-at="2016-09-28T15:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLinearisationsWithInteractionsAndConditions -->
+        <test-method status="FAIL" signature="testTwoLinearisationsWithInteractionsAndConditionsA()[pri:0, instance:testTwoLinearisationsWithInteractionsAndConditionsA(MTSSynthesis.ar.dc.uba.lsc.ChartTest)]" name="testTwoLinearisationsWithInteractionsAndConditionsA" duration-ms="2" started-at="2016-09-28T15:44:24Z" finished-at="2016-09-28T15:44:24Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<[[User -> pwd -> ATM, ATM -> checkPwd -> Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[User, ATM], Phi_4[Bank], ATM -> wait -> User, Bank -> doCheck -> Bank, Bank -> checkOk -> ATM, ATM -> ok -> User], [User -> pwd -> ATM, ATM -> checkPwd -> Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[User, ATM], Phi_4[Bank], Bank -> doCheck -> Bank, ATM -> wait -> User, Bank -> checkOk -> ATM, ATM -> ok -> User]]]]><![CDATA[> but was:<[[User -> pwd -> ATM, ATM -> checkPwd -> Bank, Phi_2[ATM], Phi_3[User, ATM], Phi_1[Bank], Phi_4[Bank], Bank -> doCheck -> Bank, ATM -> wait -> User, Bank -> checkOk -> ATM, ATM -> ok -> User], [User -> pwd -> ATM, ATM -> checkPwd -> Bank, Phi_2[ATM], Phi_3[User, ATM], Phi_1[Bank], Phi_4[Bank], ATM -> wait -> User, Bank -> doCheck -> Bank, Bank -> checkOk -> ATM, ATM -> ok -> User]]><![CDATA[]]]]><![CDATA[>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<[[User -> pwd -> ATM, ATM -> checkPwd -> Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[User, ATM], Phi_4[Bank], ATM -> wait -> User, Bank -> doCheck -> Bank, Bank -> checkOk -> ATM, ATM -> ok -> User], [User -> pwd -> ATM, ATM -> checkPwd -> Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[User, ATM], Phi_4[Bank], Bank -> doCheck -> Bank, ATM -> wait -> User, Bank -> checkOk -> ATM, ATM -> ok -> User]]]]><![CDATA[> but was:<[[User -> pwd -> ATM, ATM -> checkPwd -> Bank, Phi_2[ATM], Phi_3[User, ATM], Phi_1[Bank], Phi_4[Bank], Bank -> doCheck -> Bank, ATM -> wait -> User, Bank -> checkOk -> ATM, ATM -> ok -> User], [User -> pwd -> ATM, ATM -> checkPwd -> Bank, Phi_2[ATM], Phi_3[User, ATM], Phi_1[Bank], Phi_4[Bank], ATM -> wait -> User, Bank -> doCheck -> Bank, Bank -> checkOk -> ATM, ATM -> ok -> User]]]]><![CDATA[>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at MTSSynthesis.ar.dc.uba.lsc.ChartTest.testTwoLinearisationsWithInteractionsAndConditionsA(ChartTest.java:430)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:81)
+	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:69)
+	at org.testng.TestRunner$1.run(TestRunner.java:697)
+	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:1004)
+	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:728)
+	at org.testng.TestRunner.run(TestRunner.java:629)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:211)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:107)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:112)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTwoLinearisationsWithInteractionsAndConditionsA -->
+        <test-method status="PASS" signature="testOrderNotImportantForConditionsInstances()[pri:0, instance:testOrderNotImportantForConditionsInstances(MTSSynthesis.ar.dc.uba.lsc.ChartTest)]" name="testOrderNotImportantForConditionsInstances" duration-ms="0" started-at="2016-09-28T15:44:24Z" finished-at="2016-09-28T15:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOrderNotImportantForConditionsInstances -->
+        <test-method status="FAIL" signature="testTwoLinearisationsWithInteractionsAndConditionsB()[pri:0, instance:testTwoLinearisationsWithInteractionsAndConditionsB(MTSSynthesis.ar.dc.uba.lsc.ChartTest)]" name="testTwoLinearisationsWithInteractionsAndConditionsB" duration-ms="1" started-at="2016-09-28T15:44:24Z" finished-at="2016-09-28T15:44:24Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<[[User -> pwd -> ATM, ATM -> checkPwd -> Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[Bank, ATM], Bank -> doCheck -> Bank, ATM -> wait -> User, Bank -> checkOk -> ATM, ATM -> ok -> User], [User -> pwd -> ATM, ATM -> checkPwd -> Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[Bank, ATM], ATM -> wait -> User, Bank -> doCheck -> Bank, Bank -> checkOk -> ATM, ATM -> ok -> User]]]]><![CDATA[> but was:<[[User -> pwd -> ATM, ATM -> checkPwd -> Bank, Phi_2[ATM], Phi_1[Bank], Phi_3[Bank, ATM], ATM -> wait -> User, Bank -> doCheck -> Bank, Bank -> checkOk -> ATM, ATM -> ok -> User], [User -> pwd -> ATM, ATM -> checkPwd -> Bank, Phi_2[ATM], Phi_1[Bank], Phi_3[Bank, ATM], Bank -> doCheck -> Bank, ATM -> wait -> User, Bank -> checkOk -> ATM, ATM -> ok -> User]]><![CDATA[]]]]><![CDATA[>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<[[User -> pwd -> ATM, ATM -> checkPwd -> Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[Bank, ATM], Bank -> doCheck -> Bank, ATM -> wait -> User, Bank -> checkOk -> ATM, ATM -> ok -> User], [User -> pwd -> ATM, ATM -> checkPwd -> Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[Bank, ATM], ATM -> wait -> User, Bank -> doCheck -> Bank, Bank -> checkOk -> ATM, ATM -> ok -> User]]]]><![CDATA[> but was:<[[User -> pwd -> ATM, ATM -> checkPwd -> Bank, Phi_2[ATM], Phi_1[Bank], Phi_3[Bank, ATM], ATM -> wait -> User, Bank -> doCheck -> Bank, Bank -> checkOk -> ATM, ATM -> ok -> User], [User -> pwd -> ATM, ATM -> checkPwd -> Bank, Phi_2[ATM], Phi_1[Bank], Phi_3[Bank, ATM], Bank -> doCheck -> Bank, ATM -> wait -> User, Bank -> checkOk -> ATM, ATM -> ok -> User]]]]><![CDATA[>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at MTSSynthesis.ar.dc.uba.lsc.ChartTest.testTwoLinearisationsWithInteractionsAndConditionsB(ChartTest.java:466)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:81)
+	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:69)
+	at org.testng.TestRunner$1.run(TestRunner.java:697)
+	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:1004)
+	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:728)
+	at org.testng.TestRunner.run(TestRunner.java:629)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:211)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:107)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:112)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTwoLinearisationsWithInteractionsAndConditionsB -->
+        <test-method status="PASS" signature="testTwoLinearisationsSeveralConditionsBeginingChartWithInteractionsA()[pri:0, instance:testTwoLinearisationsSeveralConditionsBeginingChartWithInteractionsA(MTSSynthesis.ar.dc.uba.lsc.ChartTest)]" name="testTwoLinearisationsSeveralConditionsBeginingChartWithInteractionsA" duration-ms="3" started-at="2016-09-28T15:44:24Z" finished-at="2016-09-28T15:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTwoLinearisationsSeveralConditionsBeginingChartWithInteractionsA -->
+        <test-method status="PASS" signature="testTwoLinearisationsSeveralConditionsBeginingChartWithInteractionsB()[pri:0, instance:testTwoLinearisationsSeveralConditionsBeginingChartWithInteractionsB(MTSSynthesis.ar.dc.uba.lsc.ChartTest)]" name="testTwoLinearisationsSeveralConditionsBeginingChartWithInteractionsB" duration-ms="1" started-at="2016-09-28T15:44:24Z" finished-at="2016-09-28T15:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTwoLinearisationsSeveralConditionsBeginingChartWithInteractionsB -->
+        <test-method status="PASS" signature="testQtyInteractions()[pri:0, instance:testQtyInteractions(MTSSynthesis.ar.dc.uba.lsc.ChartTest)]" name="testQtyInteractions" duration-ms="5" started-at="2016-09-28T15:44:24Z" finished-at="2016-09-28T15:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testQtyInteractions -->
+        <test-method status="PASS" signature="testOrderNotImportantForLinearisationOnlyInteractions()[pri:0, instance:testOrderNotImportantForLinearisationOnlyInteractions(MTSSynthesis.ar.dc.uba.lsc.ChartTest)]" name="testOrderNotImportantForLinearisationOnlyInteractions" duration-ms="1" started-at="2016-09-28T15:44:24Z" finished-at="2016-09-28T15:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOrderNotImportantForLinearisationOnlyInteractions -->
+        <test-method status="PASS" signature="testOrderNotImportantForLinearisationInteractionsAndConditions()[pri:0, instance:testOrderNotImportantForLinearisationInteractionsAndConditions(MTSSynthesis.ar.dc.uba.lsc.ChartTest)]" name="testOrderNotImportantForLinearisationInteractionsAndConditions" duration-ms="1" started-at="2016-09-28T15:44:24Z" finished-at="2016-09-28T15:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOrderNotImportantForLinearisationInteractionsAndConditions -->
+        <test-method status="PASS" signature="testTwoLinearisationsWithInteractionsAndConditions()[pri:0, instance:testTwoLinearisationsWithInteractionsAndConditions(MTSSynthesis.ar.dc.uba.lsc.ChartTest)]" name="testTwoLinearisationsWithInteractionsAndConditions" duration-ms="0" started-at="2016-09-28T15:44:24Z" finished-at="2016-09-28T15:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTwoLinearisationsWithInteractionsAndConditions -->
+      </class> <!-- MTSSynthesis.ar.dc.uba.lsc.ChartTest -->
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilder2Test">
+        <test-method status="PASS" signature="testAll()[pri:0, instance:testAll(FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilder2Test)]" name="testAll" duration-ms="10" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAll -->
+        <test-method status="PASS" signature="testReflexiveSilent()[pri:0, instance:testReflexiveSilent(FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilder2Test)]" name="testReflexiveSilent" duration-ms="1" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReflexiveSilent -->
+      </class> <!-- FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilder2Test -->
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilderTest">
+        <test-method status="PASS" signature="testAll()[pri:0, instance:testAll(FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilderTest)]" name="testAll" duration-ms="26" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAll -->
+        <test-method status="PASS" signature="testReflexiveSilent()[pri:0, instance:testReflexiveSilent(FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilderTest)]" name="testReflexiveSilent" duration-ms="1" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReflexiveSilent -->
+      </class> <!-- FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilderTest -->
+      <class name="MTSSynthesis.ar.dc.uba.parser.AlphabetParserTest">
+        <test-method status="PASS" signature="testParseAlphabet()[pri:0, instance:testParseAlphabet(MTSSynthesis.ar.dc.uba.parser.AlphabetParserTest)]" name="testParseAlphabet" duration-ms="0" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testParseAlphabet -->
+        <test-method status="PASS" signature="testParseSingletonAlphabet()[pri:0, instance:testParseSingletonAlphabet(MTSSynthesis.ar.dc.uba.parser.AlphabetParserTest)]" name="testParseSingletonAlphabet" duration-ms="0" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testParseSingletonAlphabet -->
+      </class> <!-- MTSSynthesis.ar.dc.uba.parser.AlphabetParserTest -->
+      <class name="MTSSynthesis.ar.dc.uba.parser.WordParserTest">
+        <test-method status="PASS" signature="testParseWord()[pri:0, instance:testParseWord(MTSSynthesis.ar.dc.uba.parser.WordParserTest)]" name="testParseWord" duration-ms="1" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testParseWord -->
+        <test-method status="PASS" signature="testParseSingletonWord()[pri:0, instance:testParseSingletonWord(MTSSynthesis.ar.dc.uba.parser.WordParserTest)]" name="testParseSingletonWord" duration-ms="0" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testParseSingletonWord -->
+      </class> <!-- MTSSynthesis.ar.dc.uba.parser.WordParserTest -->
+      <class name="MTSATests.parser.PropertyTests">
+        <test-method status="PASS" signature="testPropertyInCompositeWithOthersOperations()[pri:0, instance:testPropertyInCompositeWithOthersOperations(MTSATests.parser.PropertyTests)]" name="testPropertyInCompositeWithOthersOperations" duration-ms="578" started-at="2016-09-28T15:44:23Z" finished-at="2016-09-28T15:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPropertyInCompositeWithOthersOperations -->
+        <test-method status="PASS" signature="testPropertyInComposite()[pri:0, instance:testPropertyInComposite(MTSATests.parser.PropertyTests)]" name="testPropertyInComposite" duration-ms="146" started-at="2016-09-28T15:44:24Z" finished-at="2016-09-28T15:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPropertyInComposite -->
+        <test-method status="PASS" signature="testPropertyInCompositeWithAlotOfStates()[pri:0, instance:testPropertyInCompositeWithAlotOfStates(MTSATests.parser.PropertyTests)]" name="testPropertyInCompositeWithAlotOfStates" duration-ms="154" started-at="2016-09-28T15:44:24Z" finished-at="2016-09-28T15:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPropertyInCompositeWithAlotOfStates -->
+      </class> <!-- MTSATests.parser.PropertyTests -->
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest">
+        <test-method status="PASS" signature="testDeadLockPathForDeadlockState()[pri:0, instance:testDeadLockPathForDeadlockState(FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest)]" name="testDeadLockPathForDeadlockState" duration-ms="3" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeadLockPathForDeadlockState -->
+        <test-method status="PASS" signature="testDeadlockEmptyMTS()[pri:0, instance:testDeadlockEmptyMTS(FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest)]" name="testDeadlockEmptyMTS" duration-ms="81" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeadlockEmptyMTS -->
+        <test-method status="PASS" signature="testDeadlockSimpleMTS()[pri:0, instance:testDeadlockSimpleMTS(FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest)]" name="testDeadlockSimpleMTS" duration-ms="37" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeadlockSimpleMTS -->
+        <test-method status="PASS" signature="testSimpleDeadlock()[pri:0, instance:testSimpleDeadlock(FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest)]" name="testSimpleDeadlock" duration-ms="1" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSimpleDeadlock -->
+        <test-method status="PASS" signature="testRemoveTransitionsToDeadlock()[pri:0, instance:testRemoveTransitionsToDeadlock(FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest)]" name="testRemoveTransitionsToDeadlock" duration-ms="2" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRemoveTransitionsToDeadlock -->
+        <test-method status="PASS" signature="testDeadLockPathForOnlyMaybeOutgoing()[pri:0, instance:testDeadLockPathForOnlyMaybeOutgoing(FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest)]" name="testDeadLockPathForOnlyMaybeOutgoing" duration-ms="1" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeadLockPathForOnlyMaybeOutgoing -->
+        <test-method status="PASS" signature="testDeadlockMaybeMTS()[pri:0, instance:testDeadlockMaybeMTS(FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest)]" name="testDeadlockMaybeMTS" duration-ms="1" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeadlockMaybeMTS -->
+        <test-method status="PASS" signature="testComplicatedDeadLockPath()[pri:0, instance:testComplicatedDeadLockPath(FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest)]" name="testComplicatedDeadLockPath" duration-ms="40" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testComplicatedDeadLockPath -->
+      </class> <!-- FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest -->
+      <class name="MTSSynthesis.ar.dc.uba.model.condition.ZetaFunctionTest">
+        <test-method status="PASS" signature="testCopy()[pri:0, instance:testCopy(MTSSynthesis.ar.dc.uba.model.condition.ZetaFunctionTest)]" name="testCopy" duration-ms="4" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCopy -->
+        <test-method status="PASS" signature="testFluentsEquals()[pri:0, instance:testFluentsEquals(MTSSynthesis.ar.dc.uba.model.condition.ZetaFunctionTest)]" name="testFluentsEquals" duration-ms="0" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFluentsEquals -->
+        <test-method status="PASS" signature="testEquals()[pri:0, instance:testEquals(MTSSynthesis.ar.dc.uba.model.condition.ZetaFunctionTest)]" name="testEquals" duration-ms="1" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEquals -->
+      </class> <!-- MTSSynthesis.ar.dc.uba.model.condition.ZetaFunctionTest -->
+      <class name="MTSAEnactment.robot.NXTRobotTest">
+        <test-method status="PASS" signature="testExecuteCommand()[pri:0, instance:testExecuteCommand(MTSAEnactment.robot.NXTRobotTest)]" name="testExecuteCommand" duration-ms="90" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExecuteCommand -->
+      </class> <!-- MTSAEnactment.robot.NXTRobotTest -->
+      <class name="FSP2MTS.ac.ic.doc.mtstools.MTSToAutomataConverterTest">
+        <test-method status="PASS" signature="testMTSUnMTSAEstadoPorA()[pri:0, instance:testMTSUnMTSAEstadoPorA(FSP2MTS.ac.ic.doc.mtstools.MTSToAutomataConverterTest)]" name="testMTSUnMTSAEstadoPorA" duration-ms="1" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMTSUnMTSAEstadoPorA -->
+      </class> <!-- FSP2MTS.ac.ic.doc.mtstools.MTSToAutomataConverterTest -->
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest">
+        <test-method status="PASS" signature="test1()[pri:0, instance:test1(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)]" name="test1" duration-ms="9" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="test2()[pri:0, instance:test2(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)]" name="test2" duration-ms="2" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method status="PASS" signature="test3()[pri:0, instance:test3(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)]" name="test3" duration-ms="2" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test3 -->
+        <test-method status="PASS" signature="test4()[pri:0, instance:test4(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)]" name="test4" duration-ms="1" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test4 -->
+        <test-method status="PASS" signature="test5()[pri:0, instance:test5(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)]" name="test5" duration-ms="2" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test5 -->
+        <test-method status="PASS" signature="test6()[pri:0, instance:test6(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)]" name="test6" duration-ms="1" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test6 -->
+        <test-method status="PASS" signature="test7()[pri:0, instance:test7(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)]" name="test7" duration-ms="1" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test7 -->
+        <test-method status="PASS" signature="test8()[pri:0, instance:test8(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)]" name="test8" duration-ms="2" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test8 -->
+        <test-method status="PASS" signature="test9()[pri:0, instance:test9(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)]" name="test9" duration-ms="1" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test9 -->
+      </class> <!-- FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest -->
+      <class name="MTSATests.ac.ic.doc.distribution.ComponentBuilderTest">
+        <test-method status="PASS" signature="testSimpleModelNonDetDifferentModalitiesWithLoops()[pri:0, instance:testSimpleModelNonDetDifferentModalitiesWithLoops(MTSATests.ac.ic.doc.distribution.ComponentBuilderTest)]" name="testSimpleModelNonDetDifferentModalitiesWithLoops" duration-ms="491" started-at="2016-09-28T15:44:18Z" finished-at="2016-09-28T15:44:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSimpleModelNonDetDifferentModalitiesWithLoops -->
+        <test-method status="PASS" signature="testSimpleModelFullProjection()[pri:0, instance:testSimpleModelFullProjection(MTSATests.ac.ic.doc.distribution.ComponentBuilderTest)]" name="testSimpleModelFullProjection" duration-ms="3" started-at="2016-09-28T15:44:18Z" finished-at="2016-09-28T15:44:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSimpleModelFullProjection -->
+        <test-method status="PASS" signature="testSimpleModelNonDetDifferentModalities()[pri:0, instance:testSimpleModelNonDetDifferentModalities(MTSATests.ac.ic.doc.distribution.ComponentBuilderTest)]" name="testSimpleModelNonDetDifferentModalities" duration-ms="72" started-at="2016-09-28T15:44:18Z" finished-at="2016-09-28T15:44:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSimpleModelNonDetDifferentModalities -->
+        <test-method status="PASS" signature="testTwoMistmatches()[pri:0, instance:testTwoMistmatches(MTSATests.ac.ic.doc.distribution.ComponentBuilderTest)]" name="testTwoMistmatches" duration-ms="21" started-at="2016-09-28T15:44:18Z" finished-at="2016-09-28T15:44:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTwoMistmatches -->
+        <test-method status="PASS" signature="testSimpleModelNonDetNonFullProjection()[pri:0, instance:testSimpleModelNonDetNonFullProjection(MTSATests.ac.ic.doc.distribution.ComponentBuilderTest)]" name="testSimpleModelNonDetNonFullProjection" duration-ms="13" started-at="2016-09-28T15:44:18Z" finished-at="2016-09-28T15:44:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSimpleModelNonDetNonFullProjection -->
+        <test-method status="PASS" signature="testNonFullProjection()[pri:0, instance:testNonFullProjection(MTSATests.ac.ic.doc.distribution.ComponentBuilderTest)]" name="testNonFullProjection" duration-ms="5" started-at="2016-09-28T15:44:18Z" finished-at="2016-09-28T15:44:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNonFullProjection -->
+      </class> <!-- MTSATests.ac.ic.doc.distribution.ComponentBuilderTest -->
+      <class name="MTSATests.ac.ic.doc.distribution.DistributionTest">
+        <test-method status="PASS" signature="testAlphabetModelEqualsAlphabetDistribution()[pri:0, instance:testAlphabetModelEqualsAlphabetDistribution(MTSATests.ac.ic.doc.distribution.DistributionTest)]" name="testAlphabetModelEqualsAlphabetDistribution" duration-ms="2" started-at="2016-09-28T15:44:24Z" finished-at="2016-09-28T15:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAlphabetModelEqualsAlphabetDistribution -->
+      </class> <!-- MTSATests.ac.ic.doc.distribution.DistributionTest -->
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest">
+        <test-method status="PASS" signature="testMergeC2()[pri:0, instance:testMergeC2(FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest)]" name="testMergeC2" duration-ms="34" started-at="2016-09-28T15:44:21Z" finished-at="2016-09-28T15:44:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMergeC2 -->
+        <test-method status="PASS" signature="testMergeC3()[pri:0, instance:testMergeC3(FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest)]" name="testMergeC3" duration-ms="84" started-at="2016-09-28T15:44:21Z" finished-at="2016-09-28T15:44:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMergeC3 -->
+        <test-method status="PASS" signature="testMergeC4()[pri:0, instance:testMergeC4(FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest)]" name="testMergeC4" duration-ms="38" started-at="2016-09-28T15:44:22Z" finished-at="2016-09-28T15:44:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMergeC4 -->
+        <test-method status="PASS" signature="testMergeC5()[pri:0, instance:testMergeC5(FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest)]" name="testMergeC5" duration-ms="91" started-at="2016-09-28T15:44:22Z" finished-at="2016-09-28T15:44:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMergeC5 -->
+        <test-method status="PASS" signature="testMerge0()[pri:0, instance:testMerge0(FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest)]" name="testMerge0" duration-ms="77" started-at="2016-09-28T15:44:22Z" finished-at="2016-09-28T15:44:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMerge0 -->
+        <test-method status="PASS" signature="testMerge8()[pri:0, instance:testMerge8(FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest)]" name="testMerge8" duration-ms="45" started-at="2016-09-28T15:44:22Z" finished-at="2016-09-28T15:44:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMerge8 -->
+      </class> <!-- FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest -->
+      <class name="MTSSynthesis.controller.game.bgr.BGRGameSolverTest">
+        <test-method status="PASS" signature="bgrPositiveExample()[pri:0, instance:bgrPositiveExample(MTSSynthesis.controller.game.bgr.BGRGameSolverTest)]" name="bgrPositiveExample" duration-ms="10" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bgrPositiveExample -->
+        <test-method status="PASS" signature="bgrEmptyBuchiExample()[pri:0, instance:bgrEmptyBuchiExample(MTSSynthesis.controller.game.bgr.BGRGameSolverTest)]" name="bgrEmptyBuchiExample" duration-ms="8" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bgrEmptyBuchiExample -->
+        <test-method status="PASS" signature="bgrNegativeExample()[pri:0, instance:bgrNegativeExample(MTSSynthesis.controller.game.bgr.BGRGameSolverTest)]" name="bgrNegativeExample" duration-ms="2" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bgrNegativeExample -->
+        <test-method status="PASS" signature="bgrEmptyGRExample()[pri:0, instance:bgrEmptyGRExample(MTSSynthesis.controller.game.bgr.BGRGameSolverTest)]" name="bgrEmptyGRExample" duration-ms="3" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bgrEmptyGRExample -->
+        <test-method status="PASS" signature="bgrNoGuaranteeExample()[pri:0, instance:bgrNoGuaranteeExample(MTSSynthesis.controller.game.bgr.BGRGameSolverTest)]" name="bgrNoGuaranteeExample" duration-ms="1" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bgrNoGuaranteeExample -->
+      </class> <!-- MTSSynthesis.controller.game.bgr.BGRGameSolverTest -->
+      <class name="MTSATests.controller.PermissiveControllerTests">
+        <test-method status="PASS" signature="testPermissive1()[pri:0, instance:testPermissive1(MTSATests.controller.PermissiveControllerTests)]" name="testPermissive1" duration-ms="53" started-at="2016-09-28T15:44:21Z" finished-at="2016-09-28T15:44:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPermissive1 -->
+        <test-method status="PASS" signature="testPermissive2()[pri:0, instance:testPermissive2(MTSATests.controller.PermissiveControllerTests)]" name="testPermissive2" duration-ms="58" started-at="2016-09-28T15:44:21Z" finished-at="2016-09-28T15:44:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPermissive2 -->
+        <test-method status="PASS" signature="testNotPermissive1()[pri:0, instance:testNotPermissive1(MTSATests.controller.PermissiveControllerTests)]" name="testNotPermissive1" duration-ms="46" started-at="2016-09-28T15:44:21Z" finished-at="2016-09-28T15:44:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNotPermissive1 -->
+      </class> <!-- MTSATests.controller.PermissiveControllerTests -->
+      <class name="MTSSynthesis.ar.dc.uba.parser.SetParserTest">
+        <test-method status="PASS" signature="testParseSet()[pri:0, instance:testParseSet(MTSSynthesis.ar.dc.uba.parser.SetParserTest)]" name="testParseSet" duration-ms="0" started-at="2016-09-28T15:44:22Z" finished-at="2016-09-28T15:44:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testParseSet -->
+        <test-method status="PASS" signature="testParseEmptySet()[pri:0, instance:testParseEmptySet(MTSSynthesis.ar.dc.uba.parser.SetParserTest)]" name="testParseEmptySet" duration-ms="0" started-at="2016-09-28T15:44:22Z" finished-at="2016-09-28T15:44:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testParseEmptySet -->
+        <test-method status="PASS" signature="testParseMultipleElementsSet()[pri:0, instance:testParseMultipleElementsSet(MTSSynthesis.ar.dc.uba.parser.SetParserTest)]" name="testParseMultipleElementsSet" duration-ms="0" started-at="2016-09-28T15:44:22Z" finished-at="2016-09-28T15:44:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testParseMultipleElementsSet -->
+        <test-method status="PASS" signature="testParseSingletonSet()[pri:0, instance:testParseSingletonSet(MTSSynthesis.ar.dc.uba.parser.SetParserTest)]" name="testParseSingletonSet" duration-ms="0" started-at="2016-09-28T15:44:22Z" finished-at="2016-09-28T15:44:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testParseSingletonSet -->
+      </class> <!-- MTSSynthesis.ar.dc.uba.parser.SetParserTest -->
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.ClousurePathBuilderTest">
+        <test-method status="PASS" signature="testAll()[pri:0, instance:testAll(FSP2MTS.ac.ic.doc.mtstools.model.impl.ClousurePathBuilderTest)]" name="testAll" duration-ms="7" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAll -->
+      </class> <!-- FSP2MTS.ac.ic.doc.mtstools.model.impl.ClousurePathBuilderTest -->
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest">
+        <test-method status="PASS" signature="testMinimisaEjemploLibroModelChecking()[pri:0, instance:testMinimisaEjemploLibroModelChecking(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest)]" name="testMinimisaEjemploLibroModelChecking" duration-ms="34" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMinimisaEjemploLibroModelChecking -->
+        <test-method status="PASS" signature="testMinimisaEjemploPaper()[pri:0, instance:testMinimisaEjemploPaper(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest)]" name="testMinimisaEjemploPaper" duration-ms="23" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMinimisaEjemploPaper -->
+        <test-method status="PASS" signature="testMinimisaEjemploABCConEstadoFinalMaybe()[pri:0, instance:testMinimisaEjemploABCConEstadoFinalMaybe(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest)]" name="testMinimisaEjemploABCConEstadoFinalMaybe" duration-ms="11" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMinimisaEjemploABCConEstadoFinalMaybe -->
+        <test-method status="PASS" signature="testMinimisaEjemploABSimple()[pri:0, instance:testMinimisaEjemploABSimple(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest)]" name="testMinimisaEjemploABSimple" duration-ms="9" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMinimisaEjemploABSimple -->
+      </class> <!-- FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest -->
+      <class name="MTSSynthesis.ar.dc.uba.model.language.LanguageTest">
+        <test-method status="PASS" signature="testGetAlphabet()[pri:0, instance:testGetAlphabet(MTSSynthesis.ar.dc.uba.model.language.LanguageTest)]" name="testGetAlphabet" duration-ms="16" started-at="2016-09-28T15:44:18Z" finished-at="2016-09-28T15:44:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAlphabet -->
+      </class> <!-- MTSSynthesis.ar.dc.uba.model.language.LanguageTest -->
+      <class name="MTSTools.ac.ic.doc.commons.collections.PowerSetTest">
+        <test-method status="PASS" signature="testContainsObject()[pri:0, instance:testContainsObject(MTSTools.ac.ic.doc.commons.collections.PowerSetTest)]" name="testContainsObject" duration-ms="3" started-at="2016-09-28T15:44:18Z" finished-at="2016-09-28T15:44:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testContainsObject -->
+        <test-method status="PASS" signature="testSize()[pri:0, instance:testSize(MTSTools.ac.ic.doc.commons.collections.PowerSetTest)]" name="testSize" duration-ms="1" started-at="2016-09-28T15:44:18Z" finished-at="2016-09-28T15:44:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSize -->
+        <test-method status="PASS" signature="testIterator()[pri:0, instance:testIterator(MTSTools.ac.ic.doc.commons.collections.PowerSetTest)]" name="testIterator" duration-ms="25" started-at="2016-09-28T15:44:18Z" finished-at="2016-09-28T15:44:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIterator -->
+      </class> <!-- MTSTools.ac.ic.doc.commons.collections.PowerSetTest -->
+      <class name="MTSSynthesis.ar.dc.uba.parser.LanguageParserTest">
+        <test-method status="PASS" signature="testParseSingletonLanguageSingletonWord()[pri:0, instance:testParseSingletonLanguageSingletonWord(MTSSynthesis.ar.dc.uba.parser.LanguageParserTest)]" name="testParseSingletonLanguageSingletonWord" duration-ms="0" started-at="2016-09-28T15:44:24Z" finished-at="2016-09-28T15:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testParseSingletonLanguageSingletonWord -->
+        <test-method status="PASS" signature="testParseSingletonLanguageNonSingletonWord()[pri:0, instance:testParseSingletonLanguageNonSingletonWord(MTSSynthesis.ar.dc.uba.parser.LanguageParserTest)]" name="testParseSingletonLanguageNonSingletonWord" duration-ms="1" started-at="2016-09-28T15:44:24Z" finished-at="2016-09-28T15:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testParseSingletonLanguageNonSingletonWord -->
+        <test-method status="PASS" signature="testParseLanguageSingletonWord()[pri:0, instance:testParseLanguageSingletonWord(MTSSynthesis.ar.dc.uba.parser.LanguageParserTest)]" name="testParseLanguageSingletonWord" duration-ms="0" started-at="2016-09-28T15:44:24Z" finished-at="2016-09-28T15:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testParseLanguageSingletonWord -->
+        <test-method status="PASS" signature="testParseLanguageNonSingletonWord()[pri:0, instance:testParseLanguageNonSingletonWord(MTSSynthesis.ar.dc.uba.parser.LanguageParserTest)]" name="testParseLanguageNonSingletonWord" duration-ms="0" started-at="2016-09-28T15:44:24Z" finished-at="2016-09-28T15:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testParseLanguageNonSingletonWord -->
+      </class> <!-- MTSSynthesis.ar.dc.uba.parser.LanguageParserTest -->
+      <class name="MTSTools.ac.ic.doc.commons.relations.UniversalNAryRelationTest">
+        <test-method status="PASS" signature="testContainsObject()[pri:0, instance:testContainsObject(MTSTools.ac.ic.doc.commons.relations.UniversalNAryRelationTest)]" name="testContainsObject" duration-ms="1" started-at="2016-09-28T15:44:22Z" finished-at="2016-09-28T15:44:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testContainsObject -->
+        <test-method status="PASS" signature="testSize()[pri:0, instance:testSize(MTSTools.ac.ic.doc.commons.relations.UniversalNAryRelationTest)]" name="testSize" duration-ms="0" started-at="2016-09-28T15:44:22Z" finished-at="2016-09-28T15:44:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSize -->
+        <test-method status="PASS" signature="testIterator()[pri:0, instance:testIterator(MTSTools.ac.ic.doc.commons.relations.UniversalNAryRelationTest)]" name="testIterator" duration-ms="4" started-at="2016-09-28T15:44:22Z" finished-at="2016-09-28T15:44:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIterator -->
+      </class> <!-- MTSTools.ac.ic.doc.commons.relations.UniversalNAryRelationTest -->
+      <class name="MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest">
+        <test-method status="PASS" signature="testSizeForGetAllTracesToStateSatisfyingPredicateNonDeterministicStates()[pri:0, instance:testSizeForGetAllTracesToStateSatisfyingPredicateNonDeterministicStates(MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest)]" name="testSizeForGetAllTracesToStateSatisfyingPredicateNonDeterministicStates" duration-ms="80" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSizeForGetAllTracesToStateSatisfyingPredicateNonDeterministicStates -->
+        <test-method status="PASS" signature="testTracesSatisfyPredicateFromGetAllTracesToStateSatisfyingPredicate()[pri:0, instance:testTracesSatisfyPredicateFromGetAllTracesToStateSatisfyingPredicate(MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest)]" name="testTracesSatisfyPredicateFromGetAllTracesToStateSatisfyingPredicate" duration-ms="10" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTracesSatisfyPredicateFromGetAllTracesToStateSatisfyingPredicate -->
+        <test-method status="PASS" signature="testGetATraceToAParticularState()[pri:0, instance:testGetATraceToAParticularState(MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest)]" name="testGetATraceToAParticularState" duration-ms="4" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetATraceToAParticularState -->
+        <test-method status="PASS" signature="testIsEmpty()[pri:0, instance:testIsEmpty(MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest)]" name="testIsEmpty" duration-ms="1" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsEmpty -->
+      </class> <!-- MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest -->
+      <class name="FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest">
+        <test-method status="PASS" signature="testBuildAlphabetWithoutMaybeAndNotMaybe()[pri:0, instance:testBuildAlphabetWithoutMaybeAndNotMaybe(FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest)]" name="testBuildAlphabetWithoutMaybeAndNotMaybe" duration-ms="0" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBuildAlphabetWithoutMaybeAndNotMaybe -->
+        <test-method status="PASS" signature="testIsMTSRepresentation()[pri:0, instance:testIsMTSRepresentation(FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest)]" name="testIsMTSRepresentation" duration-ms="0" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsMTSRepresentation -->
+        <test-method status="PASS" signature="testBuildAlphabetWithMaybeAndNotMaybe()[pri:0, instance:testBuildAlphabetWithMaybeAndNotMaybe(FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest)]" name="testBuildAlphabetWithMaybeAndNotMaybe" duration-ms="0" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBuildAlphabetWithMaybeAndNotMaybe -->
+        <test-method status="PASS" signature="testDoMaybe()[pri:0, instance:testDoMaybe(FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest)]" name="testDoMaybe" duration-ms="1" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDoMaybe -->
+      </class> <!-- FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest -->
+      <class name="MTSSynthesis.ar.dc.uba.model.structure.SynthesisedStateEqualsTest">
+        <test-method status="PASS" signature="testEmptyWordNoObligations()[pri:0, instance:testEmptyWordNoObligations(MTSSynthesis.ar.dc.uba.model.structure.SynthesisedStateEqualsTest)]" name="testEmptyWordNoObligations" duration-ms="0" started-at="2016-09-28T15:44:22Z" finished-at="2016-09-28T15:44:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEmptyWordNoObligations -->
+      </class> <!-- MTSSynthesis.ar.dc.uba.model.structure.SynthesisedStateEqualsTest -->
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.CompositionStateTests">
+        <test-method status="PASS" signature="testEquals()[pri:0, instance:testEquals(FSP2MTS.ac.ic.doc.mtstools.model.impl.CompositionStateTests)]" name="testEquals" duration-ms="1" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEquals -->
+      </class> <!-- FSP2MTS.ac.ic.doc.mtstools.model.impl.CompositionStateTests -->
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests">
+        <test-method status="PASS" signature="testConsistentes()[pri:0, instance:testConsistentes(FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests)]" name="testConsistentes" duration-ms="56" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testConsistentes -->
+        <test-method status="PASS" signature="testSonWeakConsistentes()[pri:0, instance:testSonWeakConsistentes(FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests)]" name="testSonWeakConsistentes" duration-ms="91" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSonWeakConsistentes -->
+        <test-method status="PASS" signature="testWeakAlphabetConsistencyEmptySilentSet()[pri:0, instance:testWeakAlphabetConsistencyEmptySilentSet(FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests)]" name="testWeakAlphabetConsistencyEmptySilentSet" duration-ms="120" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWeakAlphabetConsistencyEmptySilentSet -->
+        <test-method status="PASS" signature="testConsistentesAlfabetosDistintos()[pri:0, instance:testConsistentesAlfabetosDistintos(FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests)]" name="testConsistentesAlfabetosDistintos" duration-ms="10" started-at="2016-09-28T15:44:21Z" finished-at="2016-09-28T15:44:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testConsistentesAlfabetosDistintos -->
+        <test-method status="PASS" signature="testConsistentesEjemploSebas()[pri:0, instance:testConsistentesEjemploSebas(FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests)]" name="testConsistentesEjemploSebas" duration-ms="3" started-at="2016-09-28T15:44:21Z" finished-at="2016-09-28T15:44:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testConsistentesEjemploSebas -->
+        <test-method status="PASS" signature="testCounterExampleWeakAlphabetCompleteness()[pri:0, instance:testCounterExampleWeakAlphabetCompleteness(FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests)]" name="testCounterExampleWeakAlphabetCompleteness" duration-ms="4" started-at="2016-09-28T15:44:21Z" finished-at="2016-09-28T15:44:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCounterExampleWeakAlphabetCompleteness -->
+        <test-method status="PASS" signature="testSonConsistentes()[pri:0, instance:testSonConsistentes(FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests)]" name="testSonConsistentes" duration-ms="78" started-at="2016-09-28T15:44:21Z" finished-at="2016-09-28T15:44:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSonConsistentes -->
+        <test-method status="PASS" signature="testCounterExampleWeakAlphabetConsistency()[pri:0, instance:testCounterExampleWeakAlphabetConsistency(FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests)]" name="testCounterExampleWeakAlphabetConsistency" duration-ms="7" started-at="2016-09-28T15:44:21Z" finished-at="2016-09-28T15:44:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCounterExampleWeakAlphabetConsistency -->
+      </class> <!-- FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests -->
+      <class name="MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest">
+        <test-method status="PASS" signature="testDistributionFeedbackOnFullAlphabetNotPresent()[pri:0, instance:testDistributionFeedbackOnFullAlphabetNotPresent(MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest)]" name="testDistributionFeedbackOnFullAlphabetNotPresent" duration-ms="32" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDistributionFeedbackOnFullAlphabetNotPresent -->
+        <test-method status="PASS" signature="testNonDeterminismFeedback()[pri:0, instance:testNonDeterminismFeedback(MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest)]" name="testNonDeterminismFeedback" duration-ms="20" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNonDeterminismFeedback -->
+        <test-method status="PASS" signature="testSimpleModelNonDetDifferentModalities()[pri:0, instance:testSimpleModelNonDetDifferentModalities(MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest)]" name="testSimpleModelNonDetDifferentModalities" duration-ms="9" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSimpleModelNonDetDifferentModalities -->
+        <test-method status="PASS" signature="testComplexModelDifferentModalities()[pri:0, instance:testComplexModelDifferentModalities(MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest)]" name="testComplexModelDifferentModalities" duration-ms="2" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testComplexModelDifferentModalities -->
+        <test-method status="PASS" signature="testDistributionFeedbackOnFullAlphabetPresent()[pri:0, instance:testDistributionFeedbackOnFullAlphabetPresent(MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest)]" name="testDistributionFeedbackOnFullAlphabetPresent" duration-ms="1" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDistributionFeedbackOnFullAlphabetPresent -->
+      </class> <!-- MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest -->
+      <class name="MTSSynthesis.ar.dc.uba.model.language.CanonicalSymbolTest">
+        <test-method status="PASS" signature="testCanonicalSymbolEquals()[pri:0, instance:testCanonicalSymbolEquals(MTSSynthesis.ar.dc.uba.model.language.CanonicalSymbolTest)]" name="testCanonicalSymbolEquals" duration-ms="1" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCanonicalSymbolEquals -->
+        <test-method status="PASS" signature="testCanonicalSymbolNotEquals()[pri:0, instance:testCanonicalSymbolNotEquals(MTSSynthesis.ar.dc.uba.model.language.CanonicalSymbolTest)]" name="testCanonicalSymbolNotEquals" duration-ms="1" started-at="2016-09-28T15:44:20Z" finished-at="2016-09-28T15:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCanonicalSymbolNotEquals -->
+      </class> <!-- MTSSynthesis.ar.dc.uba.model.language.CanonicalSymbolTest -->
+      <class name="MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest">
+        <test-method status="PASS" signature="testNotEmpty()[pri:0, instance:testNotEmpty(MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest)]" name="testNotEmpty" duration-ms="1" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNotEmpty -->
+        <test-method status="PASS" signature="testTwoAlphabet()[pri:0, instance:testTwoAlphabet(MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest)]" name="testTwoAlphabet" duration-ms="2" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTwoAlphabet -->
+        <test-method status="PASS" signature="testAnyAlphabetNotEmpty()[pri:0, instance:testAnyAlphabetNotEmpty(MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest)]" name="testAnyAlphabetNotEmpty" duration-ms="1" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnyAlphabetNotEmpty -->
+        <test-method status="PASS" signature="testTwoAlphabetOneEmpty()[pri:0, instance:testTwoAlphabetOneEmpty(MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest)]" name="testTwoAlphabetOneEmpty" duration-ms="1" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTwoAlphabetOneEmpty -->
+        <test-method status="PASS" signature="testOneAlphabet()[pri:0, instance:testOneAlphabet(MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest)]" name="testOneAlphabet" duration-ms="1" started-at="2016-09-28T15:44:19Z" finished-at="2016-09-28T15:44:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOneAlphabet -->
+      </class> <!-- MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest -->
+      <class name="MTSATests.controller.NonDetControllerSynthesisTests">
+        <test-method status="PASS" signature="test1()[pri:0, instance:test1(MTSATests.controller.NonDetControllerSynthesisTests)]" name="test1" duration-ms="86" started-at="2016-09-28T15:44:21Z" finished-at="2016-09-28T15:44:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="test2()[pri:0, instance:test2(MTSATests.controller.NonDetControllerSynthesisTests)]" name="test2" duration-ms="73" started-at="2016-09-28T15:44:21Z" finished-at="2016-09-28T15:44:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method status="PASS" signature="test3()[pri:0, instance:test3(MTSATests.controller.NonDetControllerSynthesisTests)]" name="test3" duration-ms="109" started-at="2016-09-28T15:44:21Z" finished-at="2016-09-28T15:44:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test3 -->
+        <test-method status="PASS" signature="test4()[pri:0, instance:test4(MTSATests.controller.NonDetControllerSynthesisTests)]" name="test4" duration-ms="72" started-at="2016-09-28T15:44:21Z" finished-at="2016-09-28T15:44:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test4 -->
+        <test-method status="PASS" signature="test5()[pri:0, instance:test5(MTSATests.controller.NonDetControllerSynthesisTests)]" name="test5" duration-ms="47" started-at="2016-09-28T15:44:21Z" finished-at="2016-09-28T15:44:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test5 -->
+        <test-method status="PASS" signature="test6()[pri:0, instance:test6(MTSATests.controller.NonDetControllerSynthesisTests)]" name="test6" duration-ms="47" started-at="2016-09-28T15:44:21Z" finished-at="2016-09-28T15:44:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test6 -->
+      </class> <!-- MTSATests.controller.NonDetControllerSynthesisTests -->
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSAvsLTSATest">
+        <test-method status="PASS" signature="testUnLTSenMTSAyEnLTSA()[pri:0, instance:testUnLTSenMTSAyEnLTSA(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSAvsLTSATest)]" name="testUnLTSenMTSAyEnLTSA" duration-ms="339" started-at="2016-09-28T15:44:24Z" finished-at="2016-09-28T15:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUnLTSenMTSAyEnLTSA -->
+      </class> <!-- FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSAvsLTSATest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

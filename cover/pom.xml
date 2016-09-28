@@ -1,0 +1,672 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?> -->
+<!-- <project xmlns="http://maven.apache.org/POM/4.0.0" -->
+<!-- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" -->
+<!-- xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"> -->
+<!-- <modelVersion>4.0.0</modelVersion> -->
+<!-- <groupId>mtsa</groupId> -->
+<!-- <artifactId>mtsa</artifactId> -->
+<!-- <version>1.0-SNAPSHOT</version> -->
+<!-- <build> -->
+<!-- <plugins> -->
+<!-- <plugin> -->
+<!-- <artifactId>maven-compiler-plugin</artifactId> -->
+<!-- <version>3.1</version> -->
+<!-- <configuration> -->
+<!-- <source>1.7</source> -->
+<!-- <target>1.7</target> -->
+<!-- </configuration> -->
+<!-- </plugin> -->
+<!-- <plugin> -->
+<!-- <groupId>org.apache.maven.plugins</groupId> -->
+<!-- <artifactId>maven-surefire-report-plugin</artifactId> -->
+<!-- <version>2.19.1</version> -->
+<!-- <configuration> -->
+<!-- <argLine>-Xmx10G</argLine> -->
+<!-- <argLine>-Xms2G</argLine> -->
+<!-- <outputDirectory>${basedir}/target/newsite</outputDirectory> -->
+<!-- </configuration> -->
+<!-- </plugin> -->
+<!-- <plugin> -->
+<!-- <groupId>org.apache.maven.plugins</groupId> -->
+<!-- <artifactId>maven-site-plugin</artifactId> -->
+<!-- <version>2.1</version> -->
+<!-- </plugin> -->
+<!-- <plugin> -->
+<!-- <groupId>org.apache.maven.plugins</groupId> -->
+<!-- <artifactId>maven-jar-plugin</artifactId> -->
+<!-- <configuration> -->
+<!-- <archive> -->
+<!-- <manifest> -->
+<!-- <addClasspath>true</addClasspath> -->
+<!-- <mainClass>ltsa.ui.HPWindow</mainClass> -->
+<!-- </manifest> -->
+<!-- </archive> -->
+<!-- </configuration> -->
+<!-- </plugin> -->
+<!-- <plugin> -->
+<!-- <groupId>org.codehaus.mojo</groupId> -->
+<!-- <artifactId>exec-maven-plugin</artifactId> -->
+<!-- <version>1.2.1</version> -->
+<!-- <executions> -->
+<!-- <execution> -->
+<!-- <goals> -->
+<!-- <goal>java</goal> -->
+<!-- </goals> -->
+<!-- </execution> -->
+<!-- </executions> -->
+<!-- <configuration> -->
+<!-- <mainClass>ltsa.ui.HPWindow</mainClass> -->
+<!-- </configuration> -->
+<!-- </plugin> -->
+<!-- <plugin> -->
+<!-- <groupId>org.apache.maven.plugins</groupId> -->
+<!-- <artifactId>maven-shade-plugin</artifactId> -->
+<!-- <version>2.4.3</version> -->
+<!-- <executions> -->
+<!-- <execution> -->
+<!-- <phase>package</phase> -->
+<!-- <goals> -->
+<!-- <goal>shade</goal> -->
+<!-- </goals> -->
+<!-- <configuration> -->
+<!-- <transformers> -->
+<!-- <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer"> -->
+<!-- <manifestEntries> -->
+<!-- <Main-Class>ltsa.ui.HPWindow</Main-Class> -->
+<!-- <Class-Path>lib/**</Class-Path> -->
+<!-- </manifestEntries> -->
+<!-- </transformer> -->
+<!-- <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer"> -->
+<!-- <mainClass>ltsa.ui.HPWindow</mainClass> -->
+<!-- </transformer> -->
+<!-- </transformers> -->
+<!-- </configuration> -->
+<!-- </execution> -->
+<!-- </executions> -->
+<!-- </plugin> -->
+<!-- <plugin> -->
+<!-- <groupId>org.apache.maven.plugins</groupId> -->
+<!-- <artifactId>maven-assembly-plugin</artifactId> -->
+<!-- <version>2.6</version> -->
+<!-- <configuration> -->
+<!-- <descriptorRefs> -->
+<!-- <descriptorRef>jar-with-dependencies</descriptorRef> -->
+<!-- </descriptorRefs> -->
+<!-- <archive> -->
+<!-- <manifest> -->
+<!-- <mainClass>ltsa.ui.HPWindow</mainClass> -->
+<!-- </manifest> -->
+<!-- </archive> -->
+<!-- </configuration> -->
+<!-- <executions> -->
+<!-- <execution> -->
+<!-- <id>make-assembly</id> -->
+<!-- <phase>package</phase> -->
+<!-- <goals> -->
+<!-- <goal>single</goal> -->
+<!-- </goals> -->
+<!-- </execution> -->
+<!-- </executions> -->
+<!-- </plugin> -->
+<!-- </plugins> -->
+<!-- </build> -->
+
+<!-- </project> -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>it.polimi</groupId>
+	<artifactId>COVER</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<description>Goal Model checking Framework</description>
+
+	<properties>
+		<!-- specifies the version of Java used in the CHIAChecker -->
+		<java.version>1.8</java.version>
+		<!-- is the character encoding of the source code -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- Github server corresponds to entry in ~/.m2/settings.xml -->
+		<github.global.server>github</github.global.server>
+		<!-- sonar -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<surefire.version>2.17</surefire.version>
+		<testng.version>6.8.8</testng.version>
+
+		<!-- Sonar -->
+		<!-- The destination file for the code coverage report has to be set to 
+			the same value in the parent pom and in each module pom. Then JaCoCo will 
+			add up information in the same report, so that, it will give the cross-module 
+			code coverage. -->
+		<sonar.jacoco.itReportPath>${project.basedir}/../target/jacoco-it.exec</sonar.jacoco.itReportPath>
+		<sonar.language>java</sonar.language>
+		<sonar.language>java</sonar.language>
+		<sonar.host.url> http://localhost:9000/ </sonar.host.url>
+		<jacoco.version>0.7.2.201409121644</jacoco.version>
+		<javadoc.path></javadoc.path>
+
+	</properties>
+	<build>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<testSourceDirectory>src/test/java</testSourceDirectory>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<version>2.10.3</version>
+					<executions>
+						<execution>
+							<id>attach-javadocs</id>
+							<goals>
+								<goal>jar</goal>
+							</goals>
+							<configuration>
+								<additionalparam>-Xdoclint:none</additionalparam>
+								<failOnError>false</failOnError>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>sonar-maven-plugin</artifactId>
+					<version>2.3</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.17</version>
+					<configuration>
+						<runOrder>random</runOrder>
+						<skipTests>true</skipTests>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.1</version>
+					<configuration>
+						<source>${java.version}</source>
+						<target>${java.version}</target>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.jacoco</groupId>
+										<artifactId>jacoco-maven-plugin</artifactId>
+										<versionRange>[0.5,)
+										</versionRange>
+										<goals>
+											<goal>prepare-agent</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<!-- m2e doesn't know what to do with jacoco, let's ignore it or 
+											annoying error markers appear see http://wiki.eclipse.org/M2E_plugin_execution_not_covered -->
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<version>2.4</version>
+					<configuration>
+						<descriptorRefs>
+							<descriptorRef>jar-with-dependencies</descriptorRef>
+						</descriptorRefs>
+						<archive>
+							<manifest>
+								<mainClass>cover.COVER</mainClass>
+							</manifest>
+							<manifestEntries>
+								<Class-Path>.</Class-Path>
+							</manifestEntries>
+						</archive>
+					</configuration>
+					<executions>
+						<execution>
+							<id>make-assembly</id>
+							<phase>package</phase>
+							<goals>
+								<goal>single</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<!-- disable the maven plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<generateReports>false</generateReports>
+					<skipDeploy>true</skipDeploy>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<version>0.12</version>
+
+				<executions>
+					<!-- run site-maven-plugin's 'site' target as part of the build's normal 
+						'deploy' phase -->
+					<execution>
+						<id>maven_deploy</id>
+						<configuration>
+							<merge>true</merge>
+							<message>Maven artifacts for ${project.version}</message>  <!-- git commit message -->
+							<noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
+							<outputDirectory>${user.dir}/target/mvn-repo/</outputDirectory>
+							<!-- <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> --> <!-- matches distribution management repository url above -->
+							<branch>refs/heads/mvn-repo</branch>                       <!-- remote branch name -->
+							<includes>
+								<include>**/*</include>
+							</includes>
+							<repositoryName>COVER</repositoryName>      <!-- github repo name -->
+							<repositoryOwner>claudiomenghi</repositoryOwner>    <!-- github username -->
+						</configuration>
+						<goals>
+							<goal>site</goal>
+						</goals>
+						<phase>deploy</phase>
+					</execution>
+					<execution>
+						<id>github-site</id>
+
+						<configuration>
+							<repositoryName>COVER</repositoryName>      <!-- github repo name -->
+							<repositoryOwner>claudiomenghi</repositoryOwner>    <!-- github username -->
+							<merge>true</merge>
+							<path>${javadoc.path}</path>
+							<!-- <path>${project.artifactId}</path> -->
+							<message>Javadocs for ${project.name}
+								${project.version}-b${buildNumber}</message>
+							<branch>refs/heads/gh-pages</branch>
+						</configuration>
+						<phase>site</phase>
+						<goals>
+							<goal>site</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.8.1</version>
+				<configuration>
+					<altDeploymentRepository>internal.repo::default::file://${user.dir}/target/mvn-repo/</altDeploymentRepository>
+					<!-- <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository> -->
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<!-- same configuration as in the regular test execution goal -->
+					<!-- plus argLine parameter configured by JaCoCo prepare-agent -->
+					<!-- <argLine>${jacoco.agent.argLine}</argLine> -->
+					<!-- <argLine>${argLine} -XX:-UseSplitVerifier</argLine> -->
+					<includes>
+						<include>**/*Test.java</include>
+						<include>**/*Tests.java</include>
+					</includes>
+					<excludes>
+						<exclude>**/it/*IT.java</exclude>
+					</excludes>
+					<configuration>
+						<skipTests>true</skipTests>
+					</configuration>
+					<!-- new configuration needed for coverage per test -->
+					<!-- <properties> <property> <name>listener</name> <value>org.sonar.java.jacoco.JUnitListener</value> 
+						</property> </properties> -->
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>cover.COVER</mainClass>
+						</manifest>
+						<manifestEntries>
+							<Class-Path>.</Class-Path>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>cover.COVER</mainClass>
+						</manifest>
+						<manifestEntries>
+							<Class-Path>.</Class-Path>
+						</manifestEntries>
+					</archive>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id> <!-- this is used for inheritance merges -->
+						<phase>package</phase> <!-- bind to the packaging phase -->
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>18.0</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-cli</groupId>
+			<artifactId>commons-cli</artifactId>
+			<version>1.3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>it.polimi.chia</groupId>
+			<artifactId>CHIAAutomata</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>it.polimi.chia</groupId>
+			<artifactId>CHIAAutomataIO</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>it.polimi.chia</groupId>
+			<artifactId>CHIALTLIO</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>it.polimi.chia</groupId>
+			<artifactId>CHIAChecker</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>1.0.0.GA</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.annotation</groupId>
+			<artifactId>javax.annotation-api</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>18.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.checkerframework</groupId>
+			<artifactId>checker</artifactId>
+			<version>1.9.11</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.2</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge.collections</groupId>
+			<artifactId>collections-generic</artifactId>
+			<version>4.01</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>3.2</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jung</groupId>
+			<artifactId>jung-graph-impl</artifactId>
+			<version>2.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.org.apache</groupId>
+			<artifactId>jaxp-ri</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>javase</artifactId>
+			<version>2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.illposed.osc</groupId>
+			<artifactId>javaosc-core</artifactId>
+			<version>0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.scream3r</groupId>
+			<artifactId>jssc</artifactId>
+			<version>2.8.0</version>
+		</dependency>
+		<dependency>
+			<groupId>jfree</groupId>
+			<artifactId>jcommon</artifactId>
+			<version>1.0.16</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>12.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jung</groupId>
+			<artifactId>jung-algorithms</artifactId>
+			<version>2.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jung</groupId>
+			<artifactId>jung-visualization</artifactId>
+			<version>2.0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>3.2.3.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>3.2.3.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>3.2.3.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-expression</artifactId>
+			<version>3.2.3.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jgoodies</groupId>
+			<artifactId>forms</artifactId>
+			<version>1.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.freehep</groupId>
+			<artifactId>freehep-graphics2d</artifactId>
+			<version>2.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.freehep</groupId>
+			<artifactId>freehep-graphicsio-pdf</artifactId>
+			<version>2.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.freehep</groupId>
+			<artifactId>freehep-graphicsio-ps</artifactId>
+			<version>2.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.freehep</groupId>
+			<artifactId>freehep-graphicsio-svg</artifactId>
+			<version>2.4</version>
+		</dependency>
+		<dependency>
+			<groupId>jfree</groupId>
+			<artifactId>jfreechart</artifactId>
+			<version>1.0.13</version>
+		</dependency>
+		<dependency>
+			<groupId>org.bytedeco</groupId>
+			<artifactId>javacv</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>net.java.dev.swing-layout</groupId>
+			<artifactId>swing-layout</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.javacpp</groupId>
+			<artifactId>javacpp</artifactId>
+			<version>0.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.9.10</version>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.3.2</version>
+		</dependency>
+		<dependency>
+			<groupId>jadrone</groupId>
+			<artifactId>jadrone</artifactId>
+			<version>0.32</version>
+		</dependency>
+		<dependency>
+			<groupId>pccomm</groupId>
+			<artifactId>pccomm</artifactId>
+			<version>0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>jgraphx</groupId>
+			<artifactId>jgraphx</artifactId>
+			<version>0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.microsoft</groupId>
+			<artifactId>z3</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>synoptic</groupId>
+			<artifactId>synoptic</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>jargs</groupId>
+			<artifactId>jargs</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>javacv</groupId>
+			<artifactId>javacv</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>scenebeans</groupId>
+			<artifactId>scenebeans</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>lejos</groupId>
+			<artifactId>nxt</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>ev3classes</groupId>
+			<artifactId>ev3classes</artifactId>
+			<version>0.1</version>
+		</dependency>
+	</dependencies>
+	<repositories>
+		<repository>
+			<id>deib-polimi-releases</id>
+			<url>https://github.com/deib-polimi/deib-polimi-mvn-repo/raw/master/releases</url>
+		</repository>
+		<repository>
+			<id>CHIA</id>
+			<url>https://github.com/claudiomenghi</url>
+		</repository>
+		<repository>
+			<id>lib</id>
+			<url>file://${project.basedir}/lib</url>
+		</repository>
+	</repositories>
+
+
+</project>

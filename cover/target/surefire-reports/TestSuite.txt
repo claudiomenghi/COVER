@@ -1,0 +1,374 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 216, Failures: 43, Errors: 0, Skipped: 0, Time elapsed: 7.929 sec <<< FAILURE! - in TestSuite
+OppositeSafeGameTest(MTSATests.controller.OppositeSafeGameSolverTests)  Time elapsed: 0.025 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+
+OppositeSafeGameTest(MTSATests.controller.OppositeSafeGameSolverTests)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+
+OppositeSafeGameTest(MTSATests.controller.OppositeSafeGameSolverTests)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+
+OppositeSafeGameTest(MTSATests.controller.OppositeSafeGameSolverTests)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+
+OppositeSafeGameTest(MTSATests.controller.OppositeSafeGameSolverTests)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+
+OppositeSafeGameTest(MTSATests.controller.OppositeSafeGameSolverTests)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+
+OppositeSafeGameTest(MTSATests.controller.OppositeSafeGameSolverTests)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+
+OppositeSafeGameTest(MTSATests.controller.OppositeSafeGameSolverTests)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+
+OppositeSafeGameTest(MTSATests.controller.OppositeSafeGameSolverTests)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+
+OppositeSafeGameTest(MTSATests.controller.OppositeSafeGameSolverTests)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+
+OppositeSafeGameTest(MTSATests.controller.OppositeSafeGameSolverTests)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+
+OppositeSafeGameTest(MTSATests.controller.OppositeSafeGameSolverTests)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+
+OppositeSafeGameTest(MTSATests.controller.OppositeSafeGameSolverTests)  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+
+OppositeSafeGameTest(MTSATests.controller.OppositeSafeGameSolverTests)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+
+OppositeSafeGameTest(MTSATests.controller.OppositeSafeGameSolverTests)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+
+OppositeSafeGameTest(MTSATests.controller.OppositeSafeGameSolverTests)  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+
+SafeGameTest(MTSATests.controller.SafeGameSolverTests)  Time elapsed: 0.005 sec  <<< FAILURE!
+java.lang.NullPointerException: null
+	at MTSSynthesis.controller.game.safe.SafeGame.<init>(SafeGame.java:29)
+	at MTSSynthesis.controller.game.model.SafeGameSolver.<init>(SafeGameSolver.java:24)
+	at MTSATests.controller.SafeGameSolverTests.getLTSSafeGameStrategyFromFile(SafeGameSolverTests.java:29)
+	at MTSATests.controller.SafeGameSolverTests.getMut(SafeGameSolverTests.java:74)
+	at MTSATests.controller.SafeGameSolverTests.SafeGameTest(SafeGameSolverTests.java:61)
+
+checkUpdatingFormula(MTSATests.controller.UpdatingControllersTests)  Time elapsed: 0.003 sec  <<< FAILURE!
+java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/adding_actions_test.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSATests.controller.UpdatingControllersTests.checkUpdatingFormula(UpdatingControllersTests.java:113)
+
+checkUpdatingFormula(MTSATests.controller.UpdatingControllersTests)  Time elapsed: 0 sec  <<< FAILURE!
+java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/removing_actions_test.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSATests.controller.UpdatingControllersTests.checkUpdatingFormula(UpdatingControllersTests.java:113)
+
+checkUpdatingFormula(MTSATests.controller.UpdatingControllersTests)  Time elapsed: 0 sec  <<< FAILURE!
+java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/UAV_test.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSATests.controller.UpdatingControllersTests.checkUpdatingFormula(UpdatingControllersTests.java:113)
+
+checkUpdatingFormula(MTSATests.controller.UpdatingControllersTests)  Time elapsed: 0 sec  <<< FAILURE!
+java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/productionCell_test.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSATests.controller.UpdatingControllersTests.checkUpdatingFormula(UpdatingControllersTests.java:113)
+
+checkUpdatingFormula(MTSATests.controller.UpdatingControllersTests)  Time elapsed: 0 sec  <<< FAILURE!
+java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-PowerPlant-Ghezzi2013.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSATests.controller.UpdatingControllersTests.checkUpdatingFormula(UpdatingControllersTests.java:113)
+
+checkUpdatingFormula(MTSATests.controller.UpdatingControllersTests)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-Railcab-Ghezzi2012.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSATests.controller.UpdatingControllersTests.checkUpdatingFormula(UpdatingControllersTests.java:113)
+
+checkUpdatingFormula(MTSATests.controller.UpdatingControllersTests)  Time elapsed: 0.002 sec  <<< FAILURE!
+java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/2015-FSE-Workflow.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSATests.controller.UpdatingControllersTests.checkUpdatingFormula(UpdatingControllersTests.java:113)
+
+checkUpdatingFormula(MTSATests.controller.UpdatingControllersTests)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/2015-Tokyo/colorBallsTransfer.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSATests.controller.UpdatingControllersTests.checkUpdatingFormula(UpdatingControllersTests.java:113)
+
+environmentTest(MTSATests.controller.UpdatingControllersTests)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/adding_actions_test_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+
+environmentTest(MTSATests.controller.UpdatingControllersTests)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/removing_actions_test_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+
+environmentTest(MTSATests.controller.UpdatingControllersTests)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/UAV_test_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+
+environmentTest(MTSATests.controller.UpdatingControllersTests)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/productionCell_test_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+
+environmentTest(MTSATests.controller.UpdatingControllersTests)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-PowerPlant-Ghezzi2013_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+
+environmentTest(MTSATests.controller.UpdatingControllersTests)  Time elapsed: 0.002 sec  <<< FAILURE!
+java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-Railcab-Ghezzi2012_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+
+environmentTest(MTSATests.controller.UpdatingControllersTests)  Time elapsed: 0 sec  <<< FAILURE!
+java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/2015-FSE-ProductionCell_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+
+environmentTest(MTSATests.controller.UpdatingControllersTests)  Time elapsed: 0 sec  <<< FAILURE!
+java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/2015-FSE-Wildlife_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+
+environmentTest(MTSATests.controller.UpdatingControllersTests)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/2015-FSE-Workflow_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+
+graphGenerator_producesCorrectGraph(MTSATests.controller.UpdatingControllersTests)  Time elapsed: 0 sec  <<< FAILURE!
+java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/2015-Tokyo/colorBallsTransfer.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSATests.controller.UpdatingControllersTests.graphGenerator_producesCorrectGraph(UpdatingControllersTests.java:135)
+
+OppositeGR1GameTest(MTSATests.controller.OppositeGR1GameSolverTests)  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.AssertionError: mut was null expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at MTSATests.controller.OppositeGR1GameSolverTests.OppositeGR1GameTest(OppositeGR1GameSolverTests.java:77)
+
+OppositeGR1GameTest(MTSATests.controller.OppositeGR1GameSolverTests)  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.AssertionError: mut was null expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at MTSATests.controller.OppositeGR1GameSolverTests.OppositeGR1GameTest(OppositeGR1GameSolverTests.java:77)
+
+OppositeGR1GameTest(MTSATests.controller.OppositeGR1GameSolverTests)  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.AssertionError: mut was null expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at MTSATests.controller.OppositeGR1GameSolverTests.OppositeGR1GameTest(OppositeGR1GameSolverTests.java:77)
+
+OppositeGR1GameTest(MTSATests.controller.OppositeGR1GameSolverTests)  Time elapsed: 0.006 sec  <<< FAILURE!
+java.lang.AssertionError: mut was null expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at MTSATests.controller.OppositeGR1GameSolverTests.OppositeGR1GameTest(OppositeGR1GameSolverTests.java:77)
+
+testServicesExampleForLegalControllers on testServicesExampleForLegalControllers(MTSATests.controller.ControlledDeterminisationTests)(MTSATests.controller.ControlledDeterminisationTests)  Time elapsed: 0.002 sec  <<< FAILURE!
+java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/ltsa/dist/examples/2013-services-legal.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.ControlledDeterminisationTests.testServicesExampleForLegalControllers(ControlledDeterminisationTests.java:31)
+
+testSimpleControlledDet on testSimpleControlledDet(MTSATests.controller.ControlledDeterminisationTests)(MTSATests.controller.ControlledDeterminisationTests)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/ltsa/dist/examples/controlled-det-1.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.ControlledDeterminisationTests.testSimpleControlledDet(ControlledDeterminisationTests.java:21)
+
+testTwoLinearisationsWithInteractionsAndConditionsA on testTwoLinearisationsWithInteractionsAndConditionsA(MTSSynthesis.ar.dc.uba.lsc.ChartTest)(MTSSynthesis.ar.dc.uba.lsc.ChartTest)  Time elapsed: 0.003 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<[[User -> pwd -> ATM, ATM -> checkPwd -> Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[User, ATM], Phi_4[Bank], ATM -> wait -> User, Bank -> doCheck -> Bank, Bank -> checkOk -> ATM, ATM -> ok -> User], [User -> pwd -> ATM, ATM -> checkPwd -> Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[User, ATM], Phi_4[Bank], Bank -> doCheck -> Bank, ATM -> wait -> User, Bank -> checkOk -> ATM, ATM -> ok -> User]]> but was:<[[User -> pwd -> ATM, ATM -> checkPwd -> Bank, Phi_2[ATM], Phi_3[User, ATM], Phi_1[Bank], Phi_4[Bank], Bank -> doCheck -> Bank, ATM -> wait -> User, Bank -> checkOk -> ATM, ATM -> ok -> User], [User -> pwd -> ATM, ATM -> checkPwd -> Bank, Phi_2[ATM], Phi_3[User, ATM], Phi_1[Bank], Phi_4[Bank], ATM -> wait -> User, Bank -> doCheck -> Bank, Bank -> checkOk -> ATM, ATM -> ok -> User]]>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at MTSSynthesis.ar.dc.uba.lsc.ChartTest.testTwoLinearisationsWithInteractionsAndConditionsA(ChartTest.java:430)
+
+testTwoLinearisationsWithInteractionsAndConditionsB on testTwoLinearisationsWithInteractionsAndConditionsB(MTSSynthesis.ar.dc.uba.lsc.ChartTest)(MTSSynthesis.ar.dc.uba.lsc.ChartTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<[[User -> pwd -> ATM, ATM -> checkPwd -> Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[Bank, ATM], Bank -> doCheck -> Bank, ATM -> wait -> User, Bank -> checkOk -> ATM, ATM -> ok -> User], [User -> pwd -> ATM, ATM -> checkPwd -> Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[Bank, ATM], ATM -> wait -> User, Bank -> doCheck -> Bank, Bank -> checkOk -> ATM, ATM -> ok -> User]]> but was:<[[User -> pwd -> ATM, ATM -> checkPwd -> Bank, Phi_2[ATM], Phi_1[Bank], Phi_3[Bank, ATM], ATM -> wait -> User, Bank -> doCheck -> Bank, Bank -> checkOk -> ATM, ATM -> ok -> User], [User -> pwd -> ATM, ATM -> checkPwd -> Bank, Phi_2[ATM], Phi_1[Bank], Phi_3[Bank, ATM], Bank -> doCheck -> Bank, ATM -> wait -> User, Bank -> checkOk -> ATM, ATM -> ok -> User]]>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at MTSSynthesis.ar.dc.uba.lsc.ChartTest.testTwoLinearisationsWithInteractionsAndConditionsB(ChartTest.java:466)
+

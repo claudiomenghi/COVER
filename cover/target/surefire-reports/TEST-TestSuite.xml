@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestSuite" time="6.401" tests="216" errors="0" skipped="0" failures="43">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib"/>
+    <property name="java.vm.version" value="25.71-b15"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="IT"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa"/>
+    <property name="java.runtime.version" value="1.8.0_71-b15"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/rw/4wbmy6qx769b8jyd4s8kw7l00000gp/T/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf8054968865178330477.tmp"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/Claudio1/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.11.6"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/Claudio1"/>
+    <property name="user.timezone" value="Europe/Rome"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="Claudio1"/>
+    <property name="java.class.path" value="/Applications/eclipseNew/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/plexus-classworlds-2.5.1.jar"/>
+    <property name="org.slf4j.simpleLogger.defaultLogLevel" value="info"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B package"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="it"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_71"/>
+    <property name="java.ext.dirs" value="/Users/Claudio1/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/EMBEDDED"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="OppositeSafeGameTest" classname="MTSATests.controller.OppositeSafeGameSolverTests" time="0.025">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+</failure>
+    <system-out><![CDATA[Configuring TestNG with: TestNG652Configurator
+no safetyRequirement
+[Ljava.lang.StackTraceElement;@cb644e]]></system-out>
+  </testcase>
+  <testcase name="OppositeSafeGameTest" classname="MTSATests.controller.OppositeSafeGameSolverTests" time="0">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+</failure>
+    <system-out><![CDATA[no safetyRequirement
+[Ljava.lang.StackTraceElement;@20322d26]]></system-out>
+  </testcase>
+  <testcase name="OppositeSafeGameTest" classname="MTSATests.controller.OppositeSafeGameSolverTests" time="0">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+</failure>
+    <system-out><![CDATA[no safetyRequirement
+[Ljava.lang.StackTraceElement;@64bfbc86]]></system-out>
+  </testcase>
+  <testcase name="OppositeSafeGameTest" classname="MTSATests.controller.OppositeSafeGameSolverTests" time="0.001">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+</failure>
+    <system-out><![CDATA[no safetyRequirement
+[Ljava.lang.StackTraceElement;@55d56113]]></system-out>
+  </testcase>
+  <testcase name="OppositeSafeGameTest" classname="MTSATests.controller.OppositeSafeGameSolverTests" time="0.001">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+</failure>
+    <system-out><![CDATA[no safetyRequirement
+[Ljava.lang.StackTraceElement;@dc24521]]></system-out>
+  </testcase>
+  <testcase name="OppositeSafeGameTest" classname="MTSATests.controller.OppositeSafeGameSolverTests" time="0.001">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+</failure>
+    <system-out><![CDATA[no safetyRequirement
+[Ljava.lang.StackTraceElement;@6e1ec318]]></system-out>
+  </testcase>
+  <testcase name="OppositeSafeGameTest" classname="MTSATests.controller.OppositeSafeGameSolverTests" time="0.001">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+</failure>
+    <system-out><![CDATA[no safetyRequirement
+[Ljava.lang.StackTraceElement;@617faa95]]></system-out>
+  </testcase>
+  <testcase name="OppositeSafeGameTest" classname="MTSATests.controller.OppositeSafeGameSolverTests" time="0.001">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+</failure>
+    <system-out><![CDATA[no safetyRequirement
+[Ljava.lang.StackTraceElement;@60c6f5b]]></system-out>
+  </testcase>
+  <testcase name="OppositeSafeGameTest" classname="MTSATests.controller.OppositeSafeGameSolverTests" time="0.001">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+</failure>
+    <system-out><![CDATA[no safetyRequirement
+[Ljava.lang.StackTraceElement;@3c0f93f1]]></system-out>
+  </testcase>
+  <testcase name="OppositeSafeGameTest" classname="MTSATests.controller.OppositeSafeGameSolverTests" time="0.001">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+</failure>
+    <system-out><![CDATA[no safetyRequirement
+[Ljava.lang.StackTraceElement;@544fe44c]]></system-out>
+  </testcase>
+  <testcase name="OppositeSafeGameTest" classname="MTSATests.controller.OppositeSafeGameSolverTests" time="0.001">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+</failure>
+    <system-out><![CDATA[no safetyRequirement
+[Ljava.lang.StackTraceElement;@71318ec4]]></system-out>
+  </testcase>
+  <testcase name="OppositeSafeGameTest" classname="MTSATests.controller.OppositeSafeGameSolverTests" time="0.001">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+</failure>
+    <system-out><![CDATA[no safetyRequirement
+[Ljava.lang.StackTraceElement;@a67c67e]]></system-out>
+  </testcase>
+  <testcase name="OppositeSafeGameTest" classname="MTSATests.controller.OppositeSafeGameSolverTests" time="0.002">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+</failure>
+    <system-out><![CDATA[no safetyRequirement
+[Ljava.lang.StackTraceElement;@4e1d422d]]></system-out>
+  </testcase>
+  <testcase name="OppositeSafeGameTest" classname="MTSATests.controller.OppositeSafeGameSolverTests" time="0.001">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+</failure>
+    <system-out><![CDATA[no safetyRequirement
+[Ljava.lang.StackTraceElement;@52a86356]]></system-out>
+  </testcase>
+  <testcase name="OppositeSafeGameTest" classname="MTSATests.controller.OppositeSafeGameSolverTests" time="0.001">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+</failure>
+    <system-out><![CDATA[no safetyRequirement
+[Ljava.lang.StackTraceElement;@78c03f1f]]></system-out>
+  </testcase>
+  <testcase name="OppositeSafeGameTest" classname="MTSATests.controller.OppositeSafeGameSolverTests" time="0.002">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at MTSATests.controller.OppositeSafeGameSolverTests.OppositeSafeGameTest(OppositeSafeGameSolverTests.java:201)
+</failure>
+    <system-out><![CDATA[no safetyRequirement
+[Ljava.lang.StackTraceElement;@5383967b]]></system-out>
+  </testcase>
+  <testcase name="SafeGameTest" classname="MTSATests.controller.SafeGameSolverTests" time="0.005">
+    <failure type="java.lang.NullPointerException:"><![CDATA[java.lang.NullPointerException: null
+	at MTSSynthesis.controller.game.safe.SafeGame.<init>(SafeGame.java:29)
+	at MTSSynthesis.controller.game.model.SafeGameSolver.<init>(SafeGameSolver.java:24)
+	at MTSATests.controller.SafeGameSolverTests.getLTSSafeGameStrategyFromFile(SafeGameSolverTests.java:29)
+	at MTSATests.controller.SafeGameSolverTests.getMut(SafeGameSolverTests.java:74)
+	at MTSATests.controller.SafeGameSolverTests.SafeGameTest(SafeGameSolverTests.java:61)
+]]></failure>
+    <system-err><![CDATA[java.io.FileNotFoundException: ../ltsa/dist/examples/SafetyCuts/Results/general.result (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at java.io.PrintWriter.<init>(PrintWriter.java:192)
+	at java.io.PrintWriter.<init>(PrintWriter.java:232)
+	at MTSATests.controller.OppositeSafeGameSolverTests.tearDown(OppositeSafeGameSolverTests.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:232)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:204)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:107)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:112)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]></system-err>
+  </testcase>
+  <testcase name="checkUpdatingFormula" classname="MTSATests.controller.UpdatingControllersTests" time="0.003">
+    <failure message="/Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/adding_actions_test.lts (No such file or directory)" type="java.io.FileNotFoundException"><![CDATA[java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/adding_actions_test.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSATests.controller.UpdatingControllersTests.checkUpdatingFormula(UpdatingControllersTests.java:113)
+]]></failure>
+  </testcase>
+  <testcase name="checkUpdatingFormula" classname="MTSATests.controller.UpdatingControllersTests" time="0">
+    <failure message="/Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/removing_actions_test.lts (No such file or directory)" type="java.io.FileNotFoundException"><![CDATA[java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/removing_actions_test.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSATests.controller.UpdatingControllersTests.checkUpdatingFormula(UpdatingControllersTests.java:113)
+]]></failure>
+  </testcase>
+  <testcase name="checkUpdatingFormula" classname="MTSATests.controller.UpdatingControllersTests" time="0">
+    <failure message="/Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/UAV_test.lts (No such file or directory)" type="java.io.FileNotFoundException"><![CDATA[java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/UAV_test.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSATests.controller.UpdatingControllersTests.checkUpdatingFormula(UpdatingControllersTests.java:113)
+]]></failure>
+  </testcase>
+  <testcase name="checkUpdatingFormula" classname="MTSATests.controller.UpdatingControllersTests" time="0">
+    <failure message="/Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/productionCell_test.lts (No such file or directory)" type="java.io.FileNotFoundException"><![CDATA[java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/productionCell_test.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSATests.controller.UpdatingControllersTests.checkUpdatingFormula(UpdatingControllersTests.java:113)
+]]></failure>
+  </testcase>
+  <testcase name="checkUpdatingFormula" classname="MTSATests.controller.UpdatingControllersTests" time="0">
+    <failure message="/Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-PowerPlant-Ghezzi2013.lts (No such file or directory)" type="java.io.FileNotFoundException"><![CDATA[java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-PowerPlant-Ghezzi2013.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSATests.controller.UpdatingControllersTests.checkUpdatingFormula(UpdatingControllersTests.java:113)
+]]></failure>
+  </testcase>
+  <testcase name="checkUpdatingFormula" classname="MTSATests.controller.UpdatingControllersTests" time="0.001">
+    <failure message="/Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-Railcab-Ghezzi2012.lts (No such file or directory)" type="java.io.FileNotFoundException"><![CDATA[java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-Railcab-Ghezzi2012.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSATests.controller.UpdatingControllersTests.checkUpdatingFormula(UpdatingControllersTests.java:113)
+]]></failure>
+  </testcase>
+  <testcase name="checkUpdatingFormula" classname="MTSATests.controller.UpdatingControllersTests" time="0.002">
+    <failure message="/Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/2015-FSE-Workflow.lts (No such file or directory)" type="java.io.FileNotFoundException"><![CDATA[java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/2015-FSE-Workflow.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSATests.controller.UpdatingControllersTests.checkUpdatingFormula(UpdatingControllersTests.java:113)
+]]></failure>
+  </testcase>
+  <testcase name="checkUpdatingFormula" classname="MTSATests.controller.UpdatingControllersTests" time="0.001">
+    <failure message="/Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/2015-Tokyo/colorBallsTransfer.lts (No such file or directory)" type="java.io.FileNotFoundException"><![CDATA[java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/2015-Tokyo/colorBallsTransfer.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSATests.controller.UpdatingControllersTests.checkUpdatingFormula(UpdatingControllersTests.java:113)
+]]></failure>
+  </testcase>
+  <testcase name="environmentTest" classname="MTSATests.controller.UpdatingControllersTests" time="0.001">
+    <failure message="/Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/adding_actions_test_env.lts (No such file or directory)" type="java.io.FileNotFoundException"><![CDATA[java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/adding_actions_test_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+]]></failure>
+  </testcase>
+  <testcase name="environmentTest" classname="MTSATests.controller.UpdatingControllersTests" time="0.001">
+    <failure message="/Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/removing_actions_test_env.lts (No such file or directory)" type="java.io.FileNotFoundException"><![CDATA[java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/removing_actions_test_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+]]></failure>
+  </testcase>
+  <testcase name="environmentTest" classname="MTSATests.controller.UpdatingControllersTests" time="0.001">
+    <failure message="/Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/UAV_test_env.lts (No such file or directory)" type="java.io.FileNotFoundException"><![CDATA[java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/UAV_test_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+]]></failure>
+  </testcase>
+  <testcase name="environmentTest" classname="MTSATests.controller.UpdatingControllersTests" time="0.001">
+    <failure message="/Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/productionCell_test_env.lts (No such file or directory)" type="java.io.FileNotFoundException"><![CDATA[java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Tests/productionCell_test_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+]]></failure>
+  </testcase>
+  <testcase name="environmentTest" classname="MTSATests.controller.UpdatingControllersTests" time="0.001">
+    <failure message="/Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-PowerPlant-Ghezzi2013_env.lts (No such file or directory)" type="java.io.FileNotFoundException"><![CDATA[java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-PowerPlant-Ghezzi2013_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+]]></failure>
+  </testcase>
+  <testcase name="environmentTest" classname="MTSATests.controller.UpdatingControllersTests" time="0.002">
+    <failure message="/Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-Railcab-Ghezzi2012_env.lts (No such file or directory)" type="java.io.FileNotFoundException"><![CDATA[java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/Ghezzi/2015-FSE-Railcab-Ghezzi2012_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+]]></failure>
+  </testcase>
+  <testcase name="environmentTest" classname="MTSATests.controller.UpdatingControllersTests" time="0">
+    <failure message="/Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/2015-FSE-ProductionCell_env.lts (No such file or directory)" type="java.io.FileNotFoundException"><![CDATA[java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/2015-FSE-ProductionCell_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+]]></failure>
+  </testcase>
+  <testcase name="environmentTest" classname="MTSATests.controller.UpdatingControllersTests" time="0">
+    <failure message="/Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/2015-FSE-Wildlife_env.lts (No such file or directory)" type="java.io.FileNotFoundException"><![CDATA[java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/2015-FSE-Wildlife_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+]]></failure>
+  </testcase>
+  <testcase name="environmentTest" classname="MTSATests.controller.UpdatingControllersTests" time="0.001">
+    <failure message="/Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/2015-FSE-Workflow_env.lts (No such file or directory)" type="java.io.FileNotFoundException"><![CDATA[java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/2015-FSE-Workflow_env.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.UpdatingControllersTests.environmentTest(UpdatingControllersTests.java:61)
+]]></failure>
+  </testcase>
+  <testcase name="graphGenerator_producesCorrectGraph" classname="MTSATests.controller.UpdatingControllersTests" time="0">
+    <failure message="/Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/2015-Tokyo/colorBallsTransfer.lts (No such file or directory)" type="java.io.FileNotFoundException"><![CDATA[java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/mtsa/ltsa/dist/examples/ControllerUpdate/2015-Tokyo/colorBallsTransfer.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSATests.controller.UpdatingControllersTests.graphGenerator_producesCorrectGraph(UpdatingControllersTests.java:135)
+]]></failure>
+  </testcase>
+  <testcase name="OppositeGR1GameTest" classname="MTSATests.controller.OppositeGR1GameSolverTests" time="0.002">
+    <failure message="mut was null expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: mut was null expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at MTSATests.controller.OppositeGR1GameSolverTests.OppositeGR1GameTest(OppositeGR1GameSolverTests.java:77)
+</failure>
+    <system-out><![CDATA[[Ljava.lang.StackTraceElement;@2b2948e2]]></system-out>
+  </testcase>
+  <testcase name="OppositeGR1GameTest" classname="MTSATests.controller.OppositeGR1GameSolverTests" time="0.002">
+    <failure message="mut was null expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: mut was null expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at MTSATests.controller.OppositeGR1GameSolverTests.OppositeGR1GameTest(OppositeGR1GameSolverTests.java:77)
+</failure>
+    <system-out><![CDATA[[Ljava.lang.StackTraceElement;@57536d79]]></system-out>
+  </testcase>
+  <testcase name="OppositeGR1GameTest" classname="MTSATests.controller.OppositeGR1GameSolverTests" time="0.002">
+    <failure message="mut was null expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: mut was null expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at MTSATests.controller.OppositeGR1GameSolverTests.OppositeGR1GameTest(OppositeGR1GameSolverTests.java:77)
+</failure>
+    <system-out><![CDATA[[Ljava.lang.StackTraceElement;@5a8e6209]]></system-out>
+  </testcase>
+  <testcase name="OppositeGR1GameTest" classname="MTSATests.controller.OppositeGR1GameSolverTests" time="0.006">
+    <failure message="mut was null expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: mut was null expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at MTSATests.controller.OppositeGR1GameSolverTests.OppositeGR1GameTest(OppositeGR1GameSolverTests.java:77)
+</failure>
+    <system-out><![CDATA[[Ljava.lang.StackTraceElement;@731a74c]]></system-out>
+  </testcase>
+  <testcase name="testGetAlphabet on testGetAlphabet(MTSSynthesis.ar.dc.uba.model.language.LanguageTest)" classname="MTSSynthesis.ar.dc.uba.model.language.LanguageTest" time="0.016"/>
+  <testcase name="testSimpleStarredModel on testSimpleStarredModel(MTSATests.controller.StarEnvTests)" classname="MTSATests.controller.StarEnvTests" time="0.025"/>
+  <testcase name="testStateWithNoReqs on testStateWithNoReqs(MTSATests.controller.StarEnvTests)" classname="MTSATests.controller.StarEnvTests" time="0.054"/>
+  <testcase name="testContainsObject on testContainsObject(MTSTools.ac.ic.doc.commons.collections.PowerSetTest)" classname="MTSTools.ac.ic.doc.commons.collections.PowerSetTest" time="0.003"/>
+  <testcase name="testSize on testSize(MTSTools.ac.ic.doc.commons.collections.PowerSetTest)" classname="MTSTools.ac.ic.doc.commons.collections.PowerSetTest" time="0"/>
+  <testcase name="testIterator on testIterator(MTSTools.ac.ic.doc.commons.collections.PowerSetTest)" classname="MTSTools.ac.ic.doc.commons.collections.PowerSetTest" time="0.025"/>
+  <testcase name="testSimpleModelNonDetDifferentModalitiesWithLoops on testSimpleModelNonDetDifferentModalitiesWithLoops(MTSATests.ac.ic.doc.distribution.ComponentBuilderTest)" classname="MTSATests.ac.ic.doc.distribution.ComponentBuilderTest" time="0.491"/>
+  <testcase name="testSimpleModelFullProjection on testSimpleModelFullProjection(MTSATests.ac.ic.doc.distribution.ComponentBuilderTest)" classname="MTSATests.ac.ic.doc.distribution.ComponentBuilderTest" time="0.004"/>
+  <testcase name="testSimpleModelNonDetDifferentModalities on testSimpleModelNonDetDifferentModalities(MTSATests.ac.ic.doc.distribution.ComponentBuilderTest)" classname="MTSATests.ac.ic.doc.distribution.ComponentBuilderTest" time="0.072"/>
+  <testcase name="testTwoMistmatches on testTwoMistmatches(MTSATests.ac.ic.doc.distribution.ComponentBuilderTest)" classname="MTSATests.ac.ic.doc.distribution.ComponentBuilderTest" time="0.021"/>
+  <testcase name="testSimpleModelNonDetNonFullProjection on testSimpleModelNonDetNonFullProjection(MTSATests.ac.ic.doc.distribution.ComponentBuilderTest)" classname="MTSATests.ac.ic.doc.distribution.ComponentBuilderTest" time="0.013"/>
+  <testcase name="testNonFullProjection on testNonFullProjection(MTSATests.ac.ic.doc.distribution.ComponentBuilderTest)" classname="MTSATests.ac.ic.doc.distribution.ComponentBuilderTest" time="0.004"/>
+  <testcase name="testComponeBien on testComponeBien(MTSATests.mts.TopStatesTests)" classname="MTSATests.mts.TopStatesTests" time="0.429"/>
+  <testcase name="testNoTopStates on testNoTopStates(MTSATests.mts.TopStatesTests)" classname="MTSATests.mts.TopStatesTests" time="0.068"/>
+  <testcase name="testNotEmpty on testNotEmpty(MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest)" classname="MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest" time="0.001"/>
+  <testcase name="testTwoAlphabet on testTwoAlphabet(MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest)" classname="MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest" time="0.002"/>
+  <testcase name="testAnyAlphabetNotEmpty on testAnyAlphabetNotEmpty(MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest)" classname="MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest" time="0"/>
+  <testcase name="testTwoAlphabetOneEmpty on testTwoAlphabetOneEmpty(MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest)" classname="MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest" time="0"/>
+  <testcase name="testOneAlphabet on testOneAlphabet(MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest)" classname="MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest" time="0.001"/>
+  <testcase name="testAll on testAll(MTSATests.controller.MTSControllerSynthesisTests)" classname="MTSATests.controller.MTSControllerSynthesisTests" time="0.11"/>
+  <testcase name="testNone on testNone(MTSATests.controller.MTSControllerSynthesisTests)" classname="MTSATests.controller.MTSControllerSynthesisTests" time="0.039"/>
+  <testcase name="testSome on testSome(MTSATests.controller.MTSControllerSynthesisTests)" classname="MTSATests.controller.MTSControllerSynthesisTests" time="0.031"/>
+  <testcase name="bgrPositiveExample on bgrPositiveExample(MTSSynthesis.controller.game.bgr.BGRGameSolverTest)" classname="MTSSynthesis.controller.game.bgr.BGRGameSolverTest" time="0.01"/>
+  <testcase name="bgrEmptyBuchiExample on bgrEmptyBuchiExample(MTSSynthesis.controller.game.bgr.BGRGameSolverTest)" classname="MTSSynthesis.controller.game.bgr.BGRGameSolverTest" time="0.01"/>
+  <testcase name="bgrNegativeExample on bgrNegativeExample(MTSSynthesis.controller.game.bgr.BGRGameSolverTest)" classname="MTSSynthesis.controller.game.bgr.BGRGameSolverTest" time="0.001"/>
+  <testcase name="bgrEmptyGRExample on bgrEmptyGRExample(MTSSynthesis.controller.game.bgr.BGRGameSolverTest)" classname="MTSSynthesis.controller.game.bgr.BGRGameSolverTest" time="0.002"/>
+  <testcase name="bgrNoGuaranteeExample on bgrNoGuaranteeExample(MTSSynthesis.controller.game.bgr.BGRGameSolverTest)" classname="MTSSynthesis.controller.game.bgr.BGRGameSolverTest" time="0.001"/>
+  <testcase name="testAll on testAll(FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilder2Test)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilder2Test" time="0.009"/>
+  <testcase name="testReflexiveSilent on testReflexiveSilent(FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilder2Test)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilder2Test" time="0.001"/>
+  <testcase name="testConcatenateLanguages on testConcatenateLanguages(MTSSynthesis.ar.dc.uba.util.LanguageUtilsTest)" classname="MTSSynthesis.ar.dc.uba.util.LanguageUtilsTest" time="0.001"/>
+  <testcase name="test3States on test3States(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSDeterminiserTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSDeterminiserTest" time="0.01"/>
+  <testcase name="test2StepsToErrorState on test2StepsToErrorState(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSDeterminiserTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSDeterminiserTest" time="0.02"/>
+  <testcase name="testBuildAlphabetWithoutMaybeAndNotMaybe on testBuildAlphabetWithoutMaybeAndNotMaybe(FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest)" classname="FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest" time="0.001"/>
+  <testcase name="testBuildAlphabetWithMaybeAndNotMaybe on testBuildAlphabetWithMaybeAndNotMaybe(FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest)" classname="FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest" time="0"/>
+  <testcase name="testIsMTSRepresentation on testIsMTSRepresentation(FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest)" classname="FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest" time="0"/>
+  <testcase name="testDoMaybe on testDoMaybe(FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest)" classname="FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest" time="0"/>
+  <testcase name="test2StatesBisimulationWouldntMinimize on test2StatesBisimulationWouldntMinimize(FSP2MTS.ac.ic.doc.mtstools.model.impl.ClosureTraceInclusionTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.ClosureTraceInclusionTest" time="0.101"/>
+  <testcase name="testSizeForGetAllTracesToStateSatisfyingPredicateNonDeterministicStates on testSizeForGetAllTracesToStateSatisfyingPredicateNonDeterministicStates(MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest)" classname="MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest" time="0.08"/>
+  <testcase name="testTracesSatisfyPredicateFromGetAllTracesToStateSatisfyingPredicate on testTracesSatisfyPredicateFromGetAllTracesToStateSatisfyingPredicate(MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest)" classname="MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest" time="0.01"/>
+  <testcase name="testGetATraceToAParticularState on testGetATraceToAParticularState(MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest)" classname="MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest" time="0.004"/>
+  <testcase name="testIsEmpty on testIsEmpty(MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest)" classname="MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest" time="0"/>
+  <testcase name="testEquals on testEquals(FSP2MTS.ac.ic.doc.mtstools.model.impl.CompositionStateTests)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.CompositionStateTests" time="0"/>
+  <testcase name="testComponeConError on testComponeConError(FSP2MTS.ac.ic.doc.mtstools.model.impl.PlusCAAndCROperationTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.PlusCAAndCROperationTest" time="0.02"/>
+  <testcase name="testTomAndJerry on testTomAndJerry(MTSATests.controller.BasicTomAndJerryTest)" classname="MTSATests.controller.BasicTomAndJerryTest" time="0.242"/>
+  <testcase name="testDistributionFeedbackOnFullAlphabetNotPresent on testDistributionFeedbackOnFullAlphabetNotPresent(MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest)" classname="MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest" time="0.031"/>
+  <testcase name="testNonDeterminismFeedback on testNonDeterminismFeedback(MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest)" classname="MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest" time="0.02"/>
+  <testcase name="testSimpleModelNonDetDifferentModalities on testSimpleModelNonDetDifferentModalities(MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest)" classname="MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest" time="0.008"/>
+  <testcase name="testComplexModelDifferentModalities on testComplexModelDifferentModalities(MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest)" classname="MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest" time="0.003"/>
+  <testcase name="testDistributionFeedbackOnFullAlphabetPresent on testDistributionFeedbackOnFullAlphabetPresent(MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest)" classname="MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest" time="0.001"/>
+  <testcase name="testCanonicalSymbolEquals on testCanonicalSymbolEquals(MTSSynthesis.ar.dc.uba.model.language.CanonicalSymbolTest)" classname="MTSSynthesis.ar.dc.uba.model.language.CanonicalSymbolTest" time="0.001"/>
+  <testcase name="testCanonicalSymbolNotEquals on testCanonicalSymbolNotEquals(MTSSynthesis.ar.dc.uba.model.language.CanonicalSymbolTest)" classname="MTSSynthesis.ar.dc.uba.model.language.CanonicalSymbolTest" time="0"/>
+  <testcase name="testParseAlphabet on testParseAlphabet(MTSSynthesis.ar.dc.uba.parser.AlphabetParserTest)" classname="MTSSynthesis.ar.dc.uba.parser.AlphabetParserTest" time="0.001"/>
+  <testcase name="testParseSingletonAlphabet on testParseSingletonAlphabet(MTSSynthesis.ar.dc.uba.parser.AlphabetParserTest)" classname="MTSSynthesis.ar.dc.uba.parser.AlphabetParserTest" time="0"/>
+  <testcase name="testAll on testAll(FSP2MTS.ac.ic.doc.mtstools.model.impl.ClousurePathBuilderTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.ClousurePathBuilderTest" time="0.008"/>
+  <testcase name="testPropertyInComposite on testPropertyInComposite(MTSATests.parser.testParserLabelTest)" classname="MTSATests.parser.testParserLabelTest" time="0.041"/>
+  <testcase name="testRemoveOneTransitionWithOneOrphan on testRemoveOneTransitionWithOneOrphan(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSRemoveTransitionTests)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSRemoveTransitionTests" time="0"/>
+  <testcase name="testRemoveOneTransitionWithoutOrphans on testRemoveOneTransitionWithoutOrphans(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSRemoveTransitionTests)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSRemoveTransitionTests" time="0.001"/>
+  <testcase name="testRemoveOneTransitionWithTwoOrphans on testRemoveOneTransitionWithTwoOrphans(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSRemoveTransitionTests)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSRemoveTransitionTests" time="0"/>
+  <testcase name="testMinimisaEjemploLibroModelChecking on testMinimisaEjemploLibroModelChecking(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest" time="0.035"/>
+  <testcase name="testMinimisaEjemploPaper on testMinimisaEjemploPaper(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest" time="0.023"/>
+  <testcase name="testMinimisaEjemploABCConEstadoFinalMaybe on testMinimisaEjemploABCConEstadoFinalMaybe(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest" time="0.011"/>
+  <testcase name="testMinimisaEjemploABSimple on testMinimisaEjemploABSimple(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest" time="0.009"/>
+  <testcase name="testCopy on testCopy(MTSSynthesis.ar.dc.uba.model.condition.ZetaFunctionTest)" classname="MTSSynthesis.ar.dc.uba.model.condition.ZetaFunctionTest" time="0.004"/>
+  <testcase name="testFluentsEquals on testFluentsEquals(MTSSynthesis.ar.dc.uba.model.condition.ZetaFunctionTest)" classname="MTSSynthesis.ar.dc.uba.model.condition.ZetaFunctionTest" time="0"/>
+  <testcase name="testEquals on testEquals(MTSSynthesis.ar.dc.uba.model.condition.ZetaFunctionTest)" classname="MTSSynthesis.ar.dc.uba.model.condition.ZetaFunctionTest" time="0.001"/>
+  <testcase name="testCR on testCR(FSP2MTS.ac.ic.doc.mtstools.model.impl.PlusCROperatorTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.PlusCROperatorTest" time="0.012"/>
+  <testcase name="test1 on test1(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest" time="0.009"/>
+  <testcase name="test2 on test2(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest" time="0.002"/>
+  <testcase name="test3 on test3(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest" time="0.001"/>
+  <testcase name="test4 on test4(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest" time="0.001"/>
+  <testcase name="test5 on test5(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest" time="0.001"/>
+  <testcase name="test6 on test6(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest" time="0.002"/>
+  <testcase name="test7 on test7(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest" time="0.001"/>
+  <testcase name="test8 on test8(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest" time="0.001"/>
+  <testcase name="test9 on test9(FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest" time="0.001"/>
+  <testcase name="testParseWord on testParseWord(MTSSynthesis.ar.dc.uba.parser.WordParserTest)" classname="MTSSynthesis.ar.dc.uba.parser.WordParserTest" time="0.001"/>
+  <testcase name="testParseSingletonWord on testParseSingletonWord(MTSSynthesis.ar.dc.uba.parser.WordParserTest)" classname="MTSSynthesis.ar.dc.uba.parser.WordParserTest" time="0"/>
+  <testcase name="testPropertyA on testPropertyA(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSPropertyTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSPropertyTest" time="0.063"/>
+  <testcase name="testServicesExampleForLegalControllers on testServicesExampleForLegalControllers(MTSATests.controller.ControlledDeterminisationTests)" classname="MTSATests.controller.ControlledDeterminisationTests" time="0.002">
+    <failure message="/Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/ltsa/dist/examples/2013-services-legal.lts (No such file or directory)" type="java.io.FileNotFoundException"><![CDATA[java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/ltsa/dist/examples/2013-services-legal.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.ControlledDeterminisationTests.testServicesExampleForLegalControllers(ControlledDeterminisationTests.java:31)
+]]></failure>
+  </testcase>
+  <testcase name="testSimpleControlledDet on testSimpleControlledDet(MTSATests.controller.ControlledDeterminisationTests)" classname="MTSATests.controller.ControlledDeterminisationTests" time="0.001">
+    <failure message="/Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/ltsa/dist/examples/controlled-det-1.lts (No such file or directory)" type="java.io.FileNotFoundException"><![CDATA[java.io.FileNotFoundException: /Users/Claudio1/Documents/School/University/Postdoc/Software/COVER/MTSA/mtsa/maven-root/ltsa/dist/examples/controlled-det-1.lts (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at ltsa.ui.FileInput.<init>(FileInput.java:19)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileCompositeState(MTSCompiler.java:37)
+	at MTSAClient.ac.ic.doc.mtsa.MTSCompiler.compileMTS(MTSCompiler.java:27)
+	at MTSATests.controller.ControlledDeterminisationTests.testSimpleControlledDet(ControlledDeterminisationTests.java:21)
+]]></failure>
+  </testcase>
+  <testcase name="testAll on testAll(FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilderTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilderTest" time="0.026"/>
+  <testcase name="testReflexiveSilent on testReflexiveSilent(FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilderTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilderTest" time="0"/>
+  <testcase name="testGetAcceptedMid on testGetAcceptedMid(MTSAEnactment.robot.CommandAcceptedMessageTest)" classname="MTSAEnactment.robot.CommandAcceptedMessageTest" time="0.001"/>
+  <testcase name="testWriteData on testWriteData(MTSAEnactment.robot.CommandAcceptedMessageTest)" classname="MTSAEnactment.robot.CommandAcceptedMessageTest" time="0.002"/>
+  <testcase name="testGetMessageLength on testGetMessageLength(MTSAEnactment.robot.CommandAcceptedMessageTest)" classname="MTSAEnactment.robot.CommandAcceptedMessageTest" time="0"/>
+  <testcase name="testStartsWithTrue on testStartsWithTrue(MTSSynthesis.ar.dc.uba.model.language.WordTest)" classname="MTSSynthesis.ar.dc.uba.model.language.WordTest" time="0.001"/>
+  <testcase name="testReverseEmptyWord on testReverseEmptyWord(MTSSynthesis.ar.dc.uba.model.language.WordTest)" classname="MTSSynthesis.ar.dc.uba.model.language.WordTest" time="0"/>
+  <testcase name="testFirst on testFirst(MTSSynthesis.ar.dc.uba.model.language.WordTest)" classname="MTSSynthesis.ar.dc.uba.model.language.WordTest" time="0"/>
+  <testcase name="testStartsWithTrueSigletonWord on testStartsWithTrueSigletonWord(MTSSynthesis.ar.dc.uba.model.language.WordTest)" classname="MTSSynthesis.ar.dc.uba.model.language.WordTest" time="0.001"/>
+  <testcase name="testEmptyWord on testEmptyWord(MTSSynthesis.ar.dc.uba.model.language.WordTest)" classname="MTSSynthesis.ar.dc.uba.model.language.WordTest" time="0"/>
+  <testcase name="testNotEmptyWord on testNotEmptyWord(MTSSynthesis.ar.dc.uba.model.language.WordTest)" classname="MTSSynthesis.ar.dc.uba.model.language.WordTest" time="0"/>
+  <testcase name="testTailWord on testTailWord(MTSSynthesis.ar.dc.uba.model.language.WordTest)" classname="MTSSynthesis.ar.dc.uba.model.language.WordTest" time="0"/>
+  <testcase name="testWordLengthComparator on testWordLengthComparator(MTSSynthesis.ar.dc.uba.model.language.WordTest)" classname="MTSSynthesis.ar.dc.uba.model.language.WordTest" time="0"/>
+  <testcase name="testStartsWithEmptyWord on testStartsWithEmptyWord(MTSSynthesis.ar.dc.uba.model.language.WordTest)" classname="MTSSynthesis.ar.dc.uba.model.language.WordTest" time="0.001"/>
+  <testcase name="testStartsWithFalse on testStartsWithFalse(MTSSynthesis.ar.dc.uba.model.language.WordTest)" classname="MTSSynthesis.ar.dc.uba.model.language.WordTest" time="0"/>
+  <testcase name="testStartsWithFalseSingletonWord on testStartsWithFalseSingletonWord(MTSSynthesis.ar.dc.uba.model.language.WordTest)" classname="MTSSynthesis.ar.dc.uba.model.language.WordTest" time="0"/>
+  <testcase name="testReverseNonEmptyWord on testReverseNonEmptyWord(MTSSynthesis.ar.dc.uba.model.language.WordTest)" classname="MTSSynthesis.ar.dc.uba.model.language.WordTest" time="0"/>
+  <testcase name="testMTSUnMTSAEstadoPorA on testMTSUnMTSAEstadoPorA(FSP2MTS.ac.ic.doc.mtstools.MTSToAutomataConverterTest)" classname="FSP2MTS.ac.ic.doc.mtstools.MTSToAutomataConverterTest" time="0.001"/>
+  <testcase name="testExecuteCommand on testExecuteCommand(MTSAEnactment.robot.NXTRobotTest)" classname="MTSAEnactment.robot.NXTRobotTest" time="0.089"/>
+  <testcase name="testDeadLockPathForDeadlockState on testDeadLockPathForDeadlockState(FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest" time="0.003"/>
+  <testcase name="testDeadlockEmptyMTS on testDeadlockEmptyMTS(FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest" time="0.081"/>
+  <testcase name="testDeadlockSimpleMTS on testDeadlockSimpleMTS(FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest" time="0.037"/>
+  <testcase name="testSimpleDeadlock on testSimpleDeadlock(FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest" time="0.001"/>
+  <testcase name="testRemoveTransitionsToDeadlock on testRemoveTransitionsToDeadlock(FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest" time="0.001"/>
+  <testcase name="testDeadLockPathForOnlyMaybeOutgoing on testDeadLockPathForOnlyMaybeOutgoing(FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest" time="0"/>
+  <testcase name="testDeadlockMaybeMTS on testDeadlockMaybeMTS(FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest" time="0.001"/>
+  <testcase name="testComplicatedDeadLockPath on testComplicatedDeadLockPath(FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest" time="0.04"/>
+  <testcase name="testConsistentes on testConsistentes(FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests" time="0.056"/>
+  <testcase name="testSonWeakConsistentes on testSonWeakConsistentes(FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests" time="0.091"/>
+  <testcase name="testWeakAlphabetConsistencyEmptySilentSet on testWeakAlphabetConsistencyEmptySilentSet(FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests" time="0.121"/>
+  <testcase name="testConsistentesAlfabetosDistintos on testConsistentesAlfabetosDistintos(FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests" time="0.011"/>
+  <testcase name="testConsistentesEjemploSebas on testConsistentesEjemploSebas(FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests" time="0.003"/>
+  <testcase name="testCounterExampleWeakAlphabetCompleteness on testCounterExampleWeakAlphabetCompleteness(FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests" time="0.004"/>
+  <testcase name="testSonConsistentes on testSonConsistentes(FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests" time="0.078"/>
+  <testcase name="testCounterExampleWeakAlphabetConsistency on testCounterExampleWeakAlphabetConsistency(FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests" time="0.007"/>
+  <testcase name="tetAdd on tetAdd(MTSTools.ac.ic.doc.commons.relations.HashNAryRelationTest)" classname="MTSTools.ac.ic.doc.commons.relations.HashNAryRelationTest" time="0.002"/>
+  <testcase name="testPermissive1 on testPermissive1(MTSATests.controller.PermissiveControllerTests)" classname="MTSATests.controller.PermissiveControllerTests" time="0.052"/>
+  <testcase name="testPermissive2 on testPermissive2(MTSATests.controller.PermissiveControllerTests)" classname="MTSATests.controller.PermissiveControllerTests" time="0.058"/>
+  <testcase name="testNotPermissive1 on testNotPermissive1(MTSATests.controller.PermissiveControllerTests)" classname="MTSATests.controller.PermissiveControllerTests" time="0.046"/>
+  <testcase name="testOnNonDeterministicMTSs on testOnNonDeterministicMTSs(MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest)" classname="MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest" time="0"/>
+  <testcase name="testOnDeterministicMTSs on testOnDeterministicMTSs(MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest)" classname="MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest" time="0"/>
+  <testcase name="testHasNonDetTransitionsFromState on testHasNonDetTransitionsFromState(MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest)" classname="MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest" time="0"/>
+  <testcase name="testOnATrace on testOnATrace(MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest)" classname="MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest" time="0"/>
+  <testcase name="test1 on test1(MTSATests.controller.NonDetControllerSynthesisTests)" classname="MTSATests.controller.NonDetControllerSynthesisTests" time="0.086"/>
+  <testcase name="test2 on test2(MTSATests.controller.NonDetControllerSynthesisTests)" classname="MTSATests.controller.NonDetControllerSynthesisTests" time="0.074"/>
+  <testcase name="test3 on test3(MTSATests.controller.NonDetControllerSynthesisTests)" classname="MTSATests.controller.NonDetControllerSynthesisTests" time="0.109"/>
+  <testcase name="test4 on test4(MTSATests.controller.NonDetControllerSynthesisTests)" classname="MTSATests.controller.NonDetControllerSynthesisTests" time="0.072"/>
+  <testcase name="test5 on test5(MTSATests.controller.NonDetControllerSynthesisTests)" classname="MTSATests.controller.NonDetControllerSynthesisTests" time="0.046"/>
+  <testcase name="test6 on test6(MTSATests.controller.NonDetControllerSynthesisTests)" classname="MTSATests.controller.NonDetControllerSynthesisTests" time="0.048"/>
+  <testcase name="testRemoveStates on testRemoveStates(FSP2MTS.ac.ic.doc.mtstools.model.impl.RemoveUnreachableStatesTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.RemoveUnreachableStatesTest" time="0.052"/>
+  <testcase name="testIsDeterministic on testIsDeterministic(MTSATests.ac.ic.doc.mtstools.model.predicates.IsDeterministicMTSPredicateTest)" classname="MTSATests.ac.ic.doc.mtstools.model.predicates.IsDeterministicMTSPredicateTest" time="0"/>
+  <testcase name="testMergeC2 on testMergeC2(FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest" time="0.037"/>
+  <testcase name="testMergeC3 on testMergeC3(FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest" time="0.083"/>
+  <testcase name="testMergeC4 on testMergeC4(FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest" time="0.036"/>
+  <testcase name="testMergeC5 on testMergeC5(FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest" time="0.085"/>
+  <testcase name="testMerge0 on testMerge0(FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest" time="0.076"/>
+  <testcase name="testMerge8 on testMerge8(FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest" time="0.045"/>
+  <testcase name="testEmptyWordNoObligations on testEmptyWordNoObligations(MTSSynthesis.ar.dc.uba.model.structure.SynthesisedStateEqualsTest)" classname="MTSSynthesis.ar.dc.uba.model.structure.SynthesisedStateEqualsTest" time="0"/>
+  <testcase name="testBasic2StatesRefinement on testBasic2StatesRefinement(FSP2MTS.ac.ic.doc.mtstools.model.impl.RefinementBetweenStatesTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.RefinementBetweenStatesTest" time="0.001"/>
+  <testcase name="testCompositionFrom2MTS on testCompositionFrom2MTS(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSComposerTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSComposerTest" time="0.004"/>
+  <testcase name="testIntegerStrategyState on testIntegerStrategyState(MTSATests.controller.StrategyStateTests)" classname="MTSATests.controller.StrategyStateTests" time="0.006"/>
+  <testcase name="testIntegerStrategyStateHashSet on testIntegerStrategyStateHashSet(MTSATests.controller.StrategyStateTests)" classname="MTSATests.controller.StrategyStateTests" time="0.003"/>
+  <testcase name="testSymetricIntegerStrategyState on testSymetricIntegerStrategyState(MTSATests.controller.StrategyStateTests)" classname="MTSATests.controller.StrategyStateTests" time="0.002"/>
+  <testcase name="testParseEmptySet on testParseEmptySet(MTSSynthesis.ar.dc.uba.parser.SetParserTest)" classname="MTSSynthesis.ar.dc.uba.parser.SetParserTest" time="0"/>
+  <testcase name="testParseMultipleElementsSet on testParseMultipleElementsSet(MTSSynthesis.ar.dc.uba.parser.SetParserTest)" classname="MTSSynthesis.ar.dc.uba.parser.SetParserTest" time="0"/>
+  <testcase name="testParseSet on testParseSet(MTSSynthesis.ar.dc.uba.parser.SetParserTest)" classname="MTSSynthesis.ar.dc.uba.parser.SetParserTest" time="0"/>
+  <testcase name="testParseSingletonSet on testParseSingletonSet(MTSSynthesis.ar.dc.uba.parser.SetParserTest)" classname="MTSSynthesis.ar.dc.uba.parser.SetParserTest" time="0"/>
+  <testcase name="testContainsObject on testContainsObject(MTSTools.ac.ic.doc.commons.relations.UniversalNAryRelationTest)" classname="MTSTools.ac.ic.doc.commons.relations.UniversalNAryRelationTest" time="0.001"/>
+  <testcase name="testSize on testSize(MTSTools.ac.ic.doc.commons.relations.UniversalNAryRelationTest)" classname="MTSTools.ac.ic.doc.commons.relations.UniversalNAryRelationTest" time="0"/>
+  <testcase name="testIterator on testIterator(MTSTools.ac.ic.doc.commons.relations.UniversalNAryRelationTest)" classname="MTSTools.ac.ic.doc.commons.relations.UniversalNAryRelationTest" time="0.003"/>
+  <testcase name="testComponeMTSA on testComponeMTSA(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMultipleComposertMemoryAndTimeTest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMultipleComposertMemoryAndTimeTest" time="1.159"/>
+  <testcase name="testPropertyInCompositeWithOthersOperations on testPropertyInCompositeWithOthersOperations(MTSATests.parser.PropertyTests)" classname="MTSATests.parser.PropertyTests" time="0.578"/>
+  <testcase name="testPropertyInComposite on testPropertyInComposite(MTSATests.parser.PropertyTests)" classname="MTSATests.parser.PropertyTests" time="0.147"/>
+  <testcase name="testPropertyInCompositeWithAlotOfStates on testPropertyInCompositeWithAlotOfStates(MTSATests.parser.PropertyTests)" classname="MTSATests.parser.PropertyTests" time="0.154"/>
+  <testcase name="testBuildProperty on testBuildProperty(MTSTools.ac.ic.doc.mtstools.model.operations.impl.MTSPropertyToBuchiConverterTest)" classname="MTSTools.ac.ic.doc.mtstools.model.operations.impl.MTSPropertyToBuchiConverterTest" time="0.003"/>
+  <testcase name="testParseLanguageSingletonWord on testParseLanguageSingletonWord(MTSSynthesis.ar.dc.uba.parser.LanguageParserTest)" classname="MTSSynthesis.ar.dc.uba.parser.LanguageParserTest" time="0"/>
+  <testcase name="testParseSingletonLanguageSingletonWord on testParseSingletonLanguageSingletonWord(MTSSynthesis.ar.dc.uba.parser.LanguageParserTest)" classname="MTSSynthesis.ar.dc.uba.parser.LanguageParserTest" time="0"/>
+  <testcase name="testParseSingletonLanguageNonSingletonWord on testParseSingletonLanguageNonSingletonWord(MTSSynthesis.ar.dc.uba.parser.LanguageParserTest)" classname="MTSSynthesis.ar.dc.uba.parser.LanguageParserTest" time="0"/>
+  <testcase name="testParseLanguageNonSingletonWord on testParseLanguageNonSingletonWord(MTSSynthesis.ar.dc.uba.parser.LanguageParserTest)" classname="MTSSynthesis.ar.dc.uba.parser.LanguageParserTest" time="0"/>
+  <testcase name="testUnLTSenMTSAyEnLTSA on testUnLTSenMTSAyEnLTSA(FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSAvsLTSATest)" classname="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSAvsLTSATest" time="0.339"/>
+  <testcase name="testAlphabetModelEqualsAlphabetDistribution on testAlphabetModelEqualsAlphabetDistribution(MTSATests.ac.ic.doc.distribution.DistributionTest)" classname="MTSATests.ac.ic.doc.distribution.DistributionTest" time="0.002"/>
+  <testcase name="testSuffixes on testSuffixes(MTSSynthesis.ar.dc.uba.util.WordUtilsTest)" classname="MTSSynthesis.ar.dc.uba.util.WordUtilsTest" time="0.001"/>
+  <testcase name="testFollows on testFollows(MTSSynthesis.ar.dc.uba.util.WordUtilsTest)" classname="MTSSynthesis.ar.dc.uba.util.WordUtilsTest" time="0"/>
+  <testcase name="testPreffixes on testPreffixes(MTSSynthesis.ar.dc.uba.util.WordUtilsTest)" classname="MTSSynthesis.ar.dc.uba.util.WordUtilsTest" time="0"/>
+  <testcase name="testFirsts on testFirsts(MTSSynthesis.ar.dc.uba.util.WordUtilsTest)" classname="MTSSynthesis.ar.dc.uba.util.WordUtilsTest" time="0"/>
+  <testcase name="testLinearisationsOnlyInteractions on testLinearisationsOnlyInteractions(MTSSynthesis.ar.dc.uba.lsc.ChartTest)" classname="MTSSynthesis.ar.dc.uba.lsc.ChartTest" time="0.014"/>
+  <testcase name="testOrderNotImportantForConditionInstances on testOrderNotImportantForConditionInstances(MTSSynthesis.ar.dc.uba.lsc.ChartTest)" classname="MTSSynthesis.ar.dc.uba.lsc.ChartTest" time="0.003"/>
+  <testcase name="testLinearisationsWithInteractionsAndConditions on testLinearisationsWithInteractionsAndConditions(MTSSynthesis.ar.dc.uba.lsc.ChartTest)" classname="MTSSynthesis.ar.dc.uba.lsc.ChartTest" time="0.001"/>
+  <testcase name="testOrderNotImportantForConditionsInstances on testOrderNotImportantForConditionsInstances(MTSSynthesis.ar.dc.uba.lsc.ChartTest)" classname="MTSSynthesis.ar.dc.uba.lsc.ChartTest" time="0"/>
+  <testcase name="testTwoLinearisationsWithInteractionsAndConditionsA on testTwoLinearisationsWithInteractionsAndConditionsA(MTSSynthesis.ar.dc.uba.lsc.ChartTest)" classname="MTSSynthesis.ar.dc.uba.lsc.ChartTest" time="0.003">
+    <failure message="expected:&lt;[[User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[User, ATM], Phi_4[Bank], ATM -&gt; wait -&gt; User, Bank -&gt; doCheck -&gt; Bank, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User], [User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[User, ATM], Phi_4[Bank], Bank -&gt; doCheck -&gt; Bank, ATM -&gt; wait -&gt; User, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User]]&gt; but was:&lt;[[User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_2[ATM], Phi_3[User, ATM], Phi_1[Bank], Phi_4[Bank], Bank -&gt; doCheck -&gt; Bank, ATM -&gt; wait -&gt; User, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User], [User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_2[ATM], Phi_3[User, ATM], Phi_1[Bank], Phi_4[Bank], ATM -&gt; wait -&gt; User, Bank -&gt; doCheck -&gt; Bank, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User]]&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;[[User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[User, ATM], Phi_4[Bank], ATM -&gt; wait -&gt; User, Bank -&gt; doCheck -&gt; Bank, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User], [User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[User, ATM], Phi_4[Bank], Bank -&gt; doCheck -&gt; Bank, ATM -&gt; wait -&gt; User, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User]]&gt; but was:&lt;[[User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_2[ATM], Phi_3[User, ATM], Phi_1[Bank], Phi_4[Bank], Bank -&gt; doCheck -&gt; Bank, ATM -&gt; wait -&gt; User, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User], [User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_2[ATM], Phi_3[User, ATM], Phi_1[Bank], Phi_4[Bank], ATM -&gt; wait -&gt; User, Bank -&gt; doCheck -&gt; Bank, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User]]&gt;	at org.junit.Assert.fail(Assert.java:88)	at org.junit.Assert.failNotEquals(Assert.java:834)	at org.junit.Assert.assertEquals(Assert.java:118)	at org.junit.Assert.assertEquals(Assert.java:144)	at MTSSynthesis.ar.dc.uba.lsc.ChartTest.testTwoLinearisationsWithInteractionsAndConditionsA(ChartTest.java:430)</failure>
+  </testcase>
+  <testcase name="testTwoLinearisationsWithInteractionsAndConditionsB on testTwoLinearisationsWithInteractionsAndConditionsB(MTSSynthesis.ar.dc.uba.lsc.ChartTest)" classname="MTSSynthesis.ar.dc.uba.lsc.ChartTest" time="0.001">
+    <failure message="expected:&lt;[[User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[Bank, ATM], Bank -&gt; doCheck -&gt; Bank, ATM -&gt; wait -&gt; User, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User], [User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[Bank, ATM], ATM -&gt; wait -&gt; User, Bank -&gt; doCheck -&gt; Bank, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User]]&gt; but was:&lt;[[User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_2[ATM], Phi_1[Bank], Phi_3[Bank, ATM], ATM -&gt; wait -&gt; User, Bank -&gt; doCheck -&gt; Bank, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User], [User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_2[ATM], Phi_1[Bank], Phi_3[Bank, ATM], Bank -&gt; doCheck -&gt; Bank, ATM -&gt; wait -&gt; User, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User]]&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;[[User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[Bank, ATM], Bank -&gt; doCheck -&gt; Bank, ATM -&gt; wait -&gt; User, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User], [User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_1[Bank], Phi_2[ATM], Phi_3[Bank, ATM], ATM -&gt; wait -&gt; User, Bank -&gt; doCheck -&gt; Bank, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User]]&gt; but was:&lt;[[User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_2[ATM], Phi_1[Bank], Phi_3[Bank, ATM], ATM -&gt; wait -&gt; User, Bank -&gt; doCheck -&gt; Bank, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User], [User -&gt; pwd -&gt; ATM, ATM -&gt; checkPwd -&gt; Bank, Phi_2[ATM], Phi_1[Bank], Phi_3[Bank, ATM], Bank -&gt; doCheck -&gt; Bank, ATM -&gt; wait -&gt; User, Bank -&gt; checkOk -&gt; ATM, ATM -&gt; ok -&gt; User]]&gt;	at org.junit.Assert.fail(Assert.java:88)	at org.junit.Assert.failNotEquals(Assert.java:834)	at org.junit.Assert.assertEquals(Assert.java:118)	at org.junit.Assert.assertEquals(Assert.java:144)	at MTSSynthesis.ar.dc.uba.lsc.ChartTest.testTwoLinearisationsWithInteractionsAndConditionsB(ChartTest.java:466)</failure>
+  </testcase>
+  <testcase name="testTwoLinearisationsSeveralConditionsBeginingChartWithInteractionsA on testTwoLinearisationsSeveralConditionsBeginingChartWithInteractionsA(MTSSynthesis.ar.dc.uba.lsc.ChartTest)" classname="MTSSynthesis.ar.dc.uba.lsc.ChartTest" time="0.003"/>
+  <testcase name="testTwoLinearisationsSeveralConditionsBeginingChartWithInteractionsB on testTwoLinearisationsSeveralConditionsBeginingChartWithInteractionsB(MTSSynthesis.ar.dc.uba.lsc.ChartTest)" classname="MTSSynthesis.ar.dc.uba.lsc.ChartTest" time="0.001"/>
+  <testcase name="testQtyInteractions on testQtyInteractions(MTSSynthesis.ar.dc.uba.lsc.ChartTest)" classname="MTSSynthesis.ar.dc.uba.lsc.ChartTest" time="0.005"/>
+  <testcase name="testOrderNotImportantForLinearisationOnlyInteractions on testOrderNotImportantForLinearisationOnlyInteractions(MTSSynthesis.ar.dc.uba.lsc.ChartTest)" classname="MTSSynthesis.ar.dc.uba.lsc.ChartTest" time="0"/>
+  <testcase name="testOrderNotImportantForLinearisationInteractionsAndConditions on testOrderNotImportantForLinearisationInteractionsAndConditions(MTSSynthesis.ar.dc.uba.lsc.ChartTest)" classname="MTSSynthesis.ar.dc.uba.lsc.ChartTest" time="0.003"/>
+  <testcase name="testTwoLinearisationsWithInteractionsAndConditions on testTwoLinearisationsWithInteractionsAndConditions(MTSSynthesis.ar.dc.uba.lsc.ChartTest)" classname="MTSSynthesis.ar.dc.uba.lsc.ChartTest" time="0"/>
+</testsuite>

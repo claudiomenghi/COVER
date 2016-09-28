@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="0" name="Failed suite [Surefire suite]" junit="true">
+  <test name="Surefire test">
+    <classes>
+      <class name="MTSSynthesis.ar.dc.uba.model.language.LanguageTest"/>
+      <class name="MTSATests.controller.StarEnvTests"/>
+      <class name="MTSTools.ac.ic.doc.commons.collections.PowerSetTest"/>
+      <class name="MTSATests.ac.ic.doc.distribution.ComponentBuilderTest"/>
+      <class name="MTSATests.mts.TopStatesTests"/>
+      <class name="MTSATests.ac.ic.doc.distribution.model.AlphabetDistributionTest"/>
+      <class name="MTSATests.controller.MTSControllerSynthesisTests"/>
+      <class name="MTSSynthesis.controller.game.bgr.BGRGameSolverTest"/>
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilder2Test"/>
+      <class name="MTSSynthesis.ar.dc.uba.util.LanguageUtilsTest"/>
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSDeterminiserTest"/>
+      <class name="FSP2MTS.ac.ic.doc.mtstools.MTSUtilsTest"/>
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.ClosureTraceInclusionTest"/>
+      <class name="MTSATests.ac.ic.doc.mtstools.utils.MTSUtilsTest"/>
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.CompositionStateTests"/>
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.PlusCAAndCROperationTest"/>
+      <class name="MTSATests.controller.BasicTomAndJerryTest"/>
+      <class name="MTSATests.ac.ic.doc.distribution.DistributionAlgorithmTest"/>
+      <class name="MTSSynthesis.ar.dc.uba.model.language.CanonicalSymbolTest"/>
+      <class name="MTSSynthesis.ar.dc.uba.parser.AlphabetParserTest"/>
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.ClousurePathBuilderTest"/>
+      <class name="MTSATests.parser.testParserLabelTest"/>
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSRemoveTransitionTests"/>
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMinimiserTest"/>
+      <class name="MTSSynthesis.ar.dc.uba.model.condition.ZetaFunctionTest"/>
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.PlusCROperatorTest"/>
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.BranchingImplementationNotionTest"/>
+      <class name="MTSSynthesis.ar.dc.uba.parser.WordParserTest"/>
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSPropertyTest"/>
+      <class name="MTSATests.controller.ControlledDeterminisationTests"/>
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.PathBuilderTest"/>
+      <class name="MTSAEnactment.robot.CommandAcceptedMessageTest"/>
+      <class name="MTSSynthesis.ar.dc.uba.model.language.WordTest"/>
+      <class name="FSP2MTS.ac.ic.doc.mtstools.MTSToAutomataConverterTest"/>
+      <class name="MTSAEnactment.robot.NXTRobotTest"/>
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.operations.DeadlockManipulatorTest"/>
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.ConsistencyTests"/>
+      <class name="MTSTools.ac.ic.doc.commons.relations.HashNAryRelationTest"/>
+      <class name="MTSATests.controller.PermissiveControllerTests"/>
+      <class name="MTSATests.ac.ic.doc.mtstools.model.predicates.HasNonDeterministicTransitionsPredicateTest"/>
+      <class name="MTSATests.controller.NonDetControllerSynthesisTests"/>
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.RemoveUnreachableStatesTest"/>
+      <class name="MTSATests.ac.ic.doc.mtstools.model.predicates.IsDeterministicMTSPredicateTest"/>
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.operations.MergeBuilderTest"/>
+      <class name="MTSSynthesis.ar.dc.uba.model.structure.SynthesisedStateEqualsTest"/>
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.RefinementBetweenStatesTest"/>
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSComposerTest"/>
+      <class name="MTSATests.controller.StrategyStateTests"/>
+      <class name="MTSSynthesis.ar.dc.uba.parser.SetParserTest"/>
+      <class name="MTSTools.ac.ic.doc.commons.relations.UniversalNAryRelationTest"/>
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSMultipleComposertMemoryAndTimeTest"/>
+      <class name="MTSATests.parser.PropertyTests"/>
+      <class name="MTSTools.ac.ic.doc.mtstools.model.operations.impl.MTSPropertyToBuchiConverterTest"/>
+      <class name="MTSSynthesis.ar.dc.uba.parser.LanguageParserTest"/>
+      <class name="FSP2MTS.ac.ic.doc.mtstools.model.impl.MTSAvsLTSATest"/>
+      <class name="MTSATests.ac.ic.doc.distribution.DistributionTest"/>
+      <class name="MTSSynthesis.ar.dc.uba.util.WordUtilsTest"/>
+      <class name="MTSSynthesis.ar.dc.uba.lsc.ChartTest"/>
+    </classes>
+  </test> <!-- Surefire test -->
+  <test name="Surefire test(failed)" junit="true">
+    <classes>
+      <class name="MTSATests.controller.ControlledDeterminisationTests">
+        <methods>
+          <include name="testSimpleControlledDet"/>
+          <include name="testServicesExampleForLegalControllers"/>
+        </methods>
+      </class> <!-- MTSATests.controller.ControlledDeterminisationTests -->
+      <class name="MTSSynthesis.ar.dc.uba.lsc.ChartTest">
+        <methods>
+          <include name="testTwoLinearisationsWithInteractionsAndConditionsA"/>
+          <include name="testTwoLinearisationsWithInteractionsAndConditionsB"/>
+        </methods>
+      </class> <!-- MTSSynthesis.ar.dc.uba.lsc.ChartTest -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->

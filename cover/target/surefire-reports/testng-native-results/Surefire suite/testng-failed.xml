@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="0" name="Failed suite [Surefire suite]">
+  <test name="Surefire test">
+    <classes>
+      <class name="FSP2MTS.ac.ic.doc.mtstools.facade.MTSAFacadeTest"/>
+      <class name="MTSATests.controller.UpdatingControllersTests"/>
+      <class name="MTSSynthesis.controller.game.game.gr.GameSolverSimplePositiveTests"/>
+      <class name="RobotProtocolClient.ar.uba.dc.lafhis.enactment.RandomSchedulerTest"/>
+      <class name="MTSSynthesis.controller.game.game.gr.GameSolverSimpleNegativeTests"/>
+      <class name="MTSATests.controller.SafeGameSolverTests"/>
+      <class name="MTSATests.controller.OppositeGR1GameSolverTests"/>
+      <class name="MTSAEnactment.robot.NXTRobotCommTest"/>
+      <class name="MTSATests.controller.OppositeSafeGameSolverTests"/>
+      <class name="MTSATests.controller.LTSLTLPropertyTest"/>
+      <class name="MTSAEnactment.robot.RobotProtocolSessionTest"/>
+    </classes>
+  </test> <!-- Surefire test -->
+  <test name="Surefire test(failed)">
+    <classes>
+      <class name="MTSATests.controller.SafeGameSolverTests">
+        <methods>
+          <include name="SafeGameTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- MTSATests.controller.SafeGameSolverTests -->
+      <class name="MTSATests.controller.UpdatingControllersTests">
+        <methods>
+          <include name="checkUpdatingFormula" invocation-numbers="0 1 2 3 4 5 6 7"/>
+          <include name="graphGenerator_producesCorrectGraph" invocation-numbers="0"/>
+          <include name="environmentTest" invocation-numbers="0 1 2 3 4 5 6 7 8"/>
+        </methods>
+      </class> <!-- MTSATests.controller.UpdatingControllersTests -->
+      <class name="MTSATests.controller.OppositeSafeGameSolverTests">
+        <methods>
+          <include name="OppositeSafeGameTest" invocation-numbers="0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- MTSATests.controller.OppositeSafeGameSolverTests -->
+      <class name="MTSATests.controller.OppositeGR1GameSolverTests">
+        <methods>
+          <include name="OppositeGR1GameTest" invocation-numbers="0 1 2 3"/>
+        </methods>
+      </class> <!-- MTSATests.controller.OppositeGR1GameSolverTests -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->
