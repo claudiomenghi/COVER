@@ -7,12 +7,9 @@ import java.nio.file.Files;
 import java.nio.file.LinkOption;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
 
 import javax.xml.bind.JAXBException;
 
-import utils.SatisfactionValueAdapter;
 import labelpropagation.LabelPropagator;
 import ltsa.lts.ModelCheckerResult;
 import ltsa.lts.ThreeValuedModelCheckerOutput;
@@ -21,6 +18,7 @@ import ltsa.ui.HPWindow;
 import models.goal.GOALMODEL;
 import models.goal.GOALMODEL.SCENARIO.GOAL;
 import models.goal.GoalModelAdapter;
+import utils.SatisfactionValueAdapter;
 
 import com.google.common.base.Preconditions;
 
@@ -47,6 +45,9 @@ public class COVER {
 	private File outputFile;
 
 	private String mtsName;
+	
+	private static double VERIFICATION_TIME=0;
+	private static double LABEL_PROPAGATION_TIME=0;
 
 	/**
 	 * creates a new CHIARE object
@@ -83,12 +84,15 @@ public class COVER {
 	private ModelCheckerResult checkGoal(String goalName) {
 		this.window.asserted = goalName;
 
+		long startTime = System.currentTimeMillis();
 		ThreeValuedModelCheckerOutput mcoutput = new ThreeValuedModelCheckerOutput();
 		if (AssertDefinition.definitions.containsKey(goalName)) {
 			this.window.coverLiveness(mcoutput);
 			output.println("Checking goal: " + goalName + " result: "
 					+ mcoutput.getResult());
 		}
+		long stopTime = System.currentTimeMillis();
+		VERIFICATION_TIME=VERIFICATION_TIME+(stopTime-startTime);
 		return mcoutput.getResult();
 	}
 
@@ -115,8 +119,18 @@ public class COVER {
 			}
 			newScenario.getGOAL().add(newGoal);
 		}
+		
+		output.println("Model checking time: "+VERIFICATION_TIME+"ms");
+		
+		long startTime = System.currentTimeMillis();
 		newScenario = new LabelPropagator(goalModel, newScenario).perform();
+		long stopTime = System.currentTimeMillis();
+		
+		
+		LABEL_PROPAGATION_TIME=LABEL_PROPAGATION_TIME+(stopTime-startTime);
+		output.println("Label propagation time: "+LABEL_PROPAGATION_TIME+"ms");
 		goalModel.getSCENARIO().add(newScenario);
+		
 
 	}
 
@@ -146,7 +160,7 @@ public class COVER {
 	 * runs the CHIARE framework. The framework takes two arguments: the goal
 	 * model to be analyzed and the IBA over which the LTL formulae must be
 	 * considered.
-	 * 
+	 * s
 	 * @param args
 	 *            it contains the path of the goal model to be analyzed and of
 	 *            the IBA which represents the model to be considered
@@ -192,6 +206,7 @@ public class COVER {
 
 		HPWindow window = new HPWindow(null);
 		window.setVisible(false);
+		output.println("Creating COVER");
 		COVER cover = new COVER(goalModel, window, args[1], args[2], new File(
 				args[3]));
 		output.println("Checking");

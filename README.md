@@ -17,7 +17,10 @@ This technique offers several benefits.
 This would allow an early detection of design errors and of inconsistencies in the requirements. 
 
 ## Components
-COVER uses 
+The main logic of COVER is contained in the class [COVER.java](COVER/cover/src/main/java/cover/COVER.java) class
+
+COVER uses
+
 * the Goal Reasoning Tool (Gr-tool) as a design framework of  goal models  and for the label propagation <http://troposproject.org/tools/grtool/>;
 * the Modal Transition System Analyzer (MTSA) as a model checking framework <http://mtsa.dc.uba.ar/>.
 
