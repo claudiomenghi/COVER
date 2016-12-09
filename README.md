@@ -1,4 +1,4 @@
-###  COVER
+#  COVER
 COVER (Change-based gOal VErifier and Reasoner) is a prototype tool realized as a Java 8 stand-alone application.  
 
 ## Overview
