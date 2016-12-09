@@ -17,7 +17,7 @@ This technique offers several benefits.
 This would allow an early detection of design errors and of inconsistencies in the requirements. 
 
 ## Components
-The main logic of COVER is contained in the class [COVER.java](COVER/cover/src/main/java/cover/COVER.java) class
+The main logic of COVER is contained in the class [COVER.java](cover/src/main/java/cover/COVER.java) class
 
 COVER uses
 
