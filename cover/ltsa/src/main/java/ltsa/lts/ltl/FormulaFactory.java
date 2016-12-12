@@ -16,7 +16,7 @@ import ltsa.lts.Expression;
 import ltsa.lts.Symbol;
 
 /*
-* factory for LTL formlae
+* factory for LTL formulae
 */
 
 public class FormulaFactory {

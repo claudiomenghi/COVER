@@ -147,41 +147,45 @@ D3=		QUOTEMANAGER,
 
 fluent F_USER_PERFORMS_ORDER=<cOrder, Actions\{cOrder}> 
 fluent F_BOOK_DELIVERED=<sBookDelivered, Actions\{sBookDelivered}> 
-fluent F_SYSTEM_ORDER_BOOK=<sPlaceOrder, Actions\{sPlaceOrder}>
 
 
-fluent F_REQUEST_QUOTE=<cRequestQuote, Actions\{cRequestQuote}>
-fluent F_SYSTEM_PROVIDES_QUOTES=<sProvideQuote, Actions\{sProvideQuote}>
-fluent F_BOOK_ORDERED=<cBookOrdered, Actions\{cBookOrdered}>
+fluent F_C_REQ_QUOTE=<cRequestQuote, Actions\{cRequestQuote}>
+fluent F_S_PROV_QUOTE=<sProvideQuote, Actions\{sProvideQuote}>
+fluent F_C_ORDER_BOOK=<cBookOrdered, Actions\{cBookOrdered}>
 fluent F_SUBMIT_RECEIPT=<sSubmitReceipt, Actions\{sSubmitReceipt}>
 
 fluent F_RECEIPT_RECEIVED_TO_CLIENT=<sSubmitReceipt, Actions\{sSubmitReceipt}>
 fluent F_SYSTEM_PROVIDES_QUOTE=<sProvideQuote, Actions\{sProvideQuote}>
 fluent F_SYSTEM_PROVIDES_PRICE=<sProvidePrice, Actions\{sProvidePrice}>
 
-// G2: if requested the system provides the quote OK
-assert G2=([](F_REQUEST_QUOTE-><>F_SYSTEM_PROVIDES_QUOTES))
+fluent F_WH_AVAIL_BOOK=<sWaitBook, sBookReady>
+fluent F_WH_ORD_BOOK=<sPlaceOrder, Actions\{sPlaceOrder}>
 
-fluent F_BOOK_AVAILABLE_AT_WH=<sWaitBook, Actions\{sWaitBook}>
+fluent F_WH_BOOK_NAV=<sBookNotAvailable, Actions\{sBookNotAvailable}>
+fluent F_WH_BOOK_AVAL_MSG=<sRetBookAvail, Actions\{sRetBookAvail}>
+
+
+// G2: if requested the system provides the quote OK
+assert G2=([](F_C_REQ_QUOTE-><>F_S_PROV_QUOTE))
+
+
 // G3: if the WH orders a book, it is finally delivered to the WH OK
-assert G3=([]((<>F_ORDER_CLOSED)->(F_SYSTEM_ORDER_BOOK->(<>F_BOOK_AVAILABLE_AT_WH))))
+assert G3=([](F_WH_ORD_BOOK->(<>F_WH_AVAIL_BOOK)))
  
 
-fluent F_BOOK_IS_NOT_AVAILABLE=<sBookNotAvailable, Actions\{sBookNotAvailable}>
-fluent F_SYSTEM_ORDERS_BOOK=<sPlaceOrder, Actions\{sPlaceOrder}>
 // G4: if a book is not available at the WH, it is ordered OK
-assert G4=([]((<>F_ORDER_CLOSED)->(F_BOOK_IS_NOT_AVAILABLE->(<>F_SYSTEM_ORDERS_BOOK))))
+assert G4=([](F_WH_BOOK_NAV->(<>F_WH_ORD_BOOK)))
 
 
-fluent F_SYSTEM_BOOK_AVAILABLE=<sRetBookAvail, Actions\{sRetBookAvail}>
+
 // G5: after a book is ordered it is delivered at the WH OK
-assert G5=([]((<>F_ORDER_CLOSED)->(F_SYSTEM_ORDERS_BOOK->(<>F_SYSTEM_BOOK_AVAILABLE))))
+assert G5=([](F_WH_ORD_BOOK->(<>F_WH_BOOK_AVAL_MSG)))
 
 // G6: The book is finally delivered to the customer. OK
-assert G6=([]((<>F_ORDER_CLOSED)->(F_BOOK_ORDERED->(<>F_BOOK_DELIVERED))))
+assert G6=([]((<>F_ORDER_CLOSED)->(F_C_ORDER_BOOK->(<>F_BOOK_DELIVERED))))
 
 // G7: if request the receipt is placed in the shipment NO
-assert G7=([]((<>F_ORDER_CLOSED)->(F_BOOK_ORDERED->(<>F_SUBMIT_RECEIPT))))
+assert G7=([]((<>F_ORDER_CLOSED)->(F_C_ORDER_BOOK->(<>F_SUBMIT_RECEIPT))))
 
 
 fluent F_USER_PAYED=<sReceivedMoney, Actions\{sReceivedMoney}>

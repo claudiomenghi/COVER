@@ -1,0 +1,128 @@
+// -----------------------------COMMENTS-------------------------------
+
+// - To execute the solution for update controllers select in the dropdown menu 
+// the "UPDATE_CONTROLLER" label, and then press the compose button (||).
+// - In the section of UPDATING CONTROLLER SPEC, in this file, you can specify
+// different transition requeriments presented in the paper.
+// - You can animate the controller obtained pressing the blue A in the top bar.
+// - After composing, you can validate that the controller obtained satisfy 
+// each updating controller goal formula by modelchecking.
+// In the top menu go to Check >> LTL property >> TEST_FORMULA1/2/3
+
+// ---------------------------ENVIRONMENTS-----------------------------
+set ControllableActionsOld = {requestEnter, brake, idle_c}
+set ControllableActionsNew = {requestEnter, brake, idle_c}
+set AlphabetOld = {ControllableActionsOld, endOfTS, lastBrake, enterCrossing, enterAllowed[0..1]}
+set AlphabetNew = {ControllableActionsNew, endOfTS, lastBrake, enterCrossing, enterAllowed[0..1], approachingCrossing}
+
+    //oldEnvironment
+    E         = (endOfTS-> TRAIN[1]),
+	E[1]      = (lastBrake -> TRAIN[2]),
+    E[2]      = (enterCrossing -> E), 
+
+    TRAIN[i:1..2] = (brake -> E |
+					requestEnter -> E[i] | 
+					idle_c -> E[i]).
+	
+    REQUEST_RESPONSE = (endOfTS -> requestEnter ->  ANSWER | {lastBrake, brake, enterCrossing} -> REQUEST_RESPONSE),
+	ANSWER			 = ({enterAllowed[0..1], brake, enterCrossing} -> REQUEST_RESPONSE).
+
+    //NewEnvironment
+    E_N       = (endOfTS -> NEW_TRAIN[1]),
+    E_N[1]    = (approachingCrossing -> NEW_TRAIN[2]),
+    E_N[2]    = (lastBrake -> NEW_TRAIN[3]),
+    E_N[3]    = (enterCrossing -> E_N),
+
+    NEW_TRAIN[i:1..3] = (brake -> E_N |
+					requestEnter -> E_N[i] |
+                    idle_c -> E_N[i]).
+
+
+||OldEnvironment = (E || REQUEST_RESPONSE).
+||NewEnvironment = (E_N || REQUEST_RESPONSE).
+
+//Fluents declaration
+fluent RequestedOnce = <{requestEnter},{endOfTS}>
+fluent CantEnter = <{enterAllowed[0]},{endOfTS}>
+fluent ResponseRecieve = <{enterAllowed[0..1]},{endOfTS}>
+fluent EndOfTS = <{endOfTS},{enterCrossing, brake}>
+fluent LastBrake = <{lastBrake},{enterCrossing, brake}>
+fluent BrakeMade = <{brake},{endOfTS}>
+fluent ResponsePending = <{requestEnter},{enterAllowed[0..1], endOfTS}>
+fluent ApproachingCrossingHappen = <{approachingCrossing},{enterCrossing, brake}>
+fluent WhoShouldPlay = <{brake,requestEnter,idle_c},{endOfTS,lastBrake,enterCrossing}>
+fluent NewWhoShouldPlay = <{brake,requestEnter,idle_c},{endOfTS,approachingCrossing,lastBrake,enterCrossing}>
+fluent EnterCrossingMade = <{enterCrossing},{endOfTS}>
+
+// ---------------------------OLD CONTROLLER SPEC-----------------------------
+assert NOT_CRASH = !((CantEnter && EnterCrossingMade) || (!RequestedOnce && EnterCrossingMade))
+assert BRAKE_DURING_LASTBRAKE			= (brake -> !EnterCrossingMade)
+assert BRAKE_ONLY_IF_IM_NOT_ALLOWED		= (brake -> CantEnter)
+ltl_property P_NOT_CRASH						= []NOT_CRASH
+ltl_property P_BRAKE_DURING_LASTBRAKE			= []BRAKE_DURING_LASTBRAKE
+ltl_property P_BRAKE_ONLY_IF_IM_NOT_ALLOWED		= []BRAKE_ONLY_IF_IM_NOT_ALLOWED
+
+
+//Old Controller
+controllerSpec OldSpec = {
+    safety = {P_BRAKE_DURING_LASTBRAKE, P_NOT_CRASH, P_BRAKE_ONLY_IF_IM_NOT_ALLOWED}
+    controllable = {ControllableActionsOld}
+}
+
+controller ||OldController = OldEnvironment~{OldSpec}.
+||EnvironmentAndController = (OldController || OldEnvironment).
+
+// ---------------------------NEW CONTROLLER SPEC-----------------------------
+
+//assert CHECK_STATUS_AFTER_APPROACHING_CROSSING = (checkCrossingStatus -> ApproachingCrossingHappen)
+//ltl_property P_CHECK_STATUS_AFTER_APPROACHING_CROSSING = []CHECK_STATUS_AFTER_APPROACHING_CROSSING
+
+controllerSpec NewSpec = {
+    safety = {P_BRAKE_DURING_LASTBRAKE, P_NOT_CRASH, P_BRAKE_ONLY_IF_IM_NOT_ALLOWED}
+    controllable = {ControllableActionsNew}
+}
+
+controller ||NewController = NewEnvironment~{NewSpec}.
+||NewControllerAndNewEnvironment = (NewController || NewEnvironment).
+
+// ---------------------------UPDATING CONTROLLER SPEC-----------------------------
+
+// Updating Controller Fluents
+fluent StartNewSpec = <startNewSpec, beginUpdate>
+fluent StopOldSpec = <stopOldSpec, beginUpdate>
+fluent Reconfigure = <reconfigure, beginUpdate>
+
+assert AnyAction = (requestEnter || brake || emergencyBrake || idle_c || checkCrossingStatus|| endOfTS || approachingCrossing||
+			lastBrake|| lastEmergencyBrake || noReturn || enterCrossing || enterAllowed[0] || enterAllowed[1] || working || notWorking)
+
+
+//ltl_property T_BRAKE = ((StopOldSpec && !StartNewSpec) -> ((noReturn || brake) -> LastEmergencyBrakeSection))
+//ltl_property T_NO_TP = (AnyAction -> (!((StopOldSpec && !StartNewSpec)  || (StartNewSpec && !StopOldSpec) )))
+
+updatingController UpdCont = {
+    oldController = EnvironmentAndController,
+    oldEnvironment = OldEnvironment,
+    oldPropositions = {EndOfTS, LastBrake, EnterCrossingMade, BrakeMade, RequestedOnce, ResponsePending, ResponseRecieve, CantEnter, WhoShouldPlay}
+    newEnvironment = NewEnvironment,
+    newPropositions = { EndOfTS, LastBrake, EnterCrossingMade, BrakeMade, RequestedOnce, ResponsePending, ResponseRecieve, CantEnter, ApproachingCrossingHappen, NewWhoShouldPlay}
+    oldGoal = OldSpec,
+    newGoal = NewSpec,
+	// T = True is executed if no transition requirement is set
+	//transition = T_NO_TP,
+	//transition = T_BRAKE,
+	nonblocking,
+	mapping = {LastBrake}, {ApproachingCrossingHappen}
+	mapping = {ApproachingCrossingHappen}, {EndOfTS}
+
+}
+
+||UPDATE_CONTROLLER = UpdCont.
+
+// ---------------------------TEST AND RESULTS-----------------------------
+assert S_OLD = (BRAKE_DURING_LASTBRAKE && NOT_CRASH && BRAKE_ONLY_IF_IM_NOT_ALLOWED)
+assert S_NEW = (BRAKE_DURING_LASTBRAKE && NOT_CRASH && BRAKE_ONLY_IF_IM_NOT_ALLOWED)
+
+assert TEST_FORMULA1 = [](!StopOldSpec -> S_OLD)
+assert TEST_FORMULA2 = [](StartNewSpec -> S_NEW)
+assert TEST_FORMULA3 = [](beginUpdate -> (<>stopOldSpec && <>startNewSpec && <>reconfigure))
+
