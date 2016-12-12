@@ -10,12 +10,15 @@ package models.goal;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+
+import models.goal.GOALMODEL.SCENARIO.GOAL;
 
 
 /**
@@ -975,6 +978,25 @@ public class GOALMODEL {
             @XmlElement(name = "LTL")
             protected String ltl;
 
+            
+            public GOAL clone() {
+        		GOAL retGoal = new GOAL();
+        		retGoal.setCAPTION(this.getCAPTION());
+        		retGoal.setDEN(this.getDEN());
+        		retGoal.setID(this.getID());
+        		retGoal.setINPUT(this.getINPUT());
+        		retGoal.setINPUTFORCED(this.getINPUTFORCED());
+        		retGoal.setLTL(this.getLTL());
+        		retGoal.setOP(this.getOP());
+        		retGoal.setOUTPUTDEN(this.getOUTPUTDEN());
+        		retGoal.setOUTPUTSAT(this.getOUTPUTSAT());
+        		retGoal.setSAT(this.getSAT());
+        		retGoal.setTOP(this.getTOP());
+        		retGoal.setTYPE(this.getTYPE());
+
+        		return retGoal;
+        	}
+            
             /**
              * Recupera il valore della proprietà caption.
              * 
