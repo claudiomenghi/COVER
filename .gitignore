@@ -7,3 +7,4 @@ cover/target/
 /bin/
 *.class
 Examples/BookSeller/COVER.jar
+cover/coverengine/target/*
