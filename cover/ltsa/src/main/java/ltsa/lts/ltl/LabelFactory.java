@@ -168,6 +168,7 @@ public class LabelFactory {
 		int m = 0;
 		while (ii.hasNext()) {
 			Proposition f = (Proposition)ii.next();
+			
 			PredicateDefinition p = PredicateDefinition.get(f.toString());
 			if (p!=null)  {
 				fluents.add(p);

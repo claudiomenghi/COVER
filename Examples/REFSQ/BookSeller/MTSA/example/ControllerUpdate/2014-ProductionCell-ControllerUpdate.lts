@@ -1,0 +1,544 @@
+//ACTION SETS
+const N = 1
+range ProductCount = 1..N
+set ProductTypes = {a, b}
+set Toolset = {oven,press}//drill
+set ProductsTypeA = {{a}.[ProductCount]}
+set ProductsTypeB = {{b}.[ProductCount]}
+set ProductTypesSet = {ProductsTypeA, ProductsTypeB}
+set BlankAlpha = {[ProductTypesSet].{idle, inTray, getInTray, putOutTray}, {put}.Toolset.[ProductTypesSet]}
+set ArmAlpha = { [ProductTypesSet].{getInTray, putOutTray}, {put, get}.Toolset.[ProductTypesSet] }
+set ToolsAlpha  = { {put,/*process,*/get}.Toolset.[ProductTypesSet] }
+set Alphabet = {ArmAlpha, ToolsAlpha, BlankAlpha}
+set ControllableActions = {[ProductTypesSet].{getInTray,putOutTray}, {put,get}.Toolset.[ProductTypesSet],switchE}
+set UncontrollableActions = {Alphabet\ControllableActions}
+set PriorityActions = {UncontrollableActions\{[ProductTypesSet].{idle}}}
+//DEFINED FLUENTS 
+//The ending action needs to be getInTray, so the controller can't postpone an element indefinitely
+fluent ADDED_TO_INTRAY[e:ProductTypesSet] = <[e].inTray, [e].getInTray>
+fluent ADDED_TO_OUTTRAY[e:ProductTypesSet] = <[e].putOutTray, Alphabet\{[e].putOutTray}>
+fluent BEING_PROCESSED[e:ProductTypesSet] = <[e].getInTray, [e].putOutTray>
+
+//DEFINED ASSERTIONS
+assert ASSUME_ON_A1 = (ADDED_TO_INTRAY['a[1]] || BEING_PROCESSED['a[1]])
+assert ASSUME_ON_B1 = (ADDED_TO_INTRAY['b[1]] || BEING_PROCESSED['b[1]])
+assert ASSUME_ON_A2 = (ADDED_TO_INTRAY['a[2]] || BEING_PROCESSED['a[2]])
+assert ASSUME_ON_B2 = (ADDED_TO_INTRAY['b[2]] || BEING_PROCESSED['b[2]])
+assert GOAL_FOR_A = exists[e:ProductsTypeA] ADDED_TO_OUTTRAY[e]
+assert GOAL_FOR_B = exists[e:ProductsTypeB] ADDED_TO_OUTTRAY[e]
+assert ASSUME_ON_A = exists[e:ProductsTypeA] (ADDED_TO_INTRAY[e] || BEING_PROCESSED[e])
+assert ASSUME_ON_B = exists[e:ProductsTypeB] (ADDED_TO_INTRAY[e] || BEING_PROCESSED[e])
+
+
+//DEFINED CONTROLLERS
+controller ||C = (ENV)~{Objective}.
+checkCompatibility ||Compatible = (ENV)~{Objective}.
+
+//DEFINED GOALS 
+controllerSpec Objective = {
+	safety = {PRODUCT_PROCESS}
+	assumption = {ASSUME_ON_A1, ASSUME_ON_B1}//ASSUME_ON_A1, ASSUME_ON_B1, ASSUME_ON_A2, ASSUME_ON_B2}
+	liveness = {GOAL_FOR_A, GOAL_FOR_B}
+	controllable = {ControllableActions}
+}
+
+//Controller Update
+||FASE1 = (C||ENV||F12).
+||FASE2 = (ENV||F23).
+||FASE3 = ENV.
+
+F12 = (Alphabet->F12 | switchC->END).
+FASE12 = F12;FASE2.
+||TESTFASE12 = FASE12.
+F23 = (Alphabet->F23 | switchE->END).
+
+
+
+//ENVIRONMENT MODEL
+INIT_PRODUCT(C=1) = ([C].inTray -> [C].getInTray -> END).
+TRY_TOOL(T='any, C=1) = (put[T][C] -> END).
+FINISH_PRODUCT(C=1) = ([C].putOutTray -> END).
+
+PRODUCT_A(C=1)= INIT_PRODUCT(C);
+				TRY_TOOL('oven,C);
+//				TRY_TOOL('drill,C);
+//				TRY_TOOL('press,C);
+				FINISH_PRODUCT(C);
+				PRODUCT_A.
+
+PRODUCT_B(C=N/2+1)= INIT_PRODUCT(C);
+//					TRY_TOOL('drill,C);
+					TRY_TOOL('press,C);
+//					TRY_TOOL('oven,C);
+					FINISH_PRODUCT(C);
+					PRODUCT_B.
+
+//compose ||PRODUCT_PROCESS = (forall[a:ProductsTypeA] PRODUCT_A(a) || forall[b:ProductsTypeB] PRODUCT_B(b)).
+
+	PRODUCT_PROCESS = Q0,
+	Q0	= (b[1].inTray -> Q1
+		  |a[1].inTray -> Q15
+		  |switchE -> All),
+	Q1	= (b[1].getInTray -> Q2
+		  |a[1].inTray -> Q14
+		  |switchE -> All),
+	Q2	= (put.press.b[1] -> Q3
+		  |a[1].inTray -> Q13
+		  |switchE -> All),
+	Q3	= (b[1].putOutTray -> Q0
+		  |a[1].inTray -> Q4
+		  |switchE -> All),
+	Q4	= (a[1].getInTray -> Q5
+		  |b[1].putOutTray -> Q15
+		  |switchE -> All),
+	Q5	= (b[1].putOutTray -> Q6
+		  |put.oven.a[1] -> Q12
+		  |switchE -> All),
+	Q6	= (b[1].inTray -> Q7
+		  |put.oven.a[1] -> Q11
+		  |switchE -> All),
+	Q7	= (b[1].getInTray -> Q8
+		  |put.oven.a[1] -> Q10
+		  |switchE -> All),
+	Q8	= (put.press.b[1] -> Q5
+		  |put.oven.a[1] -> Q9
+		  |switchE -> All),
+	Q9	= (a[1].putOutTray -> Q2
+		  |put.press.b[1] -> Q12
+		  |switchE -> All),
+	Q10	= (a[1].putOutTray -> Q1
+		  |b[1].getInTray -> Q9
+		  |switchE -> All),
+	Q11	= (a[1].putOutTray -> Q0
+		  |b[1].inTray -> Q10
+		  |switchE -> All),
+	Q12	= (a[1].putOutTray -> Q3
+		  |b[1].putOutTray -> Q11
+		  |switchE -> All),
+	Q13	= (put.press.b[1] -> Q4
+		  |a[1].getInTray -> Q8
+		  |switchE -> All),
+	Q14	= (a[1].getInTray -> Q7
+		  |b[1].getInTray -> Q13
+		  |switchE -> All),
+	Q15	= (a[1].getInTray -> Q6
+		  |b[1].inTray -> Q14),
+	All = ({{a, b}[1].{getInTray, inTray, putOutTray}, put.{oven.a[1], press.b[1]}}-> All).
+
+
+RAW_PRODUCT(C=1) = ([C].inTray -> [C].getInTray -> TOOLS_AVAIL 
+					| [C].idle -> RAW_PRODUCT),
+TOOLS_AVAIL = (put[t:Toolset][C] -> get[t].[C] -> TOOLS_AVAIL 
+				| [C].putOutTray -> RAW_PRODUCT).
+
+
+||RAW_PRODUCTS = forall[p:ProductTypesSet] RAW_PRODUCT(p).
+
+TOOL(T='any) = (put[T][e:ProductTypesSet] -> /*process[T][e] -> #*/get[T][e] -> TOOL). 
+
+||TOOLS = (forall[t:Toolset] TOOL(t)).
+
+ARM = IDLE,
+IDLE = ([e:ProductTypesSet].getInTray -> PICKED_UP[e]
+		| get[t:Toolset][e:ProductTypesSet] -> PICKED_UP[e]),
+PICKED_UP[e:ProductTypesSet] = (put[t:Toolset][e] -> IDLE
+               | [e].putOutTray -> IDLE).
+
+||ENV = ( RAW_PRODUCTS || TOOLS || ARM).
+
+controller ||C2 = (FASE1to3)~{Objective2}.
+
+//DEFINED GOALS 
+controllerSpec Objective2 = {
+	safety = {PRODUCT_PROCESS2}
+	assumption = {ASSUME_ON_A1, ASSUME_ON_B1}//ASSUME_ON_A1, ASSUME_ON_B1, ASSUME_ON_A2, ASSUME_ON_B2}
+	liveness = {GOAL_FOR_A, GOAL_FOR_B}
+	controllable = {ControllableActions}
+}
+
+PRODUCT2_A(C=1)= INIT_PRODUCT(C);
+				TRY_TOOL('oven,C);
+//				TRY_TOOL('drill,C);
+//				TRY_TOOL('press,C);
+				FINISH_PRODUCT(C);
+				PRODUCT2_A.
+
+PRODUCT2_B(C=N/2+1)= INIT_PRODUCT(C);
+					TRY_TOOL('drill,C);
+					TRY_TOOL('press,C);
+//					TRY_TOOL('oven,C);
+					FINISH_PRODUCT(C);
+					PRODUCT2_B.
+
+compose ||PRODUCT_PROCESS2 = (forall[a:ProductsTypeA] PRODUCT2_A(a) || forall[b:ProductsTypeB] PRODUCT2_B(b)).
+
+//S W switchE && I && switchE -> S'
+
+//-----------
+// Controlador Original A-Oven, B-Press No Drill.
+	FASE1to3 = Q0,
+	Q0	= ({a, b}[1].idle -> Q0
+		  |switchC -> Q1
+		  |b[1].inTray -> Q2
+		  |a[1].inTray -> Q78),
+	Q1	= FASE2,
+	Q2	= (a[1].idle -> Q2
+		  |switchC -> Q3
+		  |a[1].inTray -> Q4),
+	Q3	= FASE2,
+	Q4	= (switchC -> Q5
+		  |a[1].getInTrayOld -> Q6),
+	Q5	= FASE2,
+	Q6	= (switchC -> Q7
+		  |putOld.oven.a[1] -> Q8),
+	Q7	= FASE2,
+	Q8	= (switchC -> Q9
+		  |getOld.oven.a[1] -> Q10),
+	Q9	= FASE2,
+	Q10	= (switchC -> Q11
+		  |a[1].putOutTrayOld -> Q12),
+	Q11	= FASE2,
+	Q12	= (switchC -> Q13
+		  |b[1].getInTrayOld -> Q14
+		  |a[1].inTray -> Q74
+		  |a[1].idle -> Q76),
+	Q13	= FASE2,
+	Q14	= (a[1].idle -> Q14
+		  |switchC -> Q15
+		  |putOld.press.b[1] -> Q16
+		  |putOld.oven.b[1] -> Q68
+		  |a[1].inTray -> Q72),
+	Q15	= FASE2,
+	Q16	= (a[1].idle -> Q16
+		  |switchC -> Q17
+		  |getOld.press.b[1] -> Q18
+		  |a[1].inTray -> Q66),
+	Q17	= FASE2,
+	Q18	= (a[1].idle -> Q18
+		  |switchC -> Q19
+		  |b[1].putOutTrayOld -> Q20
+		  |putOld.oven.b[1] -> Q22
+		  |a[1].inTray -> Q26),
+	Q19	= FASE2,
+	Q20	= ({a, b}[1].idle -> Q0
+		  |b[1].inTray -> Q2
+		  |switchC -> Q21
+		  |a[1].inTray -> Q78),
+	Q21	= FASE2,
+	Q22	= (getOld.oven.b[1] -> Q18
+		  |a[1].idle -> Q22
+		  |switchC -> Q23
+		  |a[1].inTray -> Q24),
+	Q23	= FASE2,
+	Q24	= (switchC -> Q25
+		  |getOld.oven.b[1] -> Q26),
+	Q25	= FASE2,
+	Q26	= (switchC -> Q27
+		  |b[1].putOutTrayOld -> Q28),
+	Q27	= FASE2,
+	Q28	= (b[1].inTray -> Q4
+		  |switchC -> Q29
+		  |a[1].getInTrayOld -> Q30
+		  |b[1].idle -> Q78),
+	Q29	= FASE2,
+	Q30	= (b[1].inTray -> Q6
+		  |b[1].idle -> Q30
+		  |switchC -> Q31
+		  |putOld.oven.a[1] -> Q32),
+	Q31	= FASE2,
+	Q32	= (b[1].inTray -> Q8
+		  |b[1].idle -> Q32
+		  |switchC -> Q33
+		  |getOld.oven.a[1] -> Q34),
+	Q33	= FASE2,
+	Q34	= (b[1].inTray -> Q10
+		  |b[1].idle -> Q34
+		  |switchC -> Q35
+		  |a[1].putOutTrayOld -> Q36),
+	Q35	= FASE2,
+	Q36	= (switchC -> Q37
+		  |a[1].inTray -> Q38
+		  |{a, b}[1].idle -> Q64
+		  |b[1].inTray -> Q76),
+	Q37	= FASE2,
+	Q38	= (b[1].idle -> Q38
+		  |switchC -> Q39
+		  |a[1].getInTrayOld -> Q40
+		  |b[1].inTray -> Q74),
+	Q39	= FASE2,
+	Q40	= (b[1].idle -> Q40
+		  |switchC -> Q41
+		  |b[1].inTray -> Q42
+		  |putOld.oven.a[1] -> Q54),
+	Q41	= FASE2,
+	Q42	= (switchC -> Q43
+		  |putOld.oven.a[1] -> Q44),
+	Q43	= FASE2,
+	Q44	= (switchC -> Q45
+		  |b[1].getInTrayOld -> Q46),
+	Q45	= FASE2,
+	Q46	= (switchC -> Q47
+		  |putOld.press.b[1] -> Q48),
+	Q47	= FASE2,
+	Q48	= (switchC -> Q49
+		  |getOld.press.b[1] -> Q50),
+	Q49	= FASE2,
+	Q50	= (switchC -> Q51
+		  |b[1].putOutTrayOld -> Q52),
+	Q51	= FASE2,
+	Q52	= (b[1].inTray -> Q8
+		  |b[1].idle -> Q32
+		  |getOld.oven.a[1] -> Q34
+		  |switchC -> Q53),
+	Q53	= FASE2,
+	Q54	= (b[1].inTray -> Q44
+		  |b[1].idle -> Q54
+		  |switchC -> Q55
+		  |getOld.oven.a[1] -> Q56),
+	Q55	= FASE2,
+	Q56	= (b[1].idle -> Q56
+		  |switchC -> Q57
+		  |b[1].inTray -> Q58
+		  |a[1].putOutTrayOld -> Q62),
+	Q57	= FASE2,
+	Q58	= (switchC -> Q59
+		  |a[1].putOutTrayOld -> Q60),
+	Q59	= FASE2,
+	Q60	= (b[1].getInTrayOld -> Q14
+		  |switchC -> Q61
+		  |a[1].inTray -> Q74
+		  |a[1].idle -> Q76),
+	Q61	= FASE2,
+	Q62	= (a[1].inTray -> Q38
+		  |switchC -> Q63
+		  |{a, b}[1].idle -> Q64
+		  |b[1].inTray -> Q76),
+	Q63	= FASE2,
+	Q64	= (a[1].inTray -> Q38
+		  |{a, b}[1].idle -> Q64
+		  |switchC -> Q65
+		  |b[1].inTray -> Q76),
+	Q65	= FASE2,
+	Q66	= (getOld.press.b[1] -> Q26
+		  |switchC -> Q67),
+	Q67	= FASE2,
+	Q68	= (getOld.oven.b[1] -> Q14
+		  |a[1].idle -> Q68
+		  |switchC -> Q69
+		  |a[1].inTray -> Q70),
+	Q69	= FASE2,
+	Q70	= (switchC -> Q71
+		  |getOld.oven.b[1] -> Q72),
+	Q71	= FASE2,
+	Q72	= (putOld.press.b[1] -> Q66
+		  |switchC -> Q73),
+	Q73	= FASE2,
+	Q74	= (b[1].getInTrayOld -> Q72
+		  |switchC -> Q75),
+	Q75	= FASE2,
+	Q76	= (b[1].getInTrayOld -> Q14
+		  |a[1].inTray -> Q74
+		  |a[1].idle -> Q76
+		  |switchC -> Q77),
+	Q77	= FASE2,
+	Q78	= (b[1].inTray -> Q4
+		  |a[1].getInTrayOld -> Q30
+		  |b[1].idle -> Q78
+		  |switchC -> Q79),
+	Q79	= FASE2,
+	FASE2 = Q2_0,
+	Q2_0	= ({a, b}[1].idle -> Q2_0
+		  |switchE -> Q2_1
+		  |b[1].inTray -> Q2_2
+		  |a[1].inTray -> Q2_42),
+	Q2_1	= FASE3,
+	Q2_2	= (a[1].idle -> Q2_2
+		  |switchE -> Q2_3
+		  |b[1].getInTray -> Q2_4
+		  |a[1].inTray -> Q2_40),
+	Q2_3	= FASE3,
+	Q2_4	= (b[1].putOutTray -> Q2_0
+		  |a[1].idle -> Q2_4
+		  |switchE -> Q2_5
+		  |put.drill.b[1] -> Q2_6
+		  |put.oven.b[1] -> Q2_34
+		  |a[1].inTray -> Q2_38),
+	Q2_5	= FASE3,
+	Q2_6	= (get.drill.b[1] -> Q2_4
+		  |a[1].idle -> Q2_6
+		  |switchE -> Q2_7
+		  |a[1].inTray -> Q2_8),
+	Q2_7	= FASE3,
+	Q2_8	= (switchE -> Q2_9
+		  |a[1].getInTray -> Q2_10
+		  |get.drill.b[1] -> Q2_38),
+	Q2_9	= FASE3,
+	Q2_10	= (a[1].putOutTray -> Q2_6
+		  |switchE -> Q2_11
+		  |put.oven.a[1] -> Q2_12),
+	Q2_11	= FASE3,
+	Q2_12	= (get.oven.a[1] -> Q2_10
+		  |switchE -> Q2_13
+		  |get.drill.b[1] -> Q2_14),
+	Q2_13	= FASE3,
+	Q2_14	= (put.drill.b[1] -> Q2_12
+		  |switchE -> Q2_15
+		  |b[1].putOutTray -> Q2_16),
+	Q2_15	= FASE3,
+	Q2_16	= (b[1].idle -> Q2_16
+		  |switchE -> Q2_17
+		  |b[1].inTray -> Q2_18
+		  |get.oven.a[1] -> Q2_32),
+	Q2_17	= FASE3,
+	Q2_18	= (b[1].getInTray -> Q2_14
+		  |switchE -> Q2_19
+		  |get.oven.a[1] -> Q2_20),
+	Q2_19	= FASE3,
+	Q2_20	= (a[1].putOutTray -> Q2_2
+		  |put.oven.a[1] -> Q2_18
+		  |switchE -> Q2_21
+		  |put.drill.a[1] -> Q2_22),
+	Q2_21	= FASE3,
+	Q2_22	= (get.drill.a[1] -> Q2_20
+		  |switchE -> Q2_23
+		  |b[1].getInTray -> Q2_24),
+	Q2_23	= FASE3,
+	Q2_24	= (switchE -> Q2_25
+		  |b[1].putOutTray -> Q2_26
+		  |put.oven.b[1] -> Q2_28),
+	Q2_25	= FASE3,
+	Q2_26	= (b[1].inTray -> Q2_22
+		  |b[1].idle -> Q2_26
+		  |switchE -> Q2_27
+		  |get.drill.a[1] -> Q2_32),
+	Q2_27	= FASE3,
+	Q2_28	= (get.oven.b[1] -> Q2_24
+		  |switchE -> Q2_29
+		  |get.drill.a[1] -> Q2_30),
+	Q2_29	= FASE3,
+	Q2_30	= (put.drill.a[1] -> Q2_28
+		  |switchE -> Q2_31
+		  |a[1].putOutTray -> Q2_34),
+	Q2_31	= FASE3,
+	Q2_32	= (a[1].putOutTray -> Q2_0
+		  |put.oven.a[1] -> Q2_16
+		  |b[1].inTray -> Q2_20
+		  |put.drill.a[1] -> Q2_26
+		  |b[1].idle -> Q2_32
+		  |switchE -> Q2_33),
+	Q2_33	= FASE3,
+	Q2_34	= (get.oven.b[1] -> Q2_4
+		  |a[1].idle -> Q2_34
+		  |switchE -> Q2_35
+		  |a[1].inTray -> Q2_36),
+	Q2_35	= FASE3,
+	Q2_36	= (a[1].getInTray -> Q2_30
+		  |switchE -> Q2_37
+		  |get.oven.b[1] -> Q2_38),
+	Q2_37	= FASE3,
+	Q2_38	= (put.drill.b[1] -> Q2_8
+		  |put.oven.b[1] -> Q2_36
+		  |switchE -> Q2_39
+		  |b[1].putOutTray -> Q2_42),
+	Q2_39	= FASE3,
+	Q2_40	= (a[1].getInTray -> Q2_20
+		  |b[1].getInTray -> Q2_38
+		  |switchE -> Q2_41),
+	Q2_41	= FASE3,
+	Q2_42	= (a[1].getInTray -> Q2_32
+		  |b[1].inTray -> Q2_40
+		  |b[1].idle -> Q2_42
+		  |switchE -> Q2_43),
+	Q2_43	= FASE3,
+		FASE3 = Q3_0,
+	Q3_0	= ({a, b}[1].idle -> Q3_0
+		  |b[1].inTray -> Q3_1
+		  |a[1].inTray -> Q3_31),
+	Q3_1	= (a[1].idle -> Q3_1
+		  |b[1].getInTray -> Q3_2
+		  |a[1].inTray -> Q3_30),
+	Q3_2	= (b[1].putOutTray -> Q3_0
+		  |a[1].idle -> Q3_2
+		  |put.press.b[1] -> Q3_3
+		  |put.drill.b[1] -> Q3_25
+		  |put.oven.b[1] -> Q3_27
+		  |a[1].inTray -> Q3_29),
+	Q3_3	= (get.press.b[1] -> Q3_2
+		  |a[1].idle -> Q3_3
+		  |a[1].inTray -> Q3_4),
+	Q3_4	= (a[1].getInTray -> Q3_5
+		  |get.press.b[1] -> Q3_29),
+	Q3_5	= (a[1].putOutTray -> Q3_3
+		  |put.oven.a[1] -> Q3_6
+		  |put.drill.a[1] -> Q3_24),
+	Q3_6	= (get.oven.a[1] -> Q3_5
+		  |get.press.b[1] -> Q3_7),
+	Q3_7	= (put.press.b[1] -> Q3_6
+		  |put.drill.b[1] -> Q3_8
+		  |b[1].putOutTray -> Q3_23),
+	Q3_8	= (get.drill.b[1] -> Q3_7
+		  |get.oven.a[1] -> Q3_9),
+	Q3_9	= (put.oven.a[1] -> Q3_8
+		  |put.press.a[1] -> Q3_10
+		  |a[1].putOutTray -> Q3_25),
+	Q3_10	= (get.press.a[1] -> Q3_9
+		  |get.drill.b[1] -> Q3_11),
+	Q3_11	= (put.drill.b[1] -> Q3_10
+		  |b[1].putOutTray -> Q3_12
+		  |put.oven.b[1] -> Q3_22),
+	Q3_12	= (b[1].idle -> Q3_12
+		  |b[1].inTray -> Q3_13
+		  |get.press.a[1] -> Q3_21),
+	Q3_13	= (b[1].getInTray -> Q3_11
+		  |get.press.a[1] -> Q3_14),
+	Q3_14	= (a[1].putOutTray -> Q3_1
+		  |put.press.a[1] -> Q3_13
+		  |put.oven.a[1] -> Q3_15
+		  |put.drill.a[1] -> Q3_16),
+	Q3_15	= (b[1].getInTray -> Q3_7
+		  |get.oven.a[1] -> Q3_14),
+	Q3_16	= (get.drill.a[1] -> Q3_14
+		  |b[1].getInTray -> Q3_17),
+	Q3_17	= (b[1].putOutTray -> Q3_18
+		  |put.oven.b[1] -> Q3_19
+		  |put.press.b[1] -> Q3_24),
+	Q3_18	= (b[1].inTray -> Q3_16
+		  |b[1].idle -> Q3_18
+		  |get.drill.a[1] -> Q3_21),
+	Q3_19	= (get.oven.b[1] -> Q3_17
+		  |get.drill.a[1] -> Q3_20),
+	Q3_20	= (put.drill.a[1] -> Q3_19
+		  |put.press.a[1] -> Q3_22
+		  |a[1].putOutTray -> Q3_27),
+	Q3_21	= (a[1].putOutTray -> Q3_0
+		  |put.press.a[1] -> Q3_12
+		  |b[1].inTray -> Q3_14
+		  |put.drill.a[1] -> Q3_18
+		  |b[1].idle -> Q3_21
+		  |put.oven.a[1] -> Q3_23),
+	Q3_22	= (get.oven.b[1] -> Q3_11
+		  |get.press.a[1] -> Q3_20),
+	Q3_23	= (b[1].inTray -> Q3_15
+		  |get.oven.a[1] -> Q3_21
+		  |b[1].idle -> Q3_23),
+	Q3_24	= (get.drill.a[1] -> Q3_5
+		  |get.press.b[1] -> Q3_17),
+	Q3_25	= (get.drill.b[1] -> Q3_2
+		  |a[1].idle -> Q3_25
+		  |a[1].inTray -> Q3_26),
+	Q3_26	= (a[1].getInTray -> Q3_9
+		  |get.drill.b[1] -> Q3_29),
+	Q3_27	= (get.oven.b[1] -> Q3_2
+		  |a[1].idle -> Q3_27
+		  |a[1].inTray -> Q3_28),
+	Q3_28	= (a[1].getInTray -> Q3_20
+		  |get.oven.b[1] -> Q3_29),
+	Q3_29	= (put.press.b[1] -> Q3_4
+		  |put.drill.b[1] -> Q3_26
+		  |put.oven.b[1] -> Q3_28
+		  |b[1].putOutTray -> Q3_31),
+	Q3_30	= (a[1].getInTray -> Q3_14
+		  |b[1].getInTray -> Q3_29),
+	Q3_31	= (a[1].getInTray -> Q3_21
+		  |b[1].inTray -> Q3_30
+		  |b[1].idle -> Q3_31).

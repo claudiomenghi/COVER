@@ -879,30 +879,30 @@ public class HPWindow extends JFrame implements LTSManager, LTSInput,
 			switch (theAction) {
 			case DO_safety:
 				showOutput();
-				safety();
+				safety(this);
 				break;
 
 			// >>> AMES: Deadlock Insensitive Analysis
 			case DO_safety_no_deadlock:
 				showOutput();
-				safety(false, false);
+				safety(this, false, false);
 				break;
 			// <<< AMES
 
 			// >>> AMES: multiple ce
 			case DO_safety_multi_ce:
 				showOutput();
-				safety(false, true);
+				safety(this, false, true);
 				break;
 			// <<< AMES
 
 			case DO_ARRANGED_ANIMATOR:
-				animate();
+				animate(this);
 				break;
 			case DO_EXPLORATION:
 				showOutput();
-				compile();
-				doComposition();
+				compile(this);
+				doComposition(this);
 				exploration_new();
 				break;
 			case DO_EXPLORATION_STEPOVER:
@@ -916,7 +916,7 @@ public class HPWindow extends JFrame implements LTSManager, LTSInput,
 				break;
 			case DO_reachable:
 				showOutput();
-				reachable();
+				reachable(this);
 				break;
 			case DO_deterministic:
 				showOutput();
@@ -924,44 +924,44 @@ public class HPWindow extends JFrame implements LTSManager, LTSInput,
 				break;
 			case DO_compile:
 				showOutput();
-				compile();
+				compile(this);
 				break;
 			case DO_doComposition:
 				showOutput();
-				doComposition();
+				doComposition(this);
 				break;
 			case DO_minimiseComposition:
 				showOutput();
-				minimiseComposition();
+				minimiseComposition(this);
 				break;
 			case DO_progress:
 				showOutput();
-				progress();
+				progress(this);
 				break;
 			case DO_liveness:
 				showOutput();
-				liveness();
+				liveness(this);
 				break;
 			case DO_parse:
 				parse();
 				break;
 			case DO_PLUS_CR:
-				doApplyPlusCROperator();
+				doApplyPlusCROperator(this);
 				break;
 			case DO_PLUS_CA:
-				doApplyPlusCAOperator();
+				doApplyPlusCAOperator(this);
 				break;
 			case DO_DETERMINISE:
-				doDeterminise();
+				doDeterminise(this);
 				break;
 			case DO_REFINEMENT:
-				doRefinement();
+				doRefinement(this);
 				break;
 			case DO_DEADLOCK:
-				doDeadlockCheck();
+				doDeadlockCheck(this);
 				break;
 			case DO_CONSISTENCY:
-				doConsistency();
+				doConsistency(this);
 				break;
 			case DO_RUNENACTORS:
 				doRunEnactors();
@@ -1981,9 +1981,9 @@ public class HPWindow extends JFrame implements LTSManager, LTSInput,
 
 	// ------------------------------------------------------------------------
 
-	private boolean compile() {
+	private boolean compile(LTSOutput output) {
 		clearOutput();
-		current = docompile();
+		current = docompile(output);
 		if (current == null) {
 			return false;
 		}
@@ -2011,10 +2011,10 @@ public class HPWindow extends JFrame implements LTSManager, LTSInput,
 			outln("ERROR - " + x.getMessage());
 	}
 
-	private CompositeState docompile() {
+	private CompositeState docompile(LTSOutput output) {
 		resetInput();
 		CompositeState cs = null;
-		LTSCompiler comp = new LTSCompiler(this, this, currentDirectory);
+		LTSCompiler comp = new LTSCompiler(this, output, currentDirectory);
 		try {
 			comp.compile();
 			if (!parse(comp.getComposites(), comp.getProcesses(),
@@ -2047,12 +2047,12 @@ public class HPWindow extends JFrame implements LTSManager, LTSInput,
 
 	private String lastCompiled = "";
 
-	private boolean compileIfChange() {
+	private boolean compileIfChange(LTSOutput output) {
 		String tmp = input.getText();
 		if (current == null || !tmp.equals(lastCompiled)
 				|| !current.getName().equals(targetChoice.getSelectedItem())) {
 			lastCompiled = tmp;
-			return compile();
+			return compile(output);
 		}
 
 		return true;
@@ -2061,13 +2061,13 @@ public class HPWindow extends JFrame implements LTSManager, LTSInput,
 	// ------------------------------------------------------------------------
 
 	// >>> AMES: Deadlock Insensitive Analysis, multiple ce
-	private void safety() {
-		safety(true, false);
+	private void safety(LTSOutput output) {
+		safety(output, true, false);
 	}
 
-	private void safety(boolean checkDeadlock, boolean multiCe) {
+	private void safety(LTSOutput output, boolean checkDeadlock, boolean multiCe) {
 		clearOutput();
-		if (compileIfChange() && current != null) {
+		if (compileIfChange(output) && current != null) {
 			TransitionSystemDispatcher.checkSafety(current, this);
 
 		}
@@ -2077,9 +2077,9 @@ public class HPWindow extends JFrame implements LTSManager, LTSInput,
 
 	// ------------------------------------------------------------------------
 
-	private void progress() {
+	private void progress(LTSOutput output) {
 		clearOutput();
-		if (compileIfChange() && current != null) {
+		if (compileIfChange(output) && current != null) {
 			TransitionSystemDispatcher.checkProgress(current, this); // sihay
 			// MTS
 			// deberia
@@ -2102,7 +2102,7 @@ public class HPWindow extends JFrame implements LTSManager, LTSInput,
 	private void liveness() {
 		System.out.println(asserted);
 		clearOutput();
-		compileIfChange();
+		compileIfChange(this);
 		CompositeState ltl_property = AssertDefinition.compile(this, asserted);
 		// Silent compilation for negated formula
 		CompositeState not_ltl_property = AssertDefinition.compile(
@@ -2131,7 +2131,7 @@ public class HPWindow extends JFrame implements LTSManager, LTSInput,
 
 		clearOutput();
 
-		compileIfChange();
+		compileIfChange(output);
 		CompositeState ltl_property = AssertDefinition.compile(this, asserted);
 		// Silent compilation for negated formula
 		CompositeState not_ltl_property = AssertDefinition.compile(
@@ -2145,10 +2145,10 @@ public class HPWindow extends JFrame implements LTSManager, LTSInput,
 
 	// ------------------------------------------------------------------------
 
-	private void minimiseComposition() {
+	private void minimiseComposition(LTSOutput output) {
 		clearOutput();
-		compileIfChange();
-		if (compileIfChange() && current != null) {
+		compileIfChange(output);
+		if (compileIfChange(output) && current != null) {
 			if (current.composition == null)
 				TransitionSystemDispatcher.applyComposition(current, this);
 			TransitionSystemDispatcher.minimise(current, this);
@@ -2158,9 +2158,9 @@ public class HPWindow extends JFrame implements LTSManager, LTSInput,
 
 	// ------------------------------------------------------------------------
 
-	private void doComposition() {
+	private void doComposition(LTSOutput output) {
 		clearOutput();
-		compileIfChange();
+		compileIfChange(output);
 		if (current != null) {
 			TransitionSystemDispatcher.applyComposition(current, this);
 			postState(current);
@@ -2380,9 +2380,9 @@ public class HPWindow extends JFrame implements LTSManager, LTSInput,
 		return count_integer;
 	}
 
-	private void animate() {
+	private void animate(LTSOutput output) {
 		clearOutput();
-		compileIfChange();
+		compileIfChange(output);
 		boolean replay = false;
 		if (current != null) {
 			if (current instanceof UpdatingControllerCompositeState
@@ -2445,9 +2445,9 @@ public class HPWindow extends JFrame implements LTSManager, LTSInput,
 
 	// ------------------------------------------------------------------------
 
-	private void reachable() {
+	private void reachable(LTSOutput output) {
 		clearOutput();
-		compileIfChange();
+		compileIfChange(output);
 		if (current != null && current.machines.size() > 0) {
 			Analyser a = new Analyser(current, this, null);
 			SuperTrace s = new SuperTrace(a, this);
@@ -2555,50 +2555,50 @@ public class HPWindow extends JFrame implements LTSManager, LTSInput,
 
 	// -------------------------------------------------------------------------
 
-	private void doOptimist() {
-		if (compileIfChange() && current != null) {
+	private void doOptimist(LTSOutput output) {
+		if (compileIfChange(output) && current != null) {
 			TransitionSystemDispatcher.makeOptimisticModel(current, this);
 			postState(current);
 		}
 	}
 
-	private void doPesimist() {
-		if (compileIfChange() && current != null) {
+	private void doPesimist(LTSOutput output) {
+		if (compileIfChange(output) && current != null) {
 			TransitionSystemDispatcher.makePessimisticModel(current, this);
 			postState(current);
 		}
 	}
 
-	private void doApplyPlusCROperator() {
-		if (compileIfChange() && current != null) {
+	private void doApplyPlusCROperator(LTSOutput output) {
+		if (compileIfChange(output) && current != null) {
 			TransitionSystemDispatcher.applyPlusCROperator(current, this);
 			postState(current);
 		}
 	}
 
-	private void doApplyPlusCAOperator() {
-		if (compileIfChange() && current != null) {
+	private void doApplyPlusCAOperator(LTSOutput output) {
+		if (compileIfChange(output) && current != null) {
 			TransitionSystemDispatcher.applyPlusCAOperator(current, this);
 			postState(current);
 		}
 	}
 
-	private void doDeterminise() {
-		if (compileIfChange() && current != null) {
+	private void doDeterminise(LTSOutput output) {
+		if (compileIfChange(output) && current != null) {
 			TransitionSystemDispatcher.determinise(current, this);
 			postState(current);
 		}
 	}
 
-	private void doDeadlockCheck() {
-		if (compileIfChange() && current != null) {
+	private void doDeadlockCheck(LTSOutput output) {
+		if (compileIfChange(output) && current != null) {
 			TransitionSystemDispatcher
 					.hasCompositionDeadlockFreeImplementations(current, this);
 		}
 	}
 
-	private void doRefinement() {
-		if (compileIfChange() && current != null) {
+	private void doRefinement(LTSOutput output) {
+		if (compileIfChange(output) && current != null) {
 			RefinementOptions refinementOptions = new RefinementOptions();
 			String[] models = getMachinesNames();
 
@@ -2631,8 +2631,8 @@ public class HPWindow extends JFrame implements LTSManager, LTSInput,
 		}
 	}
 
-	private void doConsistency() {
-		if (compileIfChange() && current != null) {
+	private void doConsistency(LTSOutput output) {
+		if (compileIfChange(output) && current != null) {
 			RefinementOptions refinementOptions = new RefinementOptions();
 			String[] models = getMachinesNames();
 
@@ -2945,7 +2945,7 @@ public class HPWindow extends JFrame implements LTSManager, LTSInput,
 	}
 
 	public void coverCompile(String name) {
-		compile();
+		compile(this);
 		current=this.compile(name);
 	}
 

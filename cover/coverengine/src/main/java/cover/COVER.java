@@ -126,6 +126,7 @@ public class COVER {
 		Preconditions
 				.checkNotNull(goalName, "The name of the goal of interest");
 
+		output.println("Checking goal: " + goalName);
 		this.window.asserted = goalName;
 
 		AssertDefinition.compileAll(new EmptyLTSOuput());

@@ -1,0 +1,248 @@
+// ---------------------------------------------------
+// CONTAINS THE INITIAL BOOK SELLER DESIGN
+// ---------------------------------------------------
+
+set Actions = { cRequestQuote,          // it is generated when the user has requested a quote 
+                sProvideQuote,          // it is generated when WH has provided a quote
+                cGetBookAvail,          // the client asks if a book is sold by the WH 
+                cLeft,                  // the client has left the WH store
+                cOrder,                 // the client has performed the order
+                sRetBookAvail,          // the WH returns the book availability
+                sProvidePrice,          // the WH provides the price for the item
+                sPlaceOrder,            // the WH has placed the order to its supplier
+                cBookOrdered,           // the client has ordered the book and terminated the payment procedure
+                sBookReady,             // the book is ready to be delivered
+				sSubmitReceipt,         // the system has sent the receipt (electronically or physically)
+                sCourierStart,          // the courier started
+                sWaitBook,              // the WH is waiting for the book
+                sBookDelivered,         // the book is delivered to the customer
+                cMoneyOrder,            // the client wants to pay through bank transfer money
+                cSendMoney,             // the client has sent the bank transfer
+                sReceivedMoney,         // the WH received the bank transfer
+                sHasCCAAuth,            // the client has requested a credit card transfer and has been correctly authenticated
+                sChargeCreditCard,      // the system has charded the user credit card
+                sReceiptPrinted,        // the system printed the receipt
+                sReceiptDelivered,      // the receipt has been deliveder to the client (physically or electronically)
+                sSendElecReceipt,        // the electronic receipt has been sent to the user
+                sSendPhysicalReceipt,   // the physical receipt has been sent to the user
+                bookReceived,           // the WH received the book from the seller
+                orderClosed,            // the order has been closed
+                end,                    // the order ended with no success
+                sBookNotAvailable       // the book is not available in the WH
+			}
+
+// initial book seller desing
+D1=		QUOTEMANAGER,
+        QUOTEMANAGER=(  		cRequestQuote?      ->  QUOTEMANAGER        		|
+                        		sProvideQuote?      ->  QUOTEMANAGER        		|
+                       			cGetBookAvail?      ->  AVAILABILITYMANAGER         |
+                        		cLeft   			->  ENDSTATE 					|
+                        		cOrder?     		->  PAYMENTMANAGER      		),
+
+		AVAILABILITYMANAGER=(	sRetBookAvail? 		-> QUOTEMANAGER 				|
+								sProvidePrice?		-> AVAILABILITYMANAGER 			|
+								sPlaceOrder?	  	-> AVAILABILITYMANAGER 			|
+								sBookNotAvailable?	-> AVAILABILITYMANAGER			|
+								bookReceived?  	    -> AVAILABILITYMANAGER 			|
+								sBookReady?	        -> DELIVERYMANAGER     			),
+
+        DELIVERYMANAGER=(   	sSubmitReceipt?		    -> 	DELIVERYMANAGER				|
+								sCourierStart?		    ->	DELIVERYMANAGER				|
+								sReceiptDelivered?	    ->	DELIVERYMANAGER				|
+								sSendElecReceipt?	    ->	DELIVERYMANAGER				|
+								sSendPhysicalReceipt?	->	DELIVERYMANAGER				|
+								sWaitBook?	            ->  AVAILABILITYMANAGER 		|
+                            	sBookDelivered	        ->  ORDERCLOSED					),
+
+        PAYMENTMANAGER=(    	cMoneyOrder?		->	PAYMENTMANAGER				|
+								cSendMoney?			->	PAYMENTMANAGER				|
+								sReceivedMoney?		->	PAYMENTMANAGER				|
+								sChargeCreditCard?	->	PAYMENTMANAGER				|
+								sHasCCAAuth?		->	PAYMENTMANAGER				|
+								sReceiptPrinted?	->	PAYMENTMANAGER				|
+								cLeft 				->	ENDSTATE					|
+								cBookOrdered?		->	DELIVERYMANAGER				),
+
+        ORDERCLOSED=(   		orderClosed  		->  ORDERCLOSED					),
+
+        ENDSTATE=(   			end     			-> 	ENDSTATE					).
+
+
+// refinement of the book seller desing
+D2=		QUOTEMANAGER,
+        QUOTEMANAGER=(  		cRequestQuote?        ->  QUOTEMANAGER        		|
+                        		sProvideQuote?        ->  QUOTEMANAGER        		|
+                       			cGetBookAvail         -> 	Q1 						|
+                        		cLeft   			  ->  ENDSTATE 					|
+                        		cOrder?     		  ->  PAYMENTMANAGER      		),
+
+		Q1=(					sBookNotAvailable		->	Q2						|
+								sRetBookAvail		->	QUOTEMANAGER				),
+		
+		Q2=(					sPlaceOrder			->	Q3							),
+
+		Q3=(					sRetBookAvail		->	QUOTEMANAGER				),
+
+		Q4=(					bookReceived		->	Q5							),
+
+		Q5=(					sProvidePrice		->	Q6							),
+
+		Q6=(					sBookReady?			->  DELIVERYMANAGER				),
+
+        DELIVERYMANAGER=(   	sSubmitReceipt?		    -> 	DELIVERYMANAGER				|
+								sCourierStart?		    ->	DELIVERYMANAGER				|
+								sReceiptDelivered?	    ->	DELIVERYMANAGER				|
+								sSendElecReceipt?	    ->	DELIVERYMANAGER				|
+								sSendPhysicalReceipt?	->	DELIVERYMANAGER				|
+								sWaitBook	        ->  Q4 							|
+                            	sBookDelivered?	    ->  ORDERCLOSED					),
+
+        PAYMENTMANAGER=(    	cMoneyOrder?		->	PAYMENTMANAGER				|
+								cSendMoney?			->	PAYMENTMANAGER				|
+								sReceivedMoney?		->	PAYMENTMANAGER				|
+								sChargeCreditCard?	->	PAYMENTMANAGER				|
+								sHasCCAAuth?		->	PAYMENTMANAGER				|
+								sReceiptPrinted?	->	PAYMENTMANAGER				|
+								cLeft 				->	ENDSTATE					|
+								cBookOrdered		->	DELIVERYMANAGER				),
+
+        ORDERCLOSED=(   		orderClosed  		->  ORDERCLOSED					),
+
+        ENDSTATE=(   			end     			-> 	ENDSTATE					).
+
+
+// refinement of the book seller desing
+D3=		QUOTEMANAGER,
+        QUOTEMANAGER=(  		cRequestQuote?      ->  QUOTEMANAGER        		|
+                        		sProvideQuote?      ->  QUOTEMANAGER        		|
+                       			cGetBookAvail      -> 	Q1 						    |
+                        		cLeft   			->  ENDSTATE 					|
+                        		cOrder?     			->  PAYMENTMANAGER      		),
+
+		Q1=(					sBookNotAvailable		->	Q2						|
+								sRetBookAvail		->	QUOTEMANAGER				),
+		
+		Q2=(					sPlaceOrder			->	Q3							),
+
+		Q3=(					sRetBookAvail		->	QUOTEMANAGER				),
+
+		Q4=(					bookReceived		->	Q5							),
+
+		Q5=(					sProvidePrice		->	Q6							),
+
+		Q6=(					sBookReady			->  Q8							),
+
+		Q7=(					sWaitBook	        ->  Q4 							),
+
+		Q8=(					sSendPhysicalReceipt	->	Q9						|
+								sSendElecReceipt		->	Q9							),
+
+		Q9=(					sSubmitReceipt		->	Q10							),
+
+		Q10=(					sCourierStart		->	Q11							),
+
+		Q11=(					sReceiptDelivered	->	Q12      					),
+        
+        Q12=(					sBookDelivered		->	ORDERCLOSED					),
+
+        PAYMENTMANAGER=(    	cMoneyOrder?		->	PAYMENTMANAGER				|
+								cSendMoney?			->	PAYMENTMANAGER				|
+                                sChargeCreditCard?	->	PAYMENTMANAGER				|
+								sHasCCAAuth?		->	PAYMENTMANAGER				|
+								sReceivedMoney?		->	PAYMENTMANAGER				|
+								sReceiptPrinted?	->	PAYMENTMANAGER				|
+								cLeft 				->	ENDSTATE					|
+								cBookOrdered		->	Q7				),
+
+        ORDERCLOSED=(   		orderClosed  		->  ORDERCLOSED					),
+
+        ENDSTATE=(   			end     			-> 	ENDSTATE					).
+
+|| D1_PROC=(D1).
+
+|| D2_PROC=(D2).
+
+|| D3_PROC=(D3).
+
+
+// quote management fluents
+fluent F_C_REQ_QUOTE=<cRequestQuote, Actions\{cRequestQuote}>
+fluent F_S_PROV_QUOTE=<sProvideQuote, Actions\{sProvideQuote}>
+
+// book availability management fluents
+fluent F_WH_BOOK_NAV=<sBookNotAvailable, Actions\{sBookNotAvailable}>
+fluent F_WH_BOOK_AVAIL=<sRetBookAvail, Actions\{sRetBookAvail}> 
+fluent F_WH_BOOK_REC=<bookReceived, Actions\{bookReceived}> 
+fluent F_C_ORD_BOOK=<cBookOrdered, Actions\{cBookOrdered}> 
+
+// book delivering fluents
+fluent F_BOOK_DEL=<sBookDelivered, Actions\{sBookDelivered}> 
+fluent F_WH_ORD_BOOK=<sPlaceOrder, Actions\{sPlaceOrder}>
+fluent F_COUR=<sCourierStart, Actions\{sCourierStart}> 
+
+
+// receipt management fluents
+fluent F_WH_SUB_REC=<sSubmitReceipt, Actions\{sSubmitReceipt}>
+fluent F_REC_RECV=<sReceiptDelivered, Actions\{sReceiptDelivered}>
+fluent F_SEND_RCV=<{sSendPhysicalReceipt, sSendElecReceipt}, Actions\{sSendPhysicalReceipt, sSendElecReceipt}>
+fluent F_PH_REQ=<sSendPhysicalReceipt, Actions\{sSendPhysicalReceipt}>
+
+
+// money management fluents
+fluent F_USER_PAY=<sReceivedMoney, Actions\{sReceivedMoney}>
+fluent F_CC_CHARGED=<sChargeCreditCard, Actions\{sChargeCreditCard}>
+fluent F_C_BANK_TRANS=<cSendMoney, Actions\{cSendMoney}>
+fluent F_WH_PRICE=<sProvidePrice, Actions\{sProvidePrice}>
+fluent F_WH_QUOTE=<sProvideQuote, Actions\{sProvideQuote}>
+
+fluent F_OC=<orderClosed, Actions\{orderClosed}>
+
+
+// G2: if requested the system provides the quote OK
+assert G2=([](F_C_REQ_QUOTE-><>F_S_PROV_QUOTE))
+
+// G3: if the WH orders a book, it is finally delivered to the WH OK
+assert G3=([](((<>F_C_ORD_BOOK) && F_WH_BOOK_NAV)->(<>F_WH_BOOK_REC)))
+
+// G4: if a book is not available at the WH, it is ordered OK
+assert G4=([](F_WH_BOOK_NAV->(<>F_WH_ORD_BOOK)))
+
+// G5: after a book is ordered it is delivered at the WH OK
+assert G5=([](F_WH_ORD_BOOK->(<>F_WH_BOOK_AVAIL)))
+
+// G6: The book is finally delivered to the customer. OK
+assert G6=((!F_OC) W ((F_BOOK_DEL) && (!F_OC)))
+
+// G7: if request the receipt is placed in the shipment NO
+assert G7=([](F_WH_SUB_REC->(<>F_REC_RECV)))
+
+// G8: the payment of the customer is finally received
+assert G8=((!F_OC) W ((F_USER_PAY) && (!F_OC)))
+
+// G9: the money are charged over the CC
+assert G9=((!F_OC) W ((F_CC_CHARGED) && (!F_OC)))
+
+// G10: An order to be closed requires the payment of the user 
+assert G10=((!F_OC) W ((F_C_BANK_TRANS) && (!F_OC)))
+
+// G11: a physical or electronic receipt is sent
+assert G11=((!F_OC) W ((F_SEND_RCV) && (!F_OC)))
+
+// G12: the physical receipt is finally received
+assert G12=([]((F_PH_REQ && !F_OC)->(!F_OC U (F_REC_RECV && !F_OC))))
+
+// G13: the receipt is received
+assert G13=((!F_OC) W ((F_REC_RECV) && (! F_OC)))
+
+// G18: the supplier provides the price before the quotes
+assert G18=((!F_WH_PRICE) W ((F_WH_QUOTE) && (!F_WH_PRICE)))
+
+// G24: charge CC can be done only before delivering to courier
+assert G24=([](F_BOOK_DEL->([](!F_CC_CHARGED))))
+
+// G25: deliver to courier after get CC authorization
+assert G25=((!F_COUR) W (F_CC_CHARGED && !F_COUR ) )
+
+// G26: The receipt is sent after the payment
+assert G26=([]( (! F_USER_PAY) || (<>(F_USER_PAY && <>F_REC_RECV))))
+

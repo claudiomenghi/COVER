@@ -27,7 +27,9 @@ public class ThreeValuedModelCheckerOutput implements LTSOutput {
 	}
 
 	private void check(String str) {
-
+		if(str.startsWith("ERROR line")){
+			System.out.println(str);
+		}
 		if (!overApproximationCheckPerformed) {
 			if (str.contains("satisfies")) {
 				result = ModelCheckerResult.TRUE;
