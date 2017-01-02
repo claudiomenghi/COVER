@@ -63,7 +63,7 @@ Note that the identifier of the assertion must mach the identifier used for the 
 7. open the generated file (i.e., <code>finalGoalModel.goal</code>) with the Gr-Tool
 
 ##Examples
-The Book Seller example is contained in the folder Examples/BookSeller.
+The Book Seller example is contained in the folder [Examples/REFSQ/BookSeller](Examples/REFSQ/BookSeller)
 
 The results are obtained by performing the commands 
 
