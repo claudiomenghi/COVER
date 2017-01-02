@@ -11,7 +11,7 @@ set Actions = { cRequestQuote,          // it is generated when the user has req
                 sProvidePrice,          // the WH provides the price for the item
                 sPlaceOrder,            // the WH has placed the order to its supplier
                 cBookOrdered,           // the client has ordered the book and terminated the payment procedure
-                sBookReady,             // the book is ready to be delivered
+                sRetBookOrd,             // the book is ready to be delivered
 				sSubmitReceipt,         // the system has sent the receipt (electronically or physically)
                 sCourierStart,          // the courier started
                 sWaitBook,              // the WH is waiting for the book
@@ -39,12 +39,12 @@ D1=		QUOTEMANAGER,
                         		cLeft   			->  ENDSTATE 					|
                         		cOrder?     		->  PAYMENTMANAGER      		),
 
-		AVAILABILITYMANAGER=(	sRetBookAvail? 		-> QUOTEMANAGER 				|
+		AVAILABILITYMANAGER=(	sRetBookOrd? 		-> QUOTEMANAGER 				|
 								sProvidePrice?		-> AVAILABILITYMANAGER 			|
 								sPlaceOrder?	  	-> AVAILABILITYMANAGER 			|
 								sBookNotAvailable?	-> AVAILABILITYMANAGER			|
 								bookReceived?  	    -> AVAILABILITYMANAGER 			|
-								sBookReady?	        -> DELIVERYMANAGER     			),
+								sRetBookAvail?	        -> DELIVERYMANAGER     			),
 
         DELIVERYMANAGER=(   	sSubmitReceipt?		    -> 	DELIVERYMANAGER				|
 								sCourierStart?		    ->	DELIVERYMANAGER				|
@@ -77,17 +77,17 @@ D2=		QUOTEMANAGER,
                         		cOrder?     		  ->  PAYMENTMANAGER      		),
 
 		Q1=(					sBookNotAvailable		->	Q2						|
-								sRetBookAvail		->	QUOTEMANAGER				),
+								sRetBookOrd		->	QUOTEMANAGER				),
 		
 		Q2=(					sPlaceOrder			->	Q3							),
 
-		Q3=(					sRetBookAvail		->	QUOTEMANAGER				),
+		Q3=(					sRetBookOrd		->	QUOTEMANAGER				),
 
 		Q4=(					bookReceived		->	Q5							),
 
 		Q5=(					sProvidePrice		->	Q6							),
 
-		Q6=(					sBookReady?			->  DELIVERYMANAGER				),
+		Q6=(					sRetBookAvail?			->  DELIVERYMANAGER				),
 
         DELIVERYMANAGER=(   	sSubmitReceipt?		    -> 	DELIVERYMANAGER				|
 								sCourierStart?		    ->	DELIVERYMANAGER				|
@@ -120,17 +120,17 @@ D3=		QUOTEMANAGER,
                         		cOrder?     			->  PAYMENTMANAGER      		),
 
 		Q1=(					sBookNotAvailable		->	Q2						|
-								sRetBookAvail		->	QUOTEMANAGER				),
+								sRetBookOrd		->	QUOTEMANAGER				),
 		
 		Q2=(					sPlaceOrder			->	Q3							),
 
-		Q3=(					sRetBookAvail		->	QUOTEMANAGER				),
+		Q3=(					sRetBookOrd		->	QUOTEMANAGER				),
 
 		Q4=(					bookReceived		->	Q5							),
 
 		Q5=(					sProvidePrice		->	Q6							),
 
-		Q6=(					sBookReady			->  Q8							),
+		Q6=(					sRetBookAvail			->  Q8							),
 
 		Q7=(					sWaitBook	        ->  Q4 							),
 
