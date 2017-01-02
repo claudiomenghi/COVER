@@ -196,19 +196,21 @@ fluent F_WH_PRICE=<sProvidePrice, Actions\{sProvidePrice}>
 fluent F_WH_QUOTE=<sProvideQuote, Actions\{sProvideQuote}>
 
 fluent F_OC=<orderClosed, Actions\{orderClosed}>
-
+fluent F_WH_WAIT_BK=<sWaitBook, Actions\{sWaitBook}>
 
 // G2: if requested the system provides the quote OK
 assert G2=([](F_C_REQ_QUOTE-><>F_S_PROV_QUOTE))
 
 // G3: if the WH orders a book, it is finally delivered to the WH OK
-assert G3=([](((<>F_C_ORD_BOOK) && F_WH_BOOK_NAV)->(<>F_WH_BOOK_REC)))
+//assert G3=([](((<>F_C_ORD_BOOK) && F_WH_BOOK_NAV)->(<>F_WH_BOOK_REC)))
+assert G3=((!F_OC) W ((F_WH_BOOK_REC) && (!F_OC)))
 
 // G4: if a book is not available at the WH, it is ordered OK
 assert G4=([](F_WH_BOOK_NAV->(<>F_WH_ORD_BOOK)))
 
 // G5: after a book is ordered it is delivered at the WH OK
-assert G5=([](F_WH_ORD_BOOK->(<>F_WH_BOOK_AVAIL)))
+//assert G5=([](F_WH_ORD_BOOK->(<>F_WH_BOOK_AVAIL)))
+assert G5=([](F_WH_WAIT_BK->(<>F_WH_BOOK_REC)))
 
 // G6: The book is finally delivered to the customer. OK
 assert G6=((!F_OC) W ((F_BOOK_DEL) && (!F_OC)))

@@ -64,45 +64,32 @@ public class COVER {
 	 *            the goal model to be considered
 	 * @param iba
 	 *            the incompleteBA to be considered
-	 * @throws JAXBException 
+	 * @throws JAXBException
 	 * @throws NullPointerException
 	 *             if one of the parameters is null
 	 */
-	public COVER(File goalModelFile, HPWindow window, String mtsInputFile,
-			String mtsName, File outputFile, PrintStream output) throws JAXBException {
-		Preconditions.checkNotNull(goalModelFile,
-				"The goal model to be considered cannot be null");
-		Preconditions.checkNotNull(window,
-				"The window to be considered cannot be null");
-		Preconditions
-				.checkNotNull(mtsInputFile,
-						"The input file containing the MTS to be analyzed cannot be null");
-		Preconditions
-				.checkNotNull(mtsName,
-						"The name of the process to be considered in the verification cannot be null");
-		Preconditions
-				.checkNotNull(outputFile,
-						"The name of the file where the results must be written cannot be null");
-		Preconditions.checkNotNull(output,
-				"The name of the output cannot be null");
+	public COVER(File goalModelFile, HPWindow window, String mtsInputFile, String mtsName, File outputFile,
+			PrintStream output) throws JAXBException {
+		Preconditions.checkNotNull(goalModelFile, "The goal model to be considered cannot be null");
+		Preconditions.checkNotNull(window, "The window to be considered cannot be null");
+		Preconditions.checkNotNull(mtsInputFile, "The input file containing the MTS to be analyzed cannot be null");
+		Preconditions.checkNotNull(mtsName,
+				"The name of the process to be considered in the verification cannot be null");
+		Preconditions.checkNotNull(outputFile, "The name of the file where the results must be written cannot be null");
+		Preconditions.checkNotNull(output, "The name of the output cannot be null");
 		output.println("************************************************");
 		output.println("PHASE 1 - Initializing COVER");
-		output.println("Goal model file: "+goalModelFile.getPath());
-		output.println("MTS file: "+mtsInputFile);
-		output.println("MTS processName: "+mtsName);
-		output.println("Output file: "+outputFile);
-		
-		this.goalModel = new GoalModelAdapter().parseModel(
-				goalModelFile);
+		output.println("Goal model file: " + goalModelFile.getPath());
+		output.println("MTS file: " + mtsInputFile);
+		output.println("MTS processName: " + mtsName);
+		output.println("Output file: " + outputFile);
+
+		this.goalModel = new GoalModelAdapter().parseModel(goalModelFile);
 		this.processName = mtsName;
 		this.window = window;
-		String folder = mtsInputFile.substring(0,
-				mtsInputFile.lastIndexOf(File.separator) + 1);
-		String file = mtsInputFile.substring(
-				mtsInputFile.lastIndexOf(File.separator) + 1,
-				mtsInputFile.length());
+		String folder = mtsInputFile.substring(0, mtsInputFile.lastIndexOf(File.separator) + 1);
+		String file = mtsInputFile.substring(mtsInputFile.lastIndexOf(File.separator) + 1, mtsInputFile.length());
 
-		
 		this.window.doOpenFile(folder, file, false);
 
 		this.window.coverCompile(mtsName);
@@ -123,8 +110,7 @@ public class COVER {
 	 *             if the name of the goal is null
 	 */
 	private ModelCheckerResult checkGoal(String goalName) {
-		Preconditions
-				.checkNotNull(goalName, "The name of the goal of interest");
+		Preconditions.checkNotNull(goalName, "The name of the goal of interest");
 
 		output.println("Checking goal: " + goalName);
 		this.window.asserted = goalName;
@@ -132,10 +118,17 @@ public class COVER {
 		AssertDefinition.compileAll(new EmptyLTSOuput());
 		long startTime = System.currentTimeMillis();
 		ThreeValuedModelCheckerOutput mcoutput = new ThreeValuedModelCheckerOutput();
-		if (AssertDefinition.definitions.containsKey(goalName)) {
-			this.window.coverLiveness(mcoutput);
-			output.println("Goal: " + goalName + " Model Checking Result: "
-					+ mcoutput.getResult());
+
+		if (AssertDefinition.definitions != null) {
+			if (AssertDefinition.definitions.containsKey(goalName)) {
+				this.window.coverLiveness(mcoutput);
+				output.println("Goal: " + goalName + " Model Checking Result: " + mcoutput.getResult());
+			} else {
+				output.println("Goal: " + goalName + " not associated with an FLTL formalization");
+			}
+		}
+		else{
+			output.println("Some parsing problem occurred. You can run COVER only when your model is correct\n. Use MTSA to find and fix the problem in your model before running COVER.");
 		}
 		long stopTime = System.currentTimeMillis();
 		verificationTime = verificationTime + (stopTime - startTime);
@@ -144,13 +137,11 @@ public class COVER {
 
 	public void check() {
 
-		GOALMODEL.SCENARIO currentGoalScenario = goalModel.getSCENARIO().get(
-				goalModel.getSCENARIO().size() - 1);
+		GOALMODEL.SCENARIO currentGoalScenario = goalModel.getSCENARIO().get(goalModel.getSCENARIO().size() - 1);
 		List<GOAL> goals = currentGoalScenario.getGOAL();
 
-		
 		output.println("************************************************");
-		output.println("PHASE 2 - Running the MTS checker, considered process: "+this.processName);
+		output.println("PHASE 2 - Running the MTS checker, considered process: " + this.processName);
 		// Getting the initial satisfaction values
 		final GOALMODEL.SCENARIO initialSatisfactionScenarioValues = computeInitialSatisfactionValues(goals);
 
@@ -160,8 +151,8 @@ public class COVER {
 		output.println("PHASE 3 - Running the label propagation algorithm");
 		// propagating the initial values
 		long startTime = System.currentTimeMillis();
-		GOALMODEL.SCENARIO newScenarioPropagationResults = new LabelPropagator(
-				goalModel, initialSatisfactionScenarioValues).perform();
+		GOALMODEL.SCENARIO newScenarioPropagationResults = new LabelPropagator(goalModel,
+				initialSatisfactionScenarioValues).perform();
 		long stopTime = System.currentTimeMillis();
 
 		labelPropagationTime = labelPropagationTime + (stopTime - startTime);
@@ -181,29 +172,22 @@ public class COVER {
 	 *             if the list of the goal is null
 	 */
 	private GOALMODEL.SCENARIO computeInitialSatisfactionValues(List<GOAL> goals) {
-		Preconditions.checkNotNull(goals,
-				"The list of the goals cannot be null");
+		Preconditions.checkNotNull(goals, "The list of the goals cannot be null");
 
 		final GOALMODEL.SCENARIO initialSatisfactionScenarioValues = new GOALMODEL.SCENARIO();
-		initialSatisfactionScenarioValues.setNAME("Scenario: "
-				+ (goalModel.getSCENARIO().size() + 1));
+		initialSatisfactionScenarioValues.setNAME("Scenario: " + (goalModel.getSCENARIO().size() + 1));
 
 		goals.forEach(goal -> {
 			GOAL newGoal = goal.clone();
 
 			if (goal.getCAPTION().contains(":")) {
-				String goalName = goal.getCAPTION().substring(0,
-						goal.getCAPTION().indexOf(":"));
+				String goalName = goal.getCAPTION().substring(0, goal.getCAPTION().indexOf(":"));
 
 				ModelCheckerResult satisfaction = this.checkGoal(goalName);
 
-				newGoal.setSAT(new SatisfactionValueAdapter()
-						.convertSatisfactionValue(satisfaction));
+				newGoal.setSAT(new SatisfactionValueAdapter().convertSatisfactionValue(satisfaction));
 			} else {
-				this.output.println("The goal: "
-						+ newGoal.getCAPTION()
-						+ " with id: "
-						+ newGoal.getID()
+				this.output.println("The goal: " + newGoal.getCAPTION() + " with id: " + newGoal.getID()
 						+ " is not associated with an LTL formalization (use : to separate the name of the goal and its formalization)");
 			}
 			initialSatisfactionScenarioValues.getGOAL().add(newGoal);
@@ -230,12 +214,12 @@ public class COVER {
 	 *             if one of the two parameters is not present or not correct
 	 */
 	public static void main(String[] args) throws Exception {
-		System.setProperty("org.apache.commons.logging.Log",
-				"org.apache.commons.logging.impl.NoOpLog");
+		System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.NoOpLog");
 
 		PrintStream output = System.out;
 		if (args.length != 4) {
-			output.println("Illegal arguments. To run cover type: \n java -jar COVER.jar model.goal design.mts PROC newmodel.goal");
+			output.println(
+					"Illegal arguments. To run cover type: \n java -jar COVER.jar model.goal design.mts PROC newmodel.goal");
 			System.exit(0);
 		}
 		if (args[0] == null) {
@@ -267,12 +251,11 @@ public class COVER {
 		HPWindow window = new HPWindow(null);
 		window.setVisible(false);
 
-		String goalModelFile=args[0];
+		String goalModelFile = args[0];
 		String mtsInputFile = args[1];
 		String processName = args[2];
 
-		COVER cover = new COVER(new File(goalModelFile), window, mtsInputFile, processName,
-				new File(args[3]), output);
+		COVER cover = new COVER(new File(goalModelFile), window, mtsInputFile, processName, new File(args[3]), output);
 		cover.check();
 		cover.writeResults();
 		window.dispatchEvent(new WindowEvent(window, WindowEvent.WINDOW_CLOSING));
