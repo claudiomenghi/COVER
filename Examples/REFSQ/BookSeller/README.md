@@ -13,6 +13,6 @@ In the following we describe the content of each file
 
 To replicate the results run the commands
 
-- java -jar COVER1.0.0.jar GoalModel.goal Design.lts D1_PROC resultsD1.goal
-- java -jar COVER1.0.0.jar GoalModel.goal Design.lts D2_PROC resultsD2.goal
-- java -jar COVER1.0.0.jar GoalModel.goal Design.lts D3_PROC resultsD3.goal
+- ```java -jar COVER.jar GoalModel.goal Design.lts D1_PROC resultsD1.goal```
+- ```java -jar COVER.jar GoalModel.goal Design.lts D2_PROC resultsD2.goal```
+- ```java -jar COVER.jar GoalModel.goal Design.lts D3_PROC resultsD3.goal```
