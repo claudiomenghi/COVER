@@ -1,7 +1,11 @@
-#  COVER
+# COVER
 COVER (Change-based gOal VErifier and Reasoner) is a prototype tool realized as a Java 8 stand-alone application.  
 
 ## Overview
+
+[![Change-based gOal VErifier and Reasoner](readmedocs/COVER.png
+)](https://youtu.be/Upf473cSD7A "Change-based gOal VErifier and Reasoner")
+
 The requirement engineer produces a goal model which describes the requirements of the system.
 Some of the goals are also associated with FLTL properties that formally describe the allowed behaviors  of the system.
 
