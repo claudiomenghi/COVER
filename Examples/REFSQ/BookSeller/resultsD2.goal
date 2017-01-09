@@ -661,8 +661,8 @@
             <INPUTFORCED>0</INPUTFORCED>
             <OP>0</OP>
             <OUTPUTDEN>0.0</OUTPUTDEN>
-            <OUTPUTSAT>0.5</OUTPUTSAT>
-            <SAT>0.5</SAT>
+            <OUTPUTSAT>1.0</OUTPUTSAT>
+            <SAT>1.0</SAT>
             <TOP>0</TOP>
             <TYPE>0</TYPE>
         </GOAL>

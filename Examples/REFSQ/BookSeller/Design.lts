@@ -166,85 +166,83 @@ D3=		QUOTEMANAGER,
 
 
 // quote management fluents
-fluent F_C_REQ_QUOTE=<cRequestQuote, Actions\{cRequestQuote}>
-fluent F_S_PROV_QUOTE=<sProvideQuote, Actions\{sProvideQuote}>
+fluent F_cRequestQuote=<cRequestQuote, Actions\{cRequestQuote}>
+
 
 // book availability management fluents
-fluent F_WH_BOOK_NAV=<sBookNotAvailable, Actions\{sBookNotAvailable}>
-fluent F_WH_BOOK_AVAIL=<sRetBookAvail, Actions\{sRetBookAvail}> 
-fluent F_WH_BOOK_REC=<bookReceived, Actions\{bookReceived}> 
-fluent F_C_ORD_BOOK=<cBookOrdered, Actions\{cBookOrdered}> 
+fluent F_sBookNotAvailable=<sBookNotAvailable, Actions\{sBookNotAvailable}>
+fluent F_sRetBookAvail=<sRetBookAvail, Actions\{sRetBookAvail}> 
+fluent F_bookReceived=<bookReceived, Actions\{bookReceived}> 
+
+
 
 // book delivering fluents
-fluent F_BOOK_DEL=<sBookDelivered, Actions\{sBookDelivered}> 
-fluent F_WH_ORD_BOOK=<sPlaceOrder, Actions\{sPlaceOrder}>
-fluent F_COUR=<sCourierStart, Actions\{sCourierStart}> 
+fluent F_sBookDelivered=<sBookDelivered, Actions\{sBookDelivered}> 
+fluent F_sPlaceOrder=<sPlaceOrder, Actions\{sPlaceOrder}>
+fluent F_sCourierStart=<sCourierStart, Actions\{sCourierStart}> 
 
 
 // receipt management fluents
-fluent F_WH_SUB_REC=<sSubmitReceipt, Actions\{sSubmitReceipt}>
-fluent F_REC_RECV=<sReceiptDelivered, Actions\{sReceiptDelivered}>
-fluent F_SEND_RCV=<{sSendPhysicalReceipt, sSendElecReceipt}, Actions\{sSendPhysicalReceipt, sSendElecReceipt}>
-fluent F_PH_REQ=<sSendPhysicalReceipt, Actions\{sSendPhysicalReceipt}>
+fluent F_sSubmitReceipt=<sSubmitReceipt, Actions\{sSubmitReceipt}>
+fluent F_sReceiptDelivered=<sReceiptDelivered, Actions\{sReceiptDelivered}>
+fluent F_sSendPhysicalReceipt=<sSendPhysicalReceipt, Actions\{sSendPhysicalReceipt}>
 
 
 // money management fluents
-fluent F_USER_PAY=<sReceivedMoney, Actions\{sReceivedMoney}>
-fluent F_CC_CHARGED=<sChargeCreditCard, Actions\{sChargeCreditCard}>
-fluent F_C_BANK_TRANS=<cSendMoney, Actions\{cSendMoney}>
-fluent F_WH_PRICE=<sProvidePrice, Actions\{sProvidePrice}>
-fluent F_WH_QUOTE=<sProvideQuote, Actions\{sProvideQuote}>
+fluent F_sReceivedMoney=<sReceivedMoney, Actions\{sReceivedMoney}>
+fluent F_sChargeCreditCard=<sChargeCreditCard, Actions\{sChargeCreditCard}>
+fluent F_cSendMoney=<cSendMoney, Actions\{cSendMoney}>
+fluent F_sProvidePrice=<sProvidePrice, Actions\{sProvidePrice}>
+fluent F_sProvideQuote=<sProvideQuote, Actions\{sProvideQuote}>
 
-fluent F_OC=<orderClosed, Actions\{orderClosed}>
-fluent F_WH_WAIT_BK=<sWaitBook, Actions\{sWaitBook}>
+fluent F_orderClosed=<orderClosed, Actions\{orderClosed}>
+fluent F_sWaitBook=<sWaitBook, Actions\{sWaitBook}>
 
 // G2: if requested the system provides the quote OK
-assert G2=([](F_C_REQ_QUOTE-><>F_S_PROV_QUOTE))
+assert G2=([](F_cRequestQuote-><>F_sProvideQuote))
 
 // G3: if the WH orders a book, it is finally delivered to the WH OK
-//assert G3=([](((<>F_C_ORD_BOOK) && F_WH_BOOK_NAV)->(<>F_WH_BOOK_REC)))
-assert G3=((!F_OC) W ((F_WH_BOOK_REC) && (!F_OC)))
+assert G3=((!F_orderClosed) W ((F_bookReceived) && (!F_orderClosed)))
 
 // G4: if a book is not available at the WH, it is ordered OK
-assert G4=([](F_WH_BOOK_NAV->(<>F_WH_ORD_BOOK)))
+assert G4=([](F_sBookNotAvailable->(<>F_sPlaceOrder)))
 
 // G5: after a book is ordered it is delivered at the WH OK
-//assert G5=([](F_WH_ORD_BOOK->(<>F_WH_BOOK_AVAIL)))
-assert G5=([](F_WH_WAIT_BK->(<>F_WH_BOOK_REC)))
+assert G5=([](F_sWaitBook->(<>F_bookReceived)))
 
 // G6: The book is finally delivered to the customer. OK
-assert G6=((!F_OC) W ((F_BOOK_DEL) && (!F_OC)))
+assert G6=((!F_orderClosed) W ((F_sBookDelivered) && (!F_orderClosed)))
 
-// G7: if request the receipt is placed in the shipment NO
-assert G7=([](F_WH_SUB_REC->(<>F_REC_RECV)))
+// G7: if request the receipt is placed in the shipment 
+assert G7=([](F_sSubmitReceipt->(<>F_sReceiptDelivered)))
 
 // G8: the payment of the customer is finally received
-assert G8=((!F_OC) W ((F_USER_PAY) && (!F_OC)))
+assert G8=((!F_orderClosed) W ((F_sReceivedMoney) && (!F_orderClosed)))
 
 // G9: the money are charged over the CC
-assert G9=((!F_OC) W ((F_CC_CHARGED) && (!F_OC)))
+assert G9=((!F_orderClosed) W ((F_sChargeCreditCard) && (!F_orderClosed)))
 
 // G10: An order to be closed requires the payment of the user 
-assert G10=((!F_OC) W ((F_C_BANK_TRANS) && (!F_OC)))
+assert G10=((!F_orderClosed) W ((F_cSendMoney) && (!F_orderClosed)))
 
 // G11: a physical or electronic receipt is sent
-assert G11=((!F_OC) W ((F_SEND_RCV) && (!F_OC)))
+assert G11=((!F_orderClosed) W ((F_sSubmitReceipt) && (!F_orderClosed)))
 
 // G12: the physical receipt is finally received
-assert G12=([]((F_PH_REQ && !F_OC)->(!F_OC U (F_REC_RECV && !F_OC))))
+assert G12=([]((F_sSendPhysicalReceipt && !F_orderClosed)->(!F_orderClosed U (F_sReceiptDelivered && !F_orderClosed))))
 
 // G13: the receipt is received
-assert G13=((!F_OC) W ((F_REC_RECV) && (! F_OC)))
+assert G13=((!F_orderClosed) W ((F_sReceiptDelivered) && (! F_orderClosed)))
 
 // G18: the supplier provides the price before the quotes
-assert G18=((!F_WH_PRICE) W ((F_WH_QUOTE) && (!F_WH_PRICE)))
+assert G18=((!F_sProvidePrice) W ((F_sProvideQuote) && (!F_sProvidePrice)))
 
 // G24: charge CC can be done only before delivering to courier
-assert G24=([](F_BOOK_DEL->([](!F_CC_CHARGED))))
+assert G24=([](F_sBookDelivered->([](!F_sChargeCreditCard))))
 
 // G25: deliver to courier after get CC authorization
-assert G25=((!F_COUR) W (F_CC_CHARGED && !F_COUR ) )
+assert G25=([](F_sCourierStart->[](!F_sChargeCreditCard)))
 
 // G26: The receipt is sent after the payment
-assert G26=([]( (! F_USER_PAY) || (<>(F_USER_PAY && <>F_REC_RECV))))
+assert G26=([]( (! F_sReceivedMoney) || (<>(F_sReceivedMoney && <>F_sReceiptDelivered))))
 
