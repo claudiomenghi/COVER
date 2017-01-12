@@ -75,4 +75,13 @@ The results are obtained by performing the commands
 * java -jar COVER.jar GoalModel.goal Design.lts D2_PROC resultsD2.goal
 * java -jar COVER.jar GoalModel.goal Design.lts D3_PROC resultsD3.goal
 
+##Publications
 
+* *Integrating Goal Model Analysis with Iterative Design*<br/> 
+ Claudio Menghi, Paola Spoletini, and Carlo Ghezzi  <br/>
+ Requirements Engineering: Foundation for Software Quality (REFSQ) 2017
+
+##Implementation
+The main class of COVER is contained in the class [COVER.java](cover/coverengine/src/main/java/cover/COVER.java)
+
+The label propagation algorithm is implemented in the classes [LabelPropagator.java](cover/coverengine/src/main/java/labelpropagation/LabelPropagator.java) and [PropagationRule.java](cover/coverengine/src/main/java/labelpropagation/PropagationRule.java)
