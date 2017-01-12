@@ -52,18 +52,18 @@ To install COVER
 
 ##Use
 1. open the Gr-Tool 
-2. design your goal model. The identifier of the goal is separated from its description by a semicolumn ":", i.e., G2: Quote Given 
+2. design your goal model. The name of the goal should be constructed based on the following grammar: <code>IDENTIFIER: GOAL NAME</code>, where <code>IDENTIFIER</code> identifies the goal, and <code>GOAL NAME</code> specifies the name of the goal. For example, <code>G2: Quote Given</code> specifies that the goal <code>Quote Given</code> is associated with the identifier <code>G2</code>. 
 3. save your goal model, e.g., in the file model.goal
 4. create a .lts file using MTSA
-5. specify the FLTL description of goals through assertions, i.e., assert G2=([](F_REQUEST_QUOTE-><>F_SYSTEM_PROVIDES_QUOTES)) 
-Note that the identifier of the assertion must mach the identifier used for the goal.
+5. specify the FLTL description of goals through assertions, i.e., assert G2=([](F_REQUEST_QUOTE-><>F_SYSTEM_PROVIDES_QUOTES)), where G2 is the identifier of the goal.
+Note that, the identifier of the assertion must mach the identifier used for the goal.
 4. design your MTS using MTSA
 5. save your design into an appropriate .lts file
 6. run COVER by typing the command <code>java -jar COVER.jar goalModelInitial.goal design.lts PROCESS finalGoalModel.goal</code> where
     1. <code>goalModelInitial.goal</code> contains the original goal model;
     2. <code>design.lts</code> contains the current design (the MTS);
     3. <code>PROCESS</code> contains the identifier of the process to be considered in the file design.lts
-    3. <code>finalGoalModel.goal</code> contains the goal model updated with the values obtained by COVER
+    4. <code>finalGoalModel.goal</code> contains the goal model updated with the values obtained by COVER
 7. open the generated file (i.e., <code>finalGoalModel.goal</code>) with the Gr-Tool
 
 ##Examples
@@ -75,13 +75,15 @@ The results are obtained by performing the commands
 * java -jar COVER.jar GoalModel.goal Design.lts D2_PROC resultsD2.goal
 * java -jar COVER.jar GoalModel.goal Design.lts D3_PROC resultsD3.goal
 
-##Publications
-
-* *Integrating Goal Model Analysis with Iterative Design*<br/> 
- Claudio Menghi, Paola Spoletini, and Carlo Ghezzi  <br/>
- Requirements Engineering: Foundation for Software Quality (REFSQ) 2017
 
 ##Implementation
 The main class of COVER is contained in the class [COVER.java](cover/coverengine/src/main/java/cover/COVER.java)
 
 The label propagation algorithm is implemented in the classes [LabelPropagator.java](cover/coverengine/src/main/java/labelpropagation/LabelPropagator.java) and [PropagationRule.java](cover/coverengine/src/main/java/labelpropagation/PropagationRule.java)
+
+##Publications
+
+* *Integrating Goal Model Analysis with Iterative Design*<br/> 
+Claudio Menghi, Paola Spoletini, and Carlo Ghezzi  <br/>
+Requirements Engineering: Foundation for Software Quality (REFSQ) 2017
+
