@@ -1,5 +1,7 @@
 # COVER
 
+![GitHub Logo](/images/logo.png)
+
 COVER (Change-based gOal VErifier and Reasoner) is a unified framework that supports the interplay between requirements engineer and software designer. 
 It aims at constructing a bridge between the requirements' engineer and the software designer artifacts by enabling goal model analysis during software design. 
 The goal model produced by the requirements analysts to be kept alive and updated while the system is designed.

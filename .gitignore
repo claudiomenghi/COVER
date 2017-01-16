@@ -11,3 +11,4 @@ cover/coverengine/target/*
 COVER.jar
 Examples/REFSQ/BookSeller/COVER1.0.0.jar
 *.ini
+Examples/REFSQ/BookSeller/MTSA/*
