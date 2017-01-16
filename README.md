@@ -1,5 +1,13 @@
 # COVER
-COVER (Change-based gOal VErifier and Reasoner) is a prototype tool realized as a Java 8 stand-alone application.  
+
+COVER (Change-based gOal VErifier and Reasoner) is a unified framework that supports the interplay between requirements engineer and software designer. 
+It aims at constructing a bridge between the requirements' engineer and the software designer artifacts by enabling goal model analysis during software design. 
+The goal model produced by the requirements analysts to be kept alive and updated while the system is designed.
+When the design of the system changes COVER verifies the new design against the requirements of interest. 
+The verification results are used to trigger a goal model analysis procedure. 
+The results of the goal model analysis can be used by the requirements engineer and the software designer to update the goal model or the design of the system.
+
+COVER is a prototype tool realized as a Java 8 stand-alone application.  
 
 ## Overview
 
