@@ -97,3 +97,7 @@ The label propagation algorithm is implemented in the classes [LabelPropagator.j
 Claudio Menghi, Paola Spoletini, and Carlo Ghezzi  <br/>
 Requirements Engineering: Foundation for Software Quality (REFSQ) 2017
 
+
+* *COVER: Change-based Goal Verifier and Reasoner.*<br/>
+Claudio Menghi, Paola Spoletini, Carlo Ghezzi:
+Requirements Engineering: Foundation for Software Quality (REFSQ), Workshops 2017
