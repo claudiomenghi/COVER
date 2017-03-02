@@ -31,6 +31,10 @@ This technique offers several benefits.
 
 This would allow an early detection of design errors and of inconsistencies in the requirements. 
 
+<img src="/images/Poster.png" width="200"/>
+
+
+
 ## Components
 The main logic of COVER is contained in the class [COVER.java](cover/src/main/java/cover/COVER.java) class
 
@@ -90,6 +94,8 @@ The results are obtained by performing the commands
 The main class of COVER is contained in the class [COVER.java](cover/coverengine/src/main/java/cover/COVER.java)
 
 The label propagation algorithm is implemented in the classes [LabelPropagator.java](cover/coverengine/src/main/java/labelpropagation/LabelPropagator.java) and [PropagationRule.java](cover/coverengine/src/main/java/labelpropagation/PropagationRule.java)
+
+
 
 ##Publications
 
