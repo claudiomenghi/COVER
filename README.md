@@ -64,7 +64,7 @@ To install COVER
 * download the COVER framework from <https://github.com/claudiomenghi/COVER/releases>
 * download the MTSA from <http://mtsa.dc.uba.ar/>
 
-##Use
+## Use
 1. open the Gr-Tool 
 2. design your goal model. The name of the goal should be constructed based on the following grammar: <code>IDENTIFIER: GOAL NAME</code>, where <code>IDENTIFIER</code> identifies the goal, and <code>GOAL NAME</code> specifies the name of the goal. For example, <code>G2: Quote Given</code> specifies that the goal <code>Quote Given</code> is associated with the identifier <code>G2</code>. 
 3. save your goal model, e.g., in the file model.goal
@@ -80,7 +80,7 @@ Note that, the identifier of the assertion must mach the identifier used for the
     4. <code>finalGoalModel.goal</code> contains the goal model updated with the values obtained by COVER
 7. open the generated file (i.e., <code>finalGoalModel.goal</code>) with the Gr-Tool
 
-##Examples
+## Examples
 The Book Seller example is contained in the folder [Examples/REFSQ/BookSeller](Examples/REFSQ/BookSeller)
 
 The results are obtained by performing the commands 
@@ -97,7 +97,7 @@ The label propagation algorithm is implemented in the classes [LabelPropagator.j
 
 
 
-##Publications
+## Publications
 
 * *Integrating Goal Model Analysis with Iterative Design*<br/> 
 Claudio Menghi, Paola Spoletini, and Carlo Ghezzi  <br/>
