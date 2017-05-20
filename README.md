@@ -58,7 +58,7 @@ COVER works through the following steps
 * writes the obtained results back into the .goal file.
 * the results can be analyzed by the requirement engineer using the Gr-tool.
 
-##Installation
+## Installation
 To install COVER
 * download the Gr-Tool from <http://troposproject.org/tools/grtool/>
 * download the COVER framework from <https://github.com/claudiomenghi/COVER/releases>
